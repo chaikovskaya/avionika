@@ -1,0 +1,332 @@
+
+/* Fancybox */
+.fancybox-bg {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.fancybox-slide {
+    padding: 50px 40px;
+}
+
+.fancybox-content {
+    overflow: visible;
+    padding: 0;
+}
+
+.fancybox-close-small {
+    width: 33px;
+    height: 33px;
+    top: -50px;
+    padding: 0;
+    opacity: 1;
+}
+
+.fancybox-close {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 1;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+}
+.fancybox-close:hover {
+}
+
+.fancybox-close-icon {
+    path {
+        fill: var(--color1);
+    }
+}
+.fancybox-button .fancybox-button-arrow {
+    width: 14px;
+    height: 10px;
+    path {
+        fill: #fff;
+    }
+}
+
+.fancybox-nav-block {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fancybox-button {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: transparent;
+}
+
+.fancybox-button--arrow_right {
+    right: -55px;
+}
+.fancybox-button--arrow_left {
+    left: -55px;
+}
+.fancybox-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    &_left { }
+    &_right { }
+}
+.fancybox-button:hover .fancybox-button-icon {
+    background-color: hsla(var(--color0), 89%, 55%, 1);
+    border-width: 0;
+}
+.fancybox-button:active .fancybox-button-icon {
+    background-color: hsla(var(--color0), 82%, 44%, 1);
+    border-width: 0;
+}
+.fancybox-button[disabled] .fancybox-button-icon {
+}
+.fancybox-button[disabled] .fancybox-button-icon {
+}
+.fancybox-slide--image {
+    .fancybox-close-small {
+        top: -50px;
+        right: -50px;
+        background-color: transparent;
+    }
+}
+
+.fancybox-toolbar {
+    display: none;
+}
+.fancybox-infobar {
+    display: none;
+}
+
+@media screen
+and (max-width: $tablet) {
+}
+@media screen
+and (max-width: $mobile) {
+    .fancybox-slide {
+        padding: 50px 11px;
+    }
+    .fancybox-close {
+        top: -32px;
+        margin-left: -24px;
+    }
+    .fancybox-button--arrow_right {
+        right: 10px;
+    }
+    .fancybox-button--arrow_left {
+        left: 10px;
+    }
+}
+/* /Fancybox */
+
+
+@keyframes preloader-animation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.preloader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+    &-container {
+        width: 70px;
+        height: 70px;
+        border: 6px solid rgb(234, 234, 234);
+        border-top: 6px solid #E11439;
+        border-radius: 50%;
+        animation: preloader-animation 1s linear infinite;
+    }
+    @media screen
+    and (max-width: $tablet) {
+        width: 70px;
+        height: 70px;
+        &-container {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}
+
+.decor-popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    &-content {
+        padding: 42px 30px 50px;
+    }
+    &-title {
+        display: block;
+        margin-bottom: 16px;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 38px;
+        text-align: center;
+        color: var(--color6);
+    }
+    &-info {
+        margin-bottom: 28px;
+        font-size: 15px;
+        line-height: 24px;
+        text-align: center;
+    }
+    &-button {
+        width: 100%;
+    }
+
+    &-city {
+        max-width: 651px;
+        border-radius: 20px;
+    }
+    &-city &-content {
+        padding: 31px 37px 20px;
+    }
+    &-city &-title {
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 29px;
+        font-weight: 500;
+    }
+
+    @media screen
+    and (max-width: $tablet) {
+        &-content {
+            padding: 28px 22px 40px;
+        }
+        &-title {
+            margin-bottom: 10px;
+            font-size: 26px;
+            line-height: 36px;
+        }
+        &-info {
+            margin-bottom: 24px;
+            font-size: 13px;
+            line-height: 21px;
+        }
+        &-city {
+            max-width: 443px;
+        }
+        &-city &-content {
+            padding-top: 29px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &-city &-title {
+            text-align: left;
+        }
+    }
+}
+
+.city {
+    &-block {
+        margin-bottom: 30px;
+    }
+    &-list-wrapper {
+        min-height: 80px;
+        max-height: 240px;
+    }
+    &-list {
+        column-count: 2;
+        column-gap: 20px;
+    }
+    &-list-item {
+        margin-bottom: 16px;
+    }
+    &-field {
+        position: relative;
+    }
+    &-reset {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        line-height: 0;
+        padding: 5px;
+    }
+    &-radio {
+        display: none;
+    }
+    &-list-label {}
+    &-list-name {
+        display: block;
+        font-size: 15px;
+        line-height: 18px;
+        color: var(--color6);
+        cursor: pointer;
+        &:hover {
+            color: var(--color1);
+        }
+    }
+    &-list-item_active &-list-name {
+        font-weight: 500;
+        color: var(--color1);
+    }
+
+    @media screen
+    and (max-width: $tablet) {
+        &-list-wrapper {
+            max-height: 246px;
+        }
+        &-block {
+            margin-bottom: 24px;
+        }
+        &-list-item {
+            margin-bottom: 17px;
+        }
+    }
+    @media screen
+    and (min-width: $mobile) and (max-width: $tablet) {
+        &-input {
+            height: 40px;
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: 400;
+            &::placeholder {
+                font-size: 15px;
+            }
+        }
+    }
+    @media screen
+    and (max-width: $mobile) {
+        &-list {
+            column-count: auto;
+        }
+    }
+}
