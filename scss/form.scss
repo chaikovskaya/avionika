@@ -5,19 +5,12 @@ $colorPlaceholder: #606060;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    &_simple {}
 
     @media screen
     and (max-width: $tablet){
-        margin-bottom: 19px;
     }
     @media screen
     and (max-width: $mobile){
-        margin-bottom: 25px;
-        &_simple {
-            margin-top: -7px;
-            margin-bottom: 9px;
-        }
     }
 }
 
@@ -30,12 +23,12 @@ $colorPlaceholder: #606060;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
-    border: 1px solid var(--color12);
+    border: 1px solid var(--color1);
     border-radius: 20px;
     background-color: #fff;
     &:focus {
         color: var(--color7);
-        border-color: var(--color13);
+        border-color: var(--color1);
     }
     &::placeholder {
         font-size: 15px;
@@ -169,7 +162,7 @@ label.form-error {
         align-items: center;
         height: 100%;
         padding: 30px 25px 30px 32px;
-        border: 2px solid var(--color10);
+        border: 2px solid var(--color1);
         border-radius: 15px;
         &:hover {
             box-shadow: 0px 0px 20px rgba(206, 206, 206, 0.4);
@@ -245,73 +238,15 @@ label.form-error {
     transition: border-radius 0.2s linear;
     &:hover {
         color: #FFFFFF;
-        background-color: hsla(var(--color0), 89%, 55%, 1);
+        background-color: hsla(var(--color1), 89%, 55%, 1);
         border-radius: 10px;
     }
     &:active {
-        background-color: hsla(var(--color0), 82%, 44%, 1);
+        background-color: hsla(var(--color1), 82%, 44%, 1);
     }
     &:disabled {
         opacity: 0.8;
         cursor: not-allowed;
-    }
-
-    &_simple {
-        padding-top: 9px;
-        padding-bottom: 11px;
-        background-color: transparent;
-        border: 1px solid var(--color11);
-        color: var(--color6);
-        font-weight: 500;
-        &:hover {
-            background-color: transparent;
-            color: var(--color6);
-            text-shadow: 0 0 .05em var(--color6);
-        }
-        &:active {
-            background-color: transparent;
-        }
-    }
-
-    &_modified {
-        background-color: #FFFFFF;
-        color: var(--color1);
-        font-weight: 400;
-        &:hover {
-            background-color: #FFFFFF;
-            color: var(--color1);
-        }
-        &:active {
-            background-color: #FFFFFF;
-            color: var(--color1);
-        }
-    }
-
-    &_light {
-        background-color: transparent;
-        border: 1px solid var(--color12);
-        color: var(--color6);
-        font-weight: 500;
-        font-size: 13px;
-        text-transform: uppercase;
-        &:hover {
-            background-color: transparent;
-            color: var(--color6);
-            text-shadow: 0 0 .05em var(--color6);
-        }
-        &:active {
-            background-color: transparent;
-        }
-    }
-
-    &_dark {
-        background-color: var(--color6);
-        &:hover {
-            background-color: hsla(0, 4%, 15%, 1);
-        }
-        &:active {
-            background-color: hsla(0, 0%, 2%, 1);
-        }
     }
 
     @media screen
@@ -319,28 +254,6 @@ label.form-error {
     }
     @media screen
     and (max-width: $tablet){
-        padding-top: 8px;
-        padding-bottom: 10px;
-        font-size: 14px;
-        transition: border-radius 0.3s linear;
-        &_simple {
-            padding-top: 7px;
-            padding-bottom: 8px;
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 1.1em;
-        }
-        &_modified {
-            padding: 8px 23px;
-            font-weight: 500;
-            font-size: 12px;
-        }
-        &_light {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            font-size: 12px;
-            line-height: 1.1em;
-        }
     }
     @media screen
     and (max-width: $mobile){
@@ -363,7 +276,7 @@ label.form-error {
     height: auto;
     font-size: 15px;
     line-height: 22px;
-    color: var(--color6);
+    color: var(--color1);
     font-weight: 500;
 }
 .selectric:hover .label {
@@ -387,7 +300,7 @@ label.form-error {
     padding: 6px 18px;
     font-size: 14px;
     line-height: 24px;
-    color: var(--color6);
+    color: var(--color1);
     @include fix-rows();
     -ms-line-clamp: 1;
     -webkit-line-clamp: 1;
@@ -451,7 +364,7 @@ label.form-error {
 .select-simple {}
 .select-simple .selectric {
     border-width: 0;
-    background-color: var(--color2);
+    background-color: var(--color1);
 }
 
 @media screen
@@ -554,7 +467,7 @@ and (max-width: $mobile) {
     &-label {
         line-height: 21px;
         font-size: 14px;
-        color: var(--color7);
+        color: var(--color1);
     }
     &-label a {
         color: inherit;
@@ -633,7 +546,7 @@ and (max-width: $mobile) {
         display: inline-block;
         font-size: 13px;
         line-height: 40px;
-        color: var(--color11);
+        color: var(--color1);
     }
     &-switcher {
         display: inline-block;
@@ -641,7 +554,7 @@ and (max-width: $mobile) {
         font-weight: 700;
         font-size: 12px;
         line-height: 11px;
-        color: $color;
+        color: var(--color1);
     }
     &_active &-icon {
         display: inline-block;
@@ -669,33 +582,6 @@ and (max-width: $mobile) {
         &-link {
             padding: 9px 33px;
             font-size: 14px;
-        }
-    }
-}
-
-
-.form {
-    &-row {
-        display: flex;
-        margin-left: -11px;
-        margin-right: -11px;
-    }
-    &-col-2 {
-        width: 50%;
-        padding-left: 11px;
-        padding-right: 11px;
-    }
-    @media screen
-    and (max-width: $tablet){
-        &-row {
-            flex-direction: column;
-            margin-left: 0;
-            margin-right: 0;
-        }
-        &-col-2 {
-            width: 100%;
-            padding-left: 0;
-            padding-right: 0;
         }
     }
 }

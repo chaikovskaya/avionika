@@ -1,32 +1,21 @@
 
 $mobile: 750px;
 $tablet: 992px;
-$desktop: 1489px;
-$gutters: 140px;
+$desktop: 1310px;
+$gutters: 60px;
 $gutter: calc($gutters/2);
 
-$color: #606060;
-
 :root {
-	--color0: 349;
-	--color1: hsla(var(--color0), 84%, 48%, 1);
-	--color2: #F5F5FB;
-	--color3: #1A2E4F;
-	--color4: #8C94A8;
-	--color5: #282D3C;
-	--color6: #111111;
-	--color7: #333333;
-	--color8: #1F1F1F;
-	--color9: #36187D;
-	--color10: #E0E0E0;
-	--color11: #4F4F4F;
-	--font-family: 'Montserrat';
+	--color1: #1B1B1B;
+	--color2: #111;
+	--color3: #F1F4F8;
+	--color4: #587873;
+	--color5: #ECEFF5;
+	--color6: #009B97;
+	--color7: #C22B6B;
+	--font-common: 'Manrope';
 	--font-size: 15px;
-	--color12: #D1D2DB;
-	--color13: #A3A5B3;
-	--color14: #141414;
-	--color15: #828282;
-	--color16: #1B1B1B;
+	--line-height: 26px;
 }
 
 * {
@@ -48,39 +37,37 @@ html, body {
 }
 
 body {
-    font: 15px/26px 'Montserrat', Arial, sans-serif;
-	font-family: var(--font-family);
-	font-size: var(--font-size);
-    color: $color;
+    font: var(--font-size)/var(--line-height) var(--font-common), sans-serif;
+    color: var(--color1);
 	background-color: #fff;
 }
 
 h1,
 .h1 {
     margin-bottom: 24px;
-	font: 600 36px/41px 'Montserrat', sans-serif;
-	color: var(--color6);
+	font: 600 32px/42px var(--font-common), sans-serif;
+	color: var(--color2);
 }
 
 h2,
 .h2 {
 	margin-bottom: 21px;
-	font: 600 30px/42px 'Montserrat', sans-serif;
-	color: var(--color6);
+	font: 600 30px/42px var(--font-common), sans-serif;
+	color: var(--color2);
 }
 
 h3,
 .h3 {
 	margin-bottom: 15px;
-    font: 600 18px/29px 'Montserrat', sans-serif;
-	color: var(--color6);
+    font: 600 18px/29px var(--font-common), sans-serif;
+	color: var(--color2);
 }
 
 h4,
 .h4 {
 	margin-bottom: 15px;
-    font: 600 15px/24px 'Montserrat', sans-serif;
-	color: var(--color6);
+    font: 600 15px/24px var(--font-common), sans-serif;
+	color: var(--color2);
 }
 
 .table {
@@ -285,7 +272,7 @@ blockquote {
 	cite {
 		font-size: 15px;
 		font-style: normal;
-		color: $color;
+		color: var(--color1);
 	}
 }
 

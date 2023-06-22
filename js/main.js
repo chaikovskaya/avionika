@@ -613,24 +613,6 @@ function initNumerator() {
     });
 }
 
-function initAnimateNumerator() {
-    var wow = new WOW(
-        {
-            boxClass:     'js-animate-section-numerator',
-            animateClass: 'animated-section',
-            offset:       0,
-            mobile:       true,
-            live:         true,
-            callback:     function(box) {
-                initNumerator();
-            },
-            scrollContainer: null,
-            resetAnimation: false,
-        }
-    );
-    wow.init();
-}
-
 var sliderSpecialists;
 function initSliderSpecialists() {
     jQuery('.js-slider-specialists').each(function() {
@@ -1693,7 +1675,6 @@ $(document).ready(function () {
     initSliderMainBanner();
     initSliderServices();
     initSliderActions();
-    initAnimateNumerator();
     initSliderSpecialists();
     initSliderTariffs();
     initSliderProjects();
