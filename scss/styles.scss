@@ -13,6 +13,7 @@ $gutter: calc($gutters/2);
 	--color5: #ECEFF5;
 	--color6: #009B97;
 	--color7: #C22B6B;
+	--color8: #DADADD;
 	--font-common: 'Manrope';
 	--font-size: 15px;
 	--line-height: 26px;
@@ -342,7 +343,7 @@ blockquote {
 	background-color: transparent;
 }
 .simplebar-scrollbar:before {
-	background: var(--color10);
+	background: var(--color8);
 	border-radius: 5px;
 }
 .simplebar-scrollbar.simplebar-visible:before {
