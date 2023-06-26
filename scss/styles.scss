@@ -1,8 +1,8 @@
 
-$mobile: 750px;
+$mobile: 770px;
 $tablet: 992px;
 $desktop: 1310px;
-$gutters: 60px;
+$gutters: 80px;
 $gutter: calc($gutters/2);
 
 :root {
@@ -14,6 +14,7 @@ $gutter: calc($gutters/2);
 	--color6: #009B97;
 	--color7: #C22B6B;
 	--color8: #DADADD;
+	--color9: #33AFAC;
 	--font-common: 'Manrope';
 	--font-size: 15px;
 	--line-height: 26px;
@@ -621,18 +622,17 @@ blockquote {
 }
 .swiper-pagination-bullet {
 	left: 0!important;
-	width: 13px;
-	height: 4px;
-	background-color: #DEDEE8;
-	opacity: 1;
+	width: 11px;
+	height: 11px;
+	background-color: var(--color9);
+	opacity: 0.11;
 	transition: width 0.3s linear;
-	margin-right: 2px!important;
-	margin-left: 2px!important;
-	border-radius: 2px;
+	margin-right: 4px!important;
+	margin-left: 4px!important;
+	border-radius: 50%;
 }
 .swiper-pagination-bullet-active {
-	background-color: #9090A4;
-	width: 26px;
+	opacity: 1;
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
 	transform: none;
@@ -652,9 +652,6 @@ blockquote {
 
 @media screen
 and (max-width: $tablet) {
-	.swiper-pagination-bullet-active {
-		width: 26px;
-	}
 }
 /* /swiper */
 
@@ -960,12 +957,6 @@ and (max-width: $desktop){
 
 @media screen
 and (max-width: $tablet){
-	$gutters: 60px;
-	$gutter: calc($gutters/2);
-	.container {
-		padding-left: $gutter;
-		padding-right: $gutter;
-	}
 	h1,
 	.h1 {
 		margin-bottom: 18px;
@@ -992,6 +983,10 @@ and (max-width: $tablet){
 
 @media screen
 and (max-width: $mobile){
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
 	.img-right {
 		float: none;
 		margin-left: 0;

@@ -253,22 +253,23 @@ function initSliderMainBanner() {
             },
             slidesPerView: 1,
             threshold: 10,
-            spaceBetween: 15,
             lazy: true,
             breakpoints: {
                 0: {
                     simulateTouch: false,
+                    spaceBetween: 15,
                 },
                 750: {
+                    spaceBetween: 25,
                 },
                 992: {
+                    spaceBetween: 30,
                 },
             },
             on: {
                 beforeInit: function () {
                 },
                 init: function () {
-                    initPopupCallback();
                 },
                 slideChangeTransitionEnd: function () {
                 },

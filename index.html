@@ -70,9 +70,229 @@
             </div>
             <div class="header-main">
                 <div class="header-main-container container">
+                    <div class="mob-menu JS-MobileMenu" data-mobilemenu="{
+                        'classActive': 'open',
+                        'classShow': 'mob-menu-show',
+                        'classElementActive': 'mob-menu_active',
+                        'backgroundDisabled': 'true'
+                    }">
+                        <a class="mob-menu-switcher JS-MobileMenu-Burger" href="javascript:;">
+                            <svg class="mob-menu-switcher-icon" width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.375 0.833252H21.7917" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.375 8.125H21.7917" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.375 15.4165H21.7917" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <div class="mob-block JS-MobileMenu-Dropdown">
+                            <div class="mob-close-panel">
+                                <a class="header-contacts-location js-popup-city" href="javascript:;" data-src="./ajax/city.html">
+                                    <svg class="header-contacts-icon" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.3371 6.50644L8.70948 15.4436C8.72189 15.7413 9.1139 15.8408 9.26676 15.5849L17.7635 1.363C17.8903 1.15077 17.7204 0.884881 17.4745 0.910782L1.10302 2.63558C0.798487 2.66766 0.732055 3.08174 1.01127 3.20747L8.3371 6.50644ZM8.3371 6.50644L8.3371 7.02755" stroke="#111111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg><span class="header-contacts-label">Пенза</span>
+                                    <svg class="header-contacts-arrow" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 3.49401L0.825613 0L0 0.775135L4.5 5L9 0.775135L8.17439 0L5.08388 2.90155L4.5 3.49401Z" fill="#111111"/>
+                                    </svg>
+                                </a>
+                                <a class="mob-menu-switcher-close JS-MobileMenu-Close" href="javascript:;">
+                                    <svg class="mob-menu-close-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.40844 6.00044L10.9422 2.46669C11.1165 2.27669 11.2107 2.02671 11.2051 1.76892C11.1995 1.51114 11.0946 1.26547 10.9122 1.08321C10.7298 0.90094 10.4841 0.796161 10.2263 0.790739C9.9685 0.785316 9.71857 0.879671 9.52869 1.05411L9.5296 1.05319L5.99585 4.58694L2.4621 1.05319C2.2721 0.878878 2.02212 0.784685 1.76434 0.790274C1.50655 0.795864 1.26088 0.900803 1.07862 1.08319C0.896354 1.26557 0.791574 1.5113 0.786152 1.76909C0.78073 2.02688 0.875085 2.2768 1.04952 2.46669L1.0486 2.46577L4.58235 5.99952L1.0486 9.53327C0.949179 9.62449 0.869241 9.73488 0.813601 9.8578C0.757961 9.98072 0.727769 10.1136 0.724844 10.2485C0.72192 10.3834 0.746322 10.5175 0.796582 10.6427C0.846842 10.768 0.921921 10.8817 1.0173 10.9771C1.11268 11.0726 1.22638 11.1477 1.35156 11.1981C1.47675 11.2484 1.61083 11.2729 1.74572 11.2701C1.88062 11.2672 2.01355 11.2371 2.13651 11.1816C2.25946 11.126 2.36991 11.0461 2.46119 10.9468L2.4621 10.9459L5.99585 7.41211L9.5296 10.9459C9.62082 11.0453 9.73121 11.1252 9.85413 11.1809C9.97705 11.2365 10.11 11.2667 10.2449 11.2696C10.3798 11.2725 10.5138 11.2481 10.6391 11.1979C10.7643 11.1476 10.878 11.0725 10.9735 10.9772C11.0689 10.8818 11.1441 10.7681 11.1944 10.6429C11.2447 10.5177 11.2692 10.3836 11.2664 10.2487C11.2636 10.1138 11.2335 9.98091 11.1779 9.85795C11.1223 9.735 11.0425 9.62455 10.9431 9.53327L10.9422 9.53236L7.40844 6.00044Z" fill="#E11439"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="mob-nav">
+                                <ul class="mob-list">
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Каталог</a>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link JS-MobileMenu-Parent" href="javascript:;">
+                                            О компании<svg class="mob-list-icon" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.50785 4.5L0.00066328 8.17439L0.778723 9L5.01953 4.5L0.778723 0L0.00066328 0.825614L2.91316 3.91612L3.50785 4.5Z" fill="black"/>
+                                        </svg>
+                                        </a>
+                                        <div class="mob-child JS-MobileMenu-Child">
+                                            <div class="mob-back">
+                                                <a class="mob-back-link JS-MobileMenu-Back" href="javascript:;">
+                                                    <svg class="mob-back-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.834 4.35C13.193 4.35 13.484 4.64101 13.484 5C13.484 5.35899 13.193 5.65 12.834 5.65V4.35ZM0.846271 5.45962C0.59243 5.20578 0.59243 4.79422 0.846271 4.54038L4.98285 0.403806C5.23669 0.149965 5.64824 0.149965 5.90208 0.403806C6.15592 0.657647 6.15592 1.0692 5.90208 1.32304L2.22513 5L5.90208 8.67696C6.15592 8.9308 6.15592 9.34235 5.90208 9.59619C5.64824 9.85003 5.23669 9.85003 4.98285 9.59619L0.846271 5.45962ZM12.834 5.65L1.30589 5.65V4.35L12.834 4.35V5.65Z" fill="#000000"/>
+                                                    </svg>Назад
+                                                </a>
+                                                <a class="mob-menu-switcher-close JS-MobileMenu-Close" href="javascript:;">
+                                                    <i class="mob-menu-close-icon icon icon_close"></i>
+                                                </a>
+                                            </div>
+                                            <a class="mob-list-current" href="#">О компании</a>
+                                            <ul class="mob-list mob-list-child">
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Салоны с приемом</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Бренды</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Покупки онлайн</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Салоны с приемом</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Бренды</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Покупки онлайн</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link JS-MobileMenu-Parent" href="#">
+                                            Клиентам<svg class="mob-list-icon" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.50785 4.5L0.00066328 8.17439L0.778723 9L5.01953 4.5L0.778723 0L0.00066328 0.825614L2.91316 3.91612L3.50785 4.5Z" fill="black"/>
+                                        </svg>
+                                        </a>
+                                        <div class="mob-child JS-MobileMenu-Child">
+                                            <div class="mob-back">
+                                                <a class="mob-back-link JS-MobileMenu-Back" href="javascript:;">
+                                                    <svg class="mob-back-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.834 4.35C13.193 4.35 13.484 4.64101 13.484 5C13.484 5.35899 13.193 5.65 12.834 5.65V4.35ZM0.846271 5.45962C0.59243 5.20578 0.59243 4.79422 0.846271 4.54038L4.98285 0.403806C5.23669 0.149965 5.64824 0.149965 5.90208 0.403806C6.15592 0.657647 6.15592 1.0692 5.90208 1.32304L2.22513 5L5.90208 8.67696C6.15592 8.9308 6.15592 9.34235 5.90208 9.59619C5.64824 9.85003 5.23669 9.85003 4.98285 9.59619L0.846271 5.45962ZM12.834 5.65L1.30589 5.65V4.35L12.834 4.35V5.65Z" fill="#000000"/>
+                                                    </svg>Назад
+                                                </a>
+                                                <a class="mob-menu-switcher-close JS-MobileMenu-Close" href="javascript:;">
+                                                    <i class="mob-menu-close-icon icon icon_close"></i>
+                                                </a>
+                                            </div>
+                                            <a class="mob-list-current" href="#">Клиентам</a>
+                                            <ul class="mob-list mob-list-child">
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Доставка</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Оплата</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Онлайн-оплата</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Бренды</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Возврат товара</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Консультация</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link JS-MobileMenu-Parent" href="javascript:;">
+                                            Услуги<svg class="mob-list-icon" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.50785 4.5L0.00066328 8.17439L0.778723 9L5.01953 4.5L0.778723 0L0.00066328 0.825614L2.91316 3.91612L3.50785 4.5Z" fill="black"/>
+                                        </svg>
+                                        </a>
+                                        <div class="mob-child JS-MobileMenu-Child">
+                                            <div class="mob-back">
+                                                <a class="mob-back-link JS-MobileMenu-Back" href="javascript:;">
+                                                    <svg class="mob-back-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.834 4.35C13.193 4.35 13.484 4.64101 13.484 5C13.484 5.35899 13.193 5.65 12.834 5.65V4.35ZM0.846271 5.45962C0.59243 5.20578 0.59243 4.79422 0.846271 4.54038L4.98285 0.403806C5.23669 0.149965 5.64824 0.149965 5.90208 0.403806C6.15592 0.657647 6.15592 1.0692 5.90208 1.32304L2.22513 5L5.90208 8.67696C6.15592 8.9308 6.15592 9.34235 5.90208 9.59619C5.64824 9.85003 5.23669 9.85003 4.98285 9.59619L0.846271 5.45962ZM12.834 5.65L1.30589 5.65V4.35L12.834 4.35V5.65Z" fill="#000000"/>
+                                                    </svg>Назад
+                                                </a>
+                                                <a class="mob-menu-switcher-close JS-MobileMenu-Close" href="javascript:;">
+                                                    <i class="mob-menu-close-icon icon icon_close"></i>
+                                                </a>
+                                            </div>
+                                            <a class="mob-list-current" href="#">Услуги</a>
+                                            <ul class="mob-list mob-list-child">
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Врач-ортопед</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Выезд врача ортопеда</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Экспресс-доставка</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Гид по стелькам</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Изготовление стелек</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Партнеры АВИОНИКИ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Гарантии</a>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Новости</a>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Салоны</a>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mob-info">
+                                <div class="mob-info-name">Телефон для связи:</div>
+                                <div class="mob-phone">
+                                    <svg class="mob-phone-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.16575 2.20414C3.22756 2.14232 3.25847 2.11142 3.2857 2.0864C3.95521 1.4712 4.98431 1.4712 5.65382 2.0864C5.68105 2.11142 5.71195 2.14232 5.77377 2.20414L7.04969 3.48006C7.75149 4.18185 7.9522 5.24169 7.55562 6.1515C7.15903 7.06131 7.35975 8.12114 8.06154 8.82294L10.1587 10.9201C10.8605 11.6219 11.9204 11.8227 12.8302 11.4261C13.74 11.0295 14.7998 11.2302 15.5016 11.932L16.7776 13.2079C16.8394 13.2697 16.8703 13.3006 16.8953 13.3279C17.5105 13.9974 17.5105 15.0265 16.8953 15.696C16.8703 15.7232 16.8394 15.7541 16.7776 15.8159L16.002 16.5915C15.3704 17.2231 14.46 17.4882 13.5881 17.2944C7.64717 15.9742 3.00746 11.3345 1.68726 5.39362C1.4935 4.52172 1.75863 3.61126 2.3902 2.97969L3.16575 2.20414Z" stroke="#111111" stroke-width="1.4"/>
+                                    </svg>
+                                    <div class="mob-phone-value">
+                                        <a href="tel:+78007077258">8 800 707 72 58</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mob-info">
+                                <div class="mob-callback">
+                                    <div class="mob-callback-label">Написать в мессенджер</div>
+                                    <ul class="socials">
+                                        <li class="socials-item">
+                                            <a class="socials-link" href="#">
+                                                <img class="socials-icon" src="./images/icons/socials/whatsapp-icon.svg" alt="" />
+                                            </a>
+                                        </li>
+                                        <li class="socials-item">
+                                            <a class="socials-link" href="#">
+                                                <img class="socials-icon" src="./images/icons/socials/vk-icon.svg" alt="" />
+                                            </a>
+                                        </li>
+                                        <li class="socials-item">
+                                            <a class="socials-link" href="#">
+                                                <img class="socials-icon" src="./images/icons/socials/tg-icon.svg" alt="" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mob-menu-decor JS-MobileMenu-Close"></div>
+                    </div>
                     <a href="/" class="header-logo">
                         <img class="header-logo-img" src="./images/company-logo.svg" alt="" />
                     </a>
+                    <a href="#" class="header-location-mob">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" fill="white"/>
+                            <path d="M12.0009 13.4299C13.724 13.4299 15.1209 12.0331 15.1209 10.3099C15.1209 8.58681 13.724 7.18994 12.0009 7.18994C10.2777 7.18994 8.88086 8.58681 8.88086 10.3099C8.88086 12.0331 10.2777 13.4299 12.0009 13.4299Z" fill="white"/>
+                            <path d="M3.61971 8.49C5.58971 -0.169998 18.4197 -0.159997 20.3797 8.5C21.5297 13.58 18.3697 17.88 15.5997 20.54C11.9996 23.9971 12.7996 24.7901 8.38971 20.54C5.62971 17.88 2.46971 13.57 3.61971 8.49Z" fill="#C22B6B"/>
+                            <circle cx="12" cy="10" r="3" fill="white"/>
+                        </svg>
+                    </a>
+                    <div class="header-main-phone">
+                        <div class="header-phone">
+                            <a href="tel:+78007077258">8 800 707 72 58</a>
+                        </div>
+                    </div>
                     <div class="header-search">
                         <div class="search JS-Dropdown" data-dropdown="{
                             'classActive': 'search_active',
@@ -240,6 +460,11 @@
                                 <path d="M1 1H15" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M1 6H15" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M1 11H15" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg class="menu-catalog-icon menu-catalog-icon_mob" width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.375 0.833252H21.7917" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.375 8.125H21.7917" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.375 15.4165H21.7917" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                             <span class="menu-catalog-label">Каталог</span>
                         </a>
@@ -699,8 +924,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="header-phone">
-                        <a href="tel:+78007077258">8 800 707 72 58</a>
+                    <div class="header-main-menu-phone">
+                        <div class="header-phone">
+                            <a href="tel:+78007077258">8 800 707 72 58</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -708,7 +935,41 @@
 
         <main class="main-content">
 
-
+            <div class="main-banner container">
+                <div class="main-banner-block js-slider-main-banner">
+                    <div class="main-banner-inner js-slider-list">
+                        <div class="main-banner-list swiper-wrapper">
+                            <div class="main-banner-item swiper-slide">
+                                <div class="main-banner-detail">
+                                    <!-- Если блок main-banner-preface пустой, НЕ удалять тег! -->
+                                    <div class="main-banner-preface">Компания Авионика</div>
+                                    <div class="main-banner-name">Встречаем весну в новой обуви  Berkemenn</div>
+                                    <div class="main-banner-info content">В магазинах и онлайн для комфортности ваших ног, консультация врача-ортопеда в подарок!</div>
+                                    <div class="main-banner-actions">
+                                        <a class="main-banner-button button button_light" href="#">Смотреть</a>
+                                    </div>
+                                </div>
+                                <div class="main-banner-img">
+                                    <img class="main-banner-pic" src="./images/main-banner/main-banner-img-1.jpg" loading="lazy" alt="" />
+                                </div>
+                            </div>
+                            <div class="main-banner-item main-banner-item_even swiper-slide">
+                                <div class="main-banner-detail">
+                                    <div class="main-banner-preface">Компания Авионика</div>
+                                    <div class="main-banner-name">Встречаем весну в новой обуви  Berkemenn</div>
+                                    <div class="main-banner-actions">
+                                        <a class="main-banner-button button button_light" href="#">Смотреть</a>
+                                    </div>
+                                </div>
+                                <div class="main-banner-img">
+                                    <img class="main-banner-pic" src="./images/main-banner/main-banner-img-1.jpg" loading="lazy" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-pagination js-slider-pagination"></div>
+                </div>
+            </div>
 
 
 
