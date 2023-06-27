@@ -21,9 +21,9 @@
 
   MobileMenu.prototype.__construct = function(){
     this.$document = jQuery('body');
-    this.$burger = this.$element.find('.JS-MobileMenu-Burger');
+    this.$burger = this.$element.find('.JS-MobileMenu-Burger').first();
     this.$close = this.$element.find('.JS-MobileMenu-Close');
-    this.$dropdown = this.$element.find('.JS-MobileMenu-Dropdown');
+    this.$dropdown = this.$element.find('.JS-MobileMenu-Dropdown').first();
     this.$child = this.$element.find('.JS-MobileMenu-Child');
     this.$parent = this.$element.find('.JS-MobileMenu-Parent');
     this.$back = this.$element.find('.JS-MobileMenu-Back');

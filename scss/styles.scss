@@ -15,6 +15,9 @@ $gutter: calc($gutters/2);
 	--color7: #C22B6B;
 	--color8: #DADADD;
 	--color9: #33AFAC;
+	--color10: #000;
+	--color11: #333;
+	--color12: #4F4F4F;
 	--font-common: 'Manrope';
 	--font-size: 15px;
 	--line-height: 26px;
@@ -145,7 +148,7 @@ ol {
 }
 
 b {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 *::before, *::after{
@@ -190,7 +193,7 @@ button {
     cursor: pointer;
     border: 0;
     outline: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-common), sans-serif;
 }
 
 input,
@@ -201,7 +204,7 @@ textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-    font-family: 'Montserrat', sans-serif;
+	font-family: var(--font-common), sans-serif;
 }
 
 fieldset {

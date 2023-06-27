@@ -234,7 +234,8 @@ label.form-error {
     color: #FFFFFF;
     font-size: 15px;
     line-height: 1.2em;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.15px;
     @include bgrcolor();
     &:hover {
         color: #FFFFFF;
@@ -259,6 +260,9 @@ label.form-error {
     }
     @media screen
     and (max-width: $tablet){
+        padding: 10px 10px;
+        font-size: 14px;
+        letter-spacing: 0.14px;
     }
     @media screen
     and (max-width: $mobile){
