@@ -330,7 +330,10 @@
     &_active &-container {
         display: block;
     }
-    &-block {}
+    &-block {
+        max-height: calc(100vh - 197px);
+        overflow: auto;
+    }
     &-list {
         display: flex;
         flex-wrap: wrap;
@@ -389,6 +392,9 @@
     @media screen
     and (max-width: $tablet){
         margin-right: 33px;
+        &-block {
+            max-height: calc(100vh - 128px);
+        }
         &-container {
             padding-top: 25px;
             padding-bottom: 20px;

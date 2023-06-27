@@ -2235,6 +2235,10 @@ label.form-error {
 .menu-catalog_active .menu-catalog-container {
   display: block;
 }
+.menu-catalog-block {
+  max-height: calc(100vh - 197px);
+  overflow: auto;
+}
 .menu-catalog-list {
   display: flex;
   flex-wrap: wrap;
@@ -2292,6 +2296,9 @@ label.form-error {
 @media screen and (max-width: 992px) {
   .menu-catalog {
     margin-right: 33px;
+  }
+  .menu-catalog-block {
+    max-height: calc(100vh - 128px);
   }
   .menu-catalog-container {
     padding-top: 25px;
