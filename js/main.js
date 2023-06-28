@@ -449,6 +449,72 @@ function initSliderActions() {
     });
 }
 
+var sliderPopular;
+function initSliderPopular() {
+    jQuery('.js-slider-popular').each(function() {
+        var $slider = $(this),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $list = $slider.find('.js-slider-list'),
+            $nextButton = $slider.find('.js-slider-next')[0],
+            $prevButton = $slider.find('.js-slider-prev')[0],
+            $pagination = $slider.find('.js-slider-pagination')[0];
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderPopular = new Swiper($list[0], {
+            loop: isStart,
+            pagination: {
+                el: $pagination,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: $nextButton,
+                prevEl: $prevButton,
+                disabledClass: "slider-button_disabled",
+            },
+            threshold: 10,
+            lazy: true,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 20,
+                    slidesPerView: 2,
+                    loop: sliderLength > 2 ? true : false,
+                },
+                770: {
+                    spaceBetween: 25,
+                    slidesPerView: 3,
+                    loop: sliderLength > 3 ? true : false,
+                },
+                992: {
+                    spaceBetween: 30,
+                    slidesPerView: 4,
+                    loop: sliderLength > 4 ? true : false,
+                },
+                1310: {
+                    spaceBetween: 30,
+                    slidesPerView: 5,
+                    loop: sliderLength > 5 ? true : false,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+function reInitSliderPopular() {
+    if (sliderPopular) {
+        sliderPopular.destroy();
+    }
+    sliderPopular = undefined;
+}
+
 var sliderProducts;
 function initSliderProducts() {
     jQuery('.js-slider-products').each(function() {
@@ -488,6 +554,11 @@ function initSliderProducts() {
                 },
                 992: {
                     spaceBetween: 30,
+                    slidesPerView: 4,
+                    loop: sliderLength > 4 ? true : false,
+                },
+                1310: {
+                    spaceBetween: 30,
                     slidesPerView: 5,
                     loop: sliderLength > 5 ? true : false,
                 },
@@ -509,10 +580,19 @@ function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
         GLOBAL.widthWindow = 'isMobile';
+        if (sliderPopular) {
+            reInitSliderPopular();
+        }
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
+        if (sliderPopular == undefined) {
+            initSliderPopular();
+        }
     } else {
         GLOBAL.widthWindow = '';
+        if (sliderPopular == undefined) {
+            initSliderPopular();
+        }
     }
 }
 
