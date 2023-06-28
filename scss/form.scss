@@ -228,13 +228,12 @@ label.form-error {
     border-radius: 21px;
     -webkit-appearance: none;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
     background-color: var(--color6);
     text-transform: uppercase;
     color: #FFFFFF;
     font-size: 15px;
     line-height: 1.2em;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.15px;
     @include bgrcolor();
     &:hover {
@@ -255,14 +254,30 @@ label.form-error {
         }
     }
 
+    &_simple {
+        font-weight: 600;
+        background-color: var(--color16);
+        color: var(--color6);
+        &:hover {
+            background-color: var(--color6);
+            color: #fff;
+            font-weight: 800;
+        }
+    }
+
     @media screen
     and (max-width: $desktop){
     }
     @media screen
     and (max-width: $tablet){
-        padding: 10px 10px;
+        padding: 9px 10px;
         font-size: 14px;
         letter-spacing: 0.14px;
+        &_simple {
+            &:hover {
+                font-weight: 600;
+            }
+        }
     }
     @media screen
     and (max-width: $mobile){

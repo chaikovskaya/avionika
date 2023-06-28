@@ -259,7 +259,7 @@ function initSliderMainBanner() {
                     simulateTouch: false,
                     spaceBetween: 15,
                 },
-                750: {
+                770: {
                     spaceBetween: 25,
                 },
                 992: {
@@ -394,6 +394,117 @@ function initMainmenu() {
     });
 }
 
+var sliderActions;
+function initSliderActions() {
+    jQuery('.js-slider-actions').each(function() {
+        var $slider = $(this),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $list = $slider.find('.js-slider-list'),
+            $nextButton = $slider.find('.js-slider-next')[0],
+            $prevButton = $slider.find('.js-slider-prev')[0],
+            $pagination = $slider.find('.js-slider-pagination')[0];
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderActions = new Swiper($list[0], {
+            loop: isStart,
+            pagination: {
+                el: $pagination,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: $nextButton,
+                prevEl: $prevButton,
+                disabledClass: "slider-button_disabled",
+            },
+            threshold: 10,
+            lazy: true,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    loop: sliderLength > 1 ? true : false,
+                },
+                770: {
+                    spaceBetween: 25,
+                    slidesPerView: 2,
+                    loop: sliderLength > 2 ? true : false,
+                },
+                992: {
+                    spaceBetween: 30,
+                    slidesPerView: 3,
+                    loop: sliderLength > 3 ? true : false,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+
+var sliderProducts;
+function initSliderProducts() {
+    jQuery('.js-slider-products').each(function() {
+        var $slider = $(this),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $list = $slider.find('.js-slider-list'),
+            $nextButton = $slider.find('.js-slider-next')[0],
+            $prevButton = $slider.find('.js-slider-prev')[0],
+            $pagination = $slider.find('.js-slider-pagination')[0];
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderProducts = new Swiper($list[0], {
+            loop: isStart,
+            pagination: {
+                el: $pagination,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: $nextButton,
+                prevEl: $prevButton,
+                disabledClass: "slider-button_disabled",
+            },
+            threshold: 10,
+            lazy: true,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 20,
+                    slidesPerView: 2,
+                    loop: sliderLength > 2 ? true : false,
+                },
+                770: {
+                    spaceBetween: 25,
+                    slidesPerView: 3,
+                    loop: sliderLength > 3 ? true : false,
+                },
+                992: {
+                    spaceBetween: 30,
+                    slidesPerView: 5,
+                    loop: sliderLength > 5 ? true : false,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+
+
 function initResizeWindow() {
     var width = $(window).outerWidth();
     if (width <= GLOBAL.mobile) {
@@ -429,4 +540,6 @@ $(document).ready(function () {
     initFormatPrice();
     initAnchorScroll();
     initMainmenu();
+    initSliderActions();
+    initSliderProducts();
 });
