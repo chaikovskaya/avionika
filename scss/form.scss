@@ -250,7 +250,8 @@ label.form-error {
         background-color: #fff;
         color: var(--color6);
         &:hover {
-            color: var(--color6);
+            color: #fff;
+            background-color: var(--color7);
         }
     }
 
@@ -265,18 +266,31 @@ label.form-error {
         }
     }
 
+    &_white {
+        background-color: #fff;
+        color: var(--color13);
+        &:hover {
+            color: #fff;
+            background-color: var(--color13);
+        }
+    }
+
     @media screen
     and (max-width: $desktop){
     }
     @media screen
     and (max-width: $tablet){
-        padding: 9px 10px;
+        padding: 9px 23px;
         font-size: 14px;
+        font-weight: 600;
         letter-spacing: 0.14px;
         &_simple {
             &:hover {
                 font-weight: 600;
             }
+        }
+        &_light {
+            font-weight: 800;
         }
     }
     @media screen
@@ -292,8 +306,8 @@ label.form-error {
     height: 40px;
     border-radius: 50em;
     background-color: transparent;
-    padding: 4px 23px 6px;
-    border: 1px solid #333;
+    padding: 7px 19px 8px 17px;
+    border: 1px solid var(--color6);
 }
 .selectric .label {
     margin: 0;
@@ -357,18 +371,18 @@ label.form-error {
     min-width: 10px;
     width: 10px;
     height: 7px;
-    background: url("../images/header/arrow-bottom-icon.svg") no-repeat 0 0;
+    background: url("../images/products/arrow-bottom-icon.svg") no-repeat 0 0;
     background-size: 100% auto;
     transition: transform 0.2s ease-in-out 0s;
 }
 .selectric-hover .selectric {
-    border-color: #333;
+    border-color: var(--color6);
 }
 .selectric-focus .selectric {
-    border-color: #333;
+    border-color: var(--color6);
 }
 .selectric-open .selectric {
-    border-color: #333;
+    border-color: var(--color6);
 }
 .selectric-open .selectric-button {
     margin-top: -1px;
@@ -394,12 +408,13 @@ label.form-error {
 @media screen
 and (max-width: $tablet) {
     .selectric {
-        height: 30px;
-        padding: 5px 19px 5px 18px;
+        height: 35px;
     }
     .selectric .label {
-        font-size: 12px;
-        line-height: 16px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--color14);
     }
 }
 
@@ -439,6 +454,7 @@ and (max-width: $mobile) {
         padding-left: 5px;
     }
     .selectric-open {
+        z-index: 1200;
         &:after {
             content: '';
             position: fixed;
@@ -452,6 +468,7 @@ and (max-width: $mobile) {
     }
     .selectric-open .selectric-items {
         bottom: 0;
+        padding-bottom: 25px;
     }
 }
 /*selectric*/

@@ -1,7 +1,7 @@
 
 $mobile: 770px;
 $tablet: 992px;
-$desktop: 1310px;
+$desktop: 1330px;
 $gutters: 80px;
 $gutter: calc($gutters/2);
 
@@ -998,34 +998,6 @@ and (max-width: $mobile){
 	}
 }
 /* /-show-more */
-
-.video {
-	display: block;
-	position: relative;
-	margin-bottom: 52px;
-	height: 436px;
-	border-radius: 30px;
-	overflow: hidden;
-	&-pic {
-		display: block;
-		width: 100%;
-		height: 100%!important;
-		object-fit: cover;
-	}
-	&:hover .play {
-		background-color: hsla(var(--color0), 89%, 55%, 1);
-	}
-	&:active .play {
-		background-color: hsla(var(--color0), 82%, 44%, 1);
-	}
-
-	@media screen
-	and (max-width: $tablet){
-		height: 260px;
-		margin-bottom: 55px;
-		border-radius: 25px;
-	}
-}
 
 /* IE 11 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
