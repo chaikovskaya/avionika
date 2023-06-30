@@ -673,6 +673,138 @@ function initAnimateNumerator() {
     wow.init();
 }
 
+var sliderBrands;
+function initSliderBrands() {
+    jQuery('.js-slider-brands').each(function() {
+        var $slider = $(this),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $list = $slider.find('.js-slider-list'),
+            $nextButton = $slider.find('.js-slider-next')[0],
+            $prevButton = $slider.find('.js-slider-prev')[0],
+            $pagination = $slider.find('.js-slider-pagination')[0];
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderBrands = new Swiper($list[0], {
+            loop: isStart,
+            pagination: {
+                el: $pagination,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: $nextButton,
+                prevEl: $prevButton,
+                disabledClass: "slider-button_disabled",
+            },
+            threshold: 10,
+            lazy: true,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 20,
+                    slidesPerView: 2,
+                    loop: sliderLength > 2 ? true : false,
+                },
+                770: {
+                    spaceBetween: 25,
+                    slidesPerView: 4,
+                    loop: sliderLength > 4 ? true : false,
+                },
+                992: {
+                    spaceBetween: 30,
+                    slidesPerView: 5,
+                    loop: sliderLength > 5 ? true : false,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+function reInitSliderBrands() {
+    if (sliderBrands) {
+        sliderBrands.destroy();
+    }
+    sliderBrands = undefined;
+}
+
+function initShowMoreBrands(showmoreExtra) {
+    if (typeof(ShowMore) === 'undefined' || !jQuery.isFunction(ShowMore)) {
+        return false;
+    }
+    var common = {
+            start: function () {},
+            toggle: function () {}
+        },
+        showmoreExtra = showmoreExtra || {};
+
+    $('.JS-ShowMore-Brands').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('showmore'));
+        new ShowMore(this, jQuery.extend({}, common, local, showmoreExtra));
+    });
+}
+
+var sliderNews;
+function initSliderNews() {
+    jQuery('.js-slider-news').each(function() {
+        var $slider = $(this),
+            sliderLength = $slider.find('.swiper-slide').length,
+            $list = $slider.find('.js-slider-list'),
+            $nextButton = $slider.find('.js-slider-next')[0],
+            $prevButton = $slider.find('.js-slider-prev')[0],
+            $pagination = $slider.find('.js-slider-pagination')[0];
+
+        var isStart = sliderLength > 1 ? true : false;
+
+        sliderNews = new Swiper($list[0], {
+            loop: isStart,
+            pagination: {
+                el: $pagination,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: $nextButton,
+                prevEl: $prevButton,
+                disabledClass: "slider-button_disabled",
+            },
+            threshold: 10,
+            lazy: true,
+            breakpoints: {
+                0: {
+                    simulateTouch: false,
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    loop: sliderLength > 1 ? true : false,
+                },
+                770: {
+                    spaceBetween: 25,
+                    slidesPerView: 2,
+                    loop: sliderLength > 2 ? true : false,
+                },
+                992: {
+                    spaceBetween: 30,
+                    slidesPerView: 3,
+                    loop: sliderLength > 3 ? true : false,
+                },
+            },
+            on: {
+                beforeInit: function () {
+                },
+                init: function () {
+                },
+                slideChangeTransitionEnd: function () {
+                },
+            },
+        });
+    });
+}
+
 
 function initResizeWindow() {
     var width = $(window).outerWidth();
@@ -681,15 +813,25 @@ function initResizeWindow() {
         if (sliderPopular) {
             reInitSliderPopular();
         }
+        if (sliderBrands) {
+            reInitSliderBrands();
+        }
+        initShowMoreBrands();
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
         if (sliderPopular == undefined) {
             initSliderPopular();
         }
+        if (sliderBrands == undefined) {
+            initSliderBrands();
+        }
     } else {
         GLOBAL.widthWindow = '';
         if (sliderPopular == undefined) {
             initSliderPopular();
+        }
+        if (sliderBrands == undefined) {
+            initSliderBrands();
         }
     }
 }
@@ -722,4 +864,5 @@ $(document).ready(function () {
     initSliderProducts();
     initAnimateNumerator();
     initSliderActionsAll();
+    initSliderNews();
 });

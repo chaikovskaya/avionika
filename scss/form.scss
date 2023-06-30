@@ -1,6 +1,4 @@
 
-$colorPlaceholder: #606060;
-
 .field {
     display: flex;
     flex-direction: column;
@@ -17,27 +15,25 @@ $colorPlaceholder: #606060;
 .input {
     margin-top: auto;
     width: 100%;
-    height: 40px;
+    height: 42px;
     padding: 6px 22px 7px;
-    color: #333333;
+    color: var(--color18);
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
-    border: 1px solid var(--color1);
-    border-radius: 20px;
+    border-radius: 50em;
     background-color: #fff;
     &:focus {
-        color: var(--color7);
-        border-color: var(--color1);
+        color: var(--color18);
     }
     &::placeholder {
         font-size: 15px;
-        color: $colorPlaceholder;
+        color: var(--color18);
     }
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus {
-        -webkit-text-fill-color: $colorPlaceholder;
+        -webkit-text-fill-color: var(--color18);
         transition: background-color 1s ease-in-out 0s;
     }
 
@@ -46,7 +42,7 @@ $colorPlaceholder: #606060;
         width: 100%;
         min-height: 40px;
         max-height: 160px;
-        padding-top: 7px;
+        padding-top: 9px;
         resize: none;
         transition: height 0.3s ease-in-out 0s;
     }
@@ -272,6 +268,17 @@ label.form-error {
         &:hover {
             color: #fff;
             background-color: var(--color13);
+        }
+    }
+
+    &_modified {
+        border: 1px solid var(--color6);
+        color: var(--color6);
+        text-transform: none;
+        background-color: transparent;
+        &:hover {
+            color: var(--color6);
+            background-color: transparent;
         }
     }
 
@@ -525,7 +532,7 @@ and (max-width: $mobile) {
         opacity: 0;
     }
     &-checkbox:checked + &-decor {
-        background-color: var(--color1);
+        background-color: var(--color6);
     }
     &-checkbox:checked + &-decor &-icon {
         left: 19px;
@@ -623,6 +630,32 @@ and (max-width: $mobile) {
         &-link {
             padding: 9px 33px;
             font-size: 14px;
+        }
+    }
+}
+
+.form {
+    &-row {
+        display: flex;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &-col-2 {
+        width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media screen
+    and (max-width: $mobile){
+        &-row {
+            flex-direction: column;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &-col-2 {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
