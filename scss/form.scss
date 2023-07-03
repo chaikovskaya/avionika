@@ -2,13 +2,29 @@
 .field {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    &_simple {
+        margin-top: 27px;
+        margin-bottom: 23px;
+    }
+    &-button {
+        margin-bottom: 25px;
+    }
 
     @media screen
     and (max-width: $tablet){
+        margin-bottom: 18px;
+        &_simple {
+            margin-top: 23px;
+            margin-bottom: 23px;
+        }
     }
     @media screen
     and (max-width: $mobile){
+        &_simple {
+            margin-top: 26px;
+            margin-bottom: 13px;
+        }
     }
 }
 
@@ -16,15 +32,15 @@
     margin-top: auto;
     width: 100%;
     height: 42px;
-    padding: 6px 22px 7px;
-    color: var(--color18);
+    padding: 6px 24px 7px;
+    color: var(--color11);
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
-    border-radius: 50em;
+    border-radius: 21px;
     background-color: #fff;
     &:focus {
-        color: var(--color18);
+        color: var(--color11);
     }
     &::placeholder {
         font-size: 15px;
@@ -35,6 +51,13 @@
     &:-webkit-autofill:focus {
         -webkit-text-fill-color: var(--color18);
         transition: background-color 1s ease-in-out 0s;
+    }
+
+    &_simple {
+        border: 1px solid var(--color20);
+        &:focus {
+            border-color: var(--color6);
+        }
     }
 
     &_textarea {
@@ -50,11 +73,12 @@
     @media screen
     and (max-width: $tablet){
         height: 35px;
-        padding-left: 19px;
-        padding-right: 19px;
+        padding-left: 18px;
+        padding-right: 18px;
         font-size: 13px;
         line-height: 16px;
         font-weight: 500;
+        border-radius: 18px;
         &::placeholder {
             font-size: 13px;
         }
@@ -112,17 +136,15 @@ label.form-error {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: 17px;
-        width: 17px;
-        height: 17px;
+        min-width: 20px;
+        width: 20px;
+        height: 20px;
         line-height: 17px;
-        margin-top: 1px;
-        margin-right: 10px;
-        background-color: #fff;
-        border: 1px solid #333333;
+        background-color: var(--color6);
         font-size: 10px;
         color: transparent;
         text-align: center;
+        border-radius: 2px;
         &:before {
         }
         &:hover {
@@ -136,11 +158,9 @@ label.form-error {
     }
     &-icon {
         visibility: hidden;
-        width: 10px;
-        height: 8px;
-        margin-top: -1px;
-        margin-left: 1px;
-        background: url("../images/catalog/catalog-icons/check.svg") no-repeat 0 0;
+        width: 12px;
+        height: 9px;
+        background: url("../images/icons/check-icon.svg") no-repeat 0 0;
     }
     &-input:checked + &-check &-icon {
         visibility: visible;
@@ -216,7 +236,7 @@ label.form-error {
 
 .button {
     display: inline-block;
-    padding: 12px 26px 12px;
+    padding: 12px 30px 12px;
     text-decoration: none;
     white-space: nowrap;
     border: 0;
@@ -234,6 +254,7 @@ label.form-error {
     @include bgrcolor();
     &:hover {
         color: #FFFFFF;
+        background-color: var(--color7);
     }
     &:active {
     }
@@ -287,10 +308,9 @@ label.form-error {
     }
     @media screen
     and (max-width: $tablet){
-        padding: 9px 23px;
+        padding: 9px 25px;
         font-size: 14px;
         font-weight: 600;
-        letter-spacing: 0.14px;
         &_simple {
             &:hover {
                 font-weight: 600;
@@ -490,10 +510,10 @@ and (max-width: $mobile) {
         display: inline-block;
         vertical-align: middle;
         position: relative;
-        width: 35px;
-        min-width: 35px;
-        height: 20px;
-        margin-right: 14px;
+        width: 31px;
+        min-width: 31px;
+        height: 18px;
+        margin-right: 11px;
         padding: 2px;
         border-radius: 50em;
         background-color: #E4E8F1;
@@ -504,7 +524,7 @@ and (max-width: $mobile) {
     }
     &-icon {
         position: absolute;
-        top: 4px;
+        top: 3px;
         left: 4px;
         width: 12px;
         height: 12px;
@@ -515,7 +535,7 @@ and (max-width: $mobile) {
     &-label {
         line-height: 21px;
         font-size: 14px;
-        color: var(--color1);
+        color: var(--color19);
     }
     &-label a {
         color: inherit;
@@ -535,13 +555,13 @@ and (max-width: $mobile) {
         background-color: var(--color6);
     }
     &-checkbox:checked + &-decor &-icon {
-        left: 19px;
+        left: 15px;
     }
 
     @media screen
     and (max-width: $tablet){
         &-label {
-            font-size: 11px;
+            font-size: 12px;
             line-height: 18px;
             letter-spacing: -0.01em;
         }
@@ -645,6 +665,18 @@ and (max-width: $mobile) {
         padding-left: 15px;
         padding-right: 15px;
     }
+
+    @media screen
+    and (max-width: $tablet){
+        &-row {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        &-col-2 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
     @media screen
     and (max-width: $mobile){
         &-row {
@@ -656,6 +688,61 @@ and (max-width: $mobile) {
             width: 100%;
             padding-left: 0;
             padding-right: 0;
+        }
+    }
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+    width: 89px;
+    padding: 3px;
+    border-radius: 50em;
+    background-color: var(--color21);
+    &-counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 26px;
+        width: 26px;
+        height: 26px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        line-height: 0;
+    }
+    &-icon {
+        font-size: 16px;
+        line-height: 0;
+        color: #000000;
+        font-weight: 600;
+        font-style: normal;
+    }
+    &-digit {
+        width: 30px;
+        height: 30px;
+        padding: 2px 4px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+        background-color: #fff;
+        -moz-appearance: textfield;
+        border-radius: 50%;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+    &_disabled {}
+    &_disabled &-counter:first-child &-icon {
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    @media screen
+    and (max-width: $tablet){
+        &-counter &-icon {
+            margin-left: 0;
         }
     }
 }

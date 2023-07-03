@@ -527,7 +527,7 @@
                     <div class="header-user-links">
                         <ul class="user-links">
                             <li class="user-links-item">
-                                <a class="user-links-element js-popup-basket" href="javascript:;" data-src="./ajax/basket.html">
+                                <a class="user-links-element js-open-profile" href="javascript:;" data-src="./ajax/profile.html">
                                     <span class="user-links-icon">
                                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.1738 11.7759C13.0654 11.7651 12.9354 11.7651 12.8163 11.7759C10.2379 11.6892 8.19043 9.57675 8.19043 6.97675C8.19043 4.32258 10.3354 2.16675 13.0004 2.16675C15.6546 2.16675 17.8104 4.32258 17.8104 6.97675C17.7996 9.57675 15.7521 11.6892 13.1738 11.7759Z" stroke="#1B1B1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -538,7 +538,7 @@
                                 </a>
                             </li>
                             <li class="user-links-item">
-                                <a class="user-links-element js-popup-basket" href="javascript:;" data-src="./ajax/basket.html">
+                                <a class="user-links-element js-popup-wishlist" href="javascript:;" data-src="./ajax/wishlist.html">
                                     <span class="user-links-icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M12.62 21.9039C12.28 22.032 11.72 22.032 11.38 21.9039C8.48 20.8472 2 16.4388 2 8.96685C2 5.66854 4.49 3 7.56 3C9.38 3 10.99 4.64372 12 6.0954C13.01 4.64372 14.63 3 16.44 3C19.51 3 22 5.66854 22 8.96685C22 16.4388 15.52 20.8472 12.62 21.9039Z" stroke="#1B1B1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1059,6 +1059,109 @@
 
         <main class="main-content">
 
+            <div class="container">
+
+                <div class="products-popup-panel products-popup-container" style="position: relative">
+                    <div class="products-popup-title">В корзине 2 товара</div>
+                    <a href="javascript:;" class="products-popup-close JS-MobileMenu-Close">
+                        Закрыть<i class="products-popup-close-icon"></i>
+                    </a>
+                </div>
+                <div class="products-popup-body products-popup-container">
+                    <div class="products-popup-content js-custom-scroll">
+                        <div class="products-popup-form">
+                            <div class="products-popup-form-info">Войдите, чтобы не потерять товары</div>
+                            <div class="products-popup-form-field">
+                                <input class="products-popup-form-input input input_simple js-mask-phone" type="text" placeholder="Телефон" id="phone-2" name="phone-2" required />
+                                <button class="products-popup-form-button button button_dark js-form-button">Получить код</button>
+                            </div>
+                        </div>
+
+                        <ul class="products-popup-list">
+                            <li class="products-popup-item">
+                                <div class="products-popup-description products-popup-col">
+                                    <div class="products-popup-check">
+                                         <label class="checkbox">
+                                            <input class="checkbox-input" type="checkbox" name="param1" />
+                                            <span class="checkbox-check" aria-hidden="true">
+                                                <span class="checkbox-icon"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="products-popup-img">
+                                        <a class="products-popup-pic-link" href="#"><img class="products-popup-pic" src="./images/products/products-img-5.png" alt="" /></a>
+                                    </div>
+                                    <div class="products-popup-detail">
+                                        <a class="products-popup-name" href="#">Женский корсет поддерживающий Berenman Viviana</a>
+                                    </div>
+                                </div>
+                                <div class="products-popup-price products-popup-col">
+                                    <span class="products-popup-price-value">
+                                        <span class="js-format-price">15990</span> <span class="currency">i</span>
+                                    </span>
+                                    <span class="products-popup-price-old">4 200<span class="currency">i</span></span>
+                                    <div class="products-popup-price products-popup-col">
+                                        <div class="products-popup-amount amount JS-Quantity" data-quantity="{
+                                            'maxNumber': '1000',
+                                            'classDisabled': 'amount_disabled'
+                                            }">
+                                            <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon">-</i></a>
+                                            <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
+                                            <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon">+</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-popup-item">
+                                <div class="products-popup-description products-popup-col">
+                                    <div class="products-popup-check">
+                                        <label class="checkbox">
+                                            <input class="checkbox-input" type="checkbox" name="param1" />
+                                            <span class="checkbox-check" aria-hidden="true">
+                                                <span class="checkbox-icon"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="products-popup-img">
+                                        <a class="products-popup-pic-link" href="#"><img class="products-popup-pic" src="./images/products/products-img-5.png" alt="" /></a>
+                                    </div>
+                                    <div class="products-popup-detail">
+                                        <a class="products-popup-name" href="#">Женский корсет поддерживающий Berenman Viviana</a>
+                                    </div>
+                                </div>
+                                <div class="products-popup-price products-popup-col">
+                                    <span class="products-popup-price-value">
+                                        <span class="js-format-price">15990</span> <span class="currency">i</span>
+                                    </span>
+                                    <span class="products-popup-price-old">4 200<span class="currency">i</span></span>
+                                    <div class="products-popup-price products-popup-col">
+                                        <div class="products-popup-amount amount JS-Quantity" data-quantity="{
+                                            'maxNumber': '1000',
+                                            'classDisabled': 'amount_disabled'
+                                            }">
+                                            <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon">-</i></a>
+                                            <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
+                                            <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon">+</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="products-popup-buttons">
+                        <a class="products-popup-button button button_dark js-open-buy" href="javascript:;" data-src="./ajax/buy.html">КУПИТЬ В 1 КЛИК</a>
+                        <a class="products-popup-button button" href="#">Оформить заказ</a>
+                        <span class="products-popup-total">
+                            <span class="products-popup-total-label">Итого:</span><span class="products-popup-total-price">134 800<span class="products-popup-total-currency currency">i</span></span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
             <section class="main-banner container">
                 <div class="main-banner-block js-slider-main-banner">
                     <div class="main-banner-inner js-slider-list">
@@ -1133,6 +1236,7 @@
             </section>
 
             <section class="actions-block container js-slider-actions">
+                <!-- тут акции будут без текста - только картинки! -->
                 <div class="actions-block-wrapper">
                     <div class="actions-block-inner js-slider-list">
                         <ul class="actions-block-list swiper-wrapper">
@@ -2250,6 +2354,11 @@
                                 </div>
                                 <button class="consultation-button button js-form-button">Записаться</button>
                             </form>
+                            <!-- Выполнить код после успешной отправки формы:
+                            <script>
+                                openPopupSuccess('./ajax/success.html');
+                            </script>
+                            -->
                         </div>
                         <div class="consultation-img">
                             <img class="consultation-pic" src="./images/consultation/consultation-img.jpg" alt="" />
@@ -2407,7 +2516,7 @@
                     </a>
                 </li>
                 <li class="actions-panel-links-item">
-                    <a class="user-links-element js-popup-basket" href="javascript:;" data-src="./ajax/basket.html">
+                    <a class="user-links-element js-popup-wishlist" href="javascript:;" data-src="./ajax/wishlist.html">
                         <span class="user-links-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.62 21.9039C12.28 22.032 11.72 22.032 11.38 21.9039C8.48 20.8472 2 16.4388 2 8.96685C2 5.66854 4.49 3 7.56 3C9.38 3 10.99 4.64372 12 6.0954C13.01 4.64372 14.63 3 16.44 3C19.51 3 22 5.66854 22 8.96685C22 16.4388 15.52 20.8472 12.62 21.9039Z" stroke="#1B1B1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2455,11 +2564,13 @@
     <script src="./libs/simplebar/simplebar.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./libs/wow/wow.min.js"></script>
+    <script src="./libs/jcfilter/jcfilter.js"></script>
     <script src="./js/map.js"></script>
     <script src="./js/JSC.Dropdown.js"></script>
     <script src="./js/JSC.MobileMenu.js"></script>
     <script src="./js/JSC.Accordion.js"></script>
     <script src="./js/JSC.ShowMore.js"></script>
+    <script src="./js/JSC.Quantity.js"></script>
 
     <script src="./js/main.js"></script>
 
