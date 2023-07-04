@@ -3,190 +3,118 @@
         'classShow': 'mob-form-show',
         'classElementActive': 'mob-form_active'
     }">
-    <div class="wishlist-list-block products-popup-form-block mob-form-block JS-MobileMenu-Dropdown">
+    <div class="products-popup-form-block mob-form-block JS-MobileMenu-Dropdown">
         <div class="products-popup-panel products-popup-container">
-            <a class="products-popup-title" href="#">
-                <span class="products-popup-title-label">Мои избранные</span><span class="products-popup-count">7</span>
-            </a>
-            <a class="products-popup-delete-link button" href="javascript:;">Очистить <span class="products-popup-delete-label">избранные</span></a>
+            <div class="products-popup-title">Избранное</div>
             <a href="javascript:;" class="products-popup-close JS-MobileMenu-Close">
-                Закрыть<i class="products-popup-close-icon"></i>
+                Закрыть<svg class="products-popup-close-icon" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.75 1.25L12.4313 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.4316 1.25L1.75029 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </a>
         </div>
         <div class="products-popup-body products-popup-container">
             <div class="products-popup-content js-custom-scroll">
-                <ul class="wishlist-list">
-                    <li class="wishlist-list-item">
-                        <div class="wishlist-list-description wishlist-list-col">
-                            <div class="wishlist-list-img">
-                                <a class="wishlist-list-pic-link" href="#"><img class="wishlist-list-pic" src="./images/basket/basket-img-1.png" alt="" /></a>
+                <div class="products-popup-form">
+                    <div class="products-popup-form-info">Войдите, чтобы не потерять товары</div>
+                    <div class="products-popup-form-field">
+                        <input class="products-popup-form-input input input_simple js-mask-phone" type="text" placeholder="Телефон" id="phone-2" name="phone-2" required />
+                        <button class="products-popup-form-button button button_dark js-form-button">Получить код</button>
+                    </div>
+                </div>
+
+                <div class="products-popup-list js-selectCheckbox">
+                    <div class="products-popup-item">
+                        <div class="products-popup-description products-popup-col">
+                            <label class="checkbox-field js-selectCheckbox-link">
+                                <span class="products-popup-checkbox checkbox">
+                                    <input class="checkbox-input" type="checkbox" name="param1" />
+                                    <span class="checkbox-check" aria-hidden="true">
+                                        <span class="checkbox-icon"></span>
+                                    </span>
+                                </span>
+                                <span class="products-popup-checkbox-label checkbox-label">Выбрать все</span>
+                            </label>
+                        </div>
+                        <div class="products-popup-price products-popup-col">
+                            <a class="products-popup-delete-link" href="javascript:;">Удалить выбранные</a>
+                        </div>
+                    </div>
+                    <div class="products-popup-item">
+                        <div class="products-popup-description products-popup-col">
+                            <div class="products-popup-check">
+                                <label class="checkbox">
+                                    <input class="checkbox-input js-selectCheckbox-input" type="checkbox" name="param1" />
+                                    <span class="checkbox-check" aria-hidden="true">
+                                        <span class="checkbox-icon"></span>
+                                    </span>
+                                </label>
                             </div>
-                            <div class="wishlist-list-detail">
-                                <ul class="wishlist-list-brand">
-                                    <li class="wishlist-list-brand-item">
-                                        <img class="wishlist-list-brand-logo" src="./images/products/brand-logo.svg" alt="" />
-                                    </li>
-                                    <li class="wishlist-list-brand-item">
-                                        <img class="wishlist-list-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
-                                    </li>
-                                </ul>
-                                <a class="wishlist-list-name" href="#">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</a>
+                            <div class="products-popup-img">
+                                <a class="products-popup-pic-link" href="#"><img class="products-popup-pic" src="./images/products/products-img-5.png" alt="" /></a>
+                            </div>
+                            <div class="products-popup-detail">
+                                <a class="products-popup-name" href="#">Женский корсет поддерживающий Berenman Viviana</a>
                             </div>
                         </div>
-                        <div class="wishlist-list-price wishlist-list-col">
-                            <div>
-                                <div class="products-popup-discount-wrapper">
-                                    <span class="products-popup-price-old">4 200<span class="products-popup-price-old-currency currency">i</span></span>
-                                    <span class="products-popup-discount">sale</span>
-                                </div>
-                                <div class="products-popup-price-value">124 800 <span class="products-popup-currency currency">i</span>/м<span class="products-popup-price-symbol">2</span></div>
-                            </div>
-                            <ul class="products-popup-actions">
-                                <li class="products-popup-actions-item">
-                                    <a class="products-popup-actions-link" href="#">
-                                        <span class="products-popup-actions-icon products-popup-actions-icon_box"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="wishlist-list-item">
-                        <div class="wishlist-list-description wishlist-list-col">
-                            <div class="wishlist-list-img">
-                                <a class="wishlist-list-pic-link" href="#"><img class="wishlist-list-pic" src="./images/basket/basket-img-4.png" alt="" /></a>
-                            </div>
-                            <div class="wishlist-list-detail">
-                                <ul class="wishlist-list-brand">
-                                    <li class="wishlist-list-brand-item">
-                                        <img class="wishlist-list-brand-logo" src="./images/products/brand-logo-1.png" alt="" />
-                                    </li>
-                                    <li class="wishlist-list-brand-item">
-                                        <img class="wishlist-list-brand-icon" src="./images/products/products-icons/flag-2.png" alt="" />Германия
-                                    </li>
-                                </ul>
-                                <a class="wishlist-list-name" href="#">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</a>
+                        <div class="products-popup-price products-popup-col">
+                            <span class="products-popup-price-value">
+                                <span class="js-format-price">15990</span> <span class="currency">i</span>
+                            </span>
+                            <span class="products-popup-price-old">
+                                <span class="js-format-price">4200</span> <span class="currency">i</span>
+                            </span>
+                            <div class="products-popup-amount amount JS-Quantity" data-quantity="{
+                                'maxNumber': '1000',
+                                'classDisabled': 'amount_disabled'
+                            }">
+                                <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon">-</i></a>
+                                <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
+                                <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon">+</i></a>
                             </div>
                         </div>
-                        <div class="wishlist-list-price wishlist-list-col">
-                            <div>
-                                <div class="products-popup-discount-wrapper">
-                                    <span class="products-popup-price-old">4 200<span class="products-popup-price-old-currency currency">i</span></span>
-                                    <span class="products-popup-discount">sale</span>
-                                </div>
-                                <div class="products-popup-price-value">124 800 <span class="products-popup-currency currency">i</span>/м<span class="products-popup-price-symbol">2</span></div>
+                    </div>
+                    <div class="products-popup-item">
+                        <div class="products-popup-description products-popup-col">
+                            <div class="products-popup-check">
+                                <label class="checkbox">
+                                    <input class="checkbox-input js-selectCheckbox-input" type="checkbox" name="param1" />
+                                    <span class="checkbox-check" aria-hidden="true">
+                                        <span class="checkbox-icon"></span>
+                                    </span>
+                                </label>
                             </div>
-                            <ul class="products-popup-actions">
-                                <li class="products-popup-actions-item">
-                                    <a class="products-popup-actions-link" href="#">
-                                        <span class="products-popup-actions-icon products-popup-actions-icon_box"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="wishlist-list-item">
-                        <div class="wishlist-list-description wishlist-list-col">
-                            <div class="wishlist-list-img">
-                                <a class="wishlist-list-pic-link" href="#"><img class="wishlist-list-pic" src="./images/basket/basket-img-5.png" alt="" /></a>
+                            <div class="products-popup-img">
+                                <a class="products-popup-pic-link" href="#"><img class="products-popup-pic" src="./images/products/products-img-6.png" alt="" /></a>
                             </div>
-                            <div class="wishlist-list-detail">
-                                <ul class="wishlist-list-brand">
-                                    <li class="wishlist-list-brand-item">
-                                        <img class="wishlist-list-brand-logo" src="./images/products/brand-logo-2.png" alt="" />
-                                    </li>
-                                    <li class="wishlist-list-brand-item">
-                                        <img class="wishlist-list-brand-icon" src="./images/products/products-icons/flag-3.png" alt="" />Франция
-                                    </li>
-                                </ul>
-                                <a class="wishlist-list-name" href="#">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</a>
+                            <div class="products-popup-detail">
+                                <a class="products-popup-name" href="#">Женский корсет поддерживающий Berenman Viviana</a>
                             </div>
                         </div>
-                        <div class="wishlist-list-price wishlist-list-col">
-                            <div>
-                                <div class="products-popup-discount-wrapper">
-                                    <span class="products-popup-price-old">4 200<span class="products-popup-price-old-currency currency">i</span></span>
-                                    <span class="products-popup-discount">sale</span>
-                                </div>
-                                <div class="products-popup-price-value">124 800 <span class="products-popup-currency currency">i</span>/м<span class="products-popup-price-symbol">2</span></div>
-                            </div>
-                            <ul class="products-popup-actions">
-                                <li class="products-popup-actions-item">
-                                    <a class="products-popup-actions-link" href="#">
-                                        <span class="products-popup-actions-icon products-popup-actions-icon_box"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="wishlist-list-item">
-                        <div class="wishlist-list-description wishlist-list-col">
-                            <div class="wishlist-list-img">
-                                <a class="wishlist-list-pic-link" href="#"><img class="wishlist-list-pic" src="./images/basket/basket-img-6.png" alt="" /></a>
-                            </div>
-                            <div class="wishlist-list-detail">
-                                <ul class="wishlist-list-brand">
-                                    <li class="wishlist-list-brand-item">
-                                        <img class="wishlist-list-brand-logo" src="./images/products/brand-logo.svg" alt="" />
-                                    </li>
-                                    <li class="wishlist-list-brand-item">
-                                        <img class="wishlist-list-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
-                                    </li>
-                                </ul>
-                                <a class="wishlist-list-name" href="#">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</a>
+                        <div class="products-popup-price products-popup-col">
+                            <span class="products-popup-price-value">
+                                <span class="js-format-price">15990</span> <span class="currency">i</span>
+                            </span>
+                            <span class="products-popup-price-old">
+                                <span class="js-format-price">4200</span> <span class="currency">i</span>
+                            </span>
+                            <div class="products-popup-amount amount JS-Quantity" data-quantity="{
+                                'maxNumber': '1000',
+                                'classDisabled': 'amount_disabled'
+                            }">
+                                <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon">-</i></a>
+                                <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
+                                <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon">+</i></a>
                             </div>
                         </div>
-                        <div class="wishlist-list-price wishlist-list-col">
-                            <div>
-                                <div class="products-popup-discount-wrapper">
-                                    <span class="products-popup-price-old">4 200<span class="products-popup-price-old-currency currency">i</span></span>
-                                    <span class="products-popup-discount">sale</span>
-                                </div>
-                                <div class="products-popup-price-value">124 800 <span class="products-popup-currency currency">i</span>/м<span class="products-popup-price-symbol">2</span></div>
-                            </div>
-                            <ul class="products-popup-actions">
-                                <li class="products-popup-actions-item">
-                                    <a class="products-popup-actions-link" href="#">
-                                        <span class="products-popup-actions-icon products-popup-actions-icon_box"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="wishlist-list-item">
-                        <div class="wishlist-list-description wishlist-list-col">
-                            <div class="wishlist-list-img">
-                                <a class="wishlist-list-pic-link" href="#"><img class="wishlist-list-pic" src="./images/basket/basket-img-1.png" alt="" /></a>
-                            </div>
-                            <div class="wishlist-list-detail">
-                                <ul class="wishlist-list-brand">
-                                    <li class="wishlist-list-brand-item">
-                                        <img class="wishlist-list-brand-logo" src="./images/products/brand-logo.svg" alt="" />
-                                    </li>
-                                    <li class="wishlist-list-brand-item">
-                                        <img class="wishlist-list-brand-icon" src="./images/products/products-icons/flag-1.png" alt="" />Россия
-                                    </li>
-                                </ul>
-                                <a class="wishlist-list-name" href="#">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</a>
-                            </div>
-                        </div>
-                        <div class="wishlist-list-price wishlist-list-col">
-                            <div>
-                                <div class="products-popup-discount-wrapper">
-                                    <span class="products-popup-price-old">4 200<span class="products-popup-price-old-currency currency">i</span></span>
-                                    <span class="products-popup-discount">sale</span>
-                                </div>
-                                <div class="products-popup-price-value">124 800 <span class="products-popup-currency currency">i</span>/м<span class="products-popup-price-symbol">2</span></div>
-                            </div>
-                            <ul class="products-popup-actions">
-                                <li class="products-popup-actions-item">
-                                    <a class="products-popup-actions-link" href="#">
-                                        <span class="products-popup-actions-icon products-popup-actions-icon_box"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="products-popup-total">
+                <div class="products-popup-total-label">Итого (2)</div>
+                <div class="products-popup-total-price">
+                    <span class="js-format-price">31980</span> <span class="currency">i</span>
+                </div>
             </div>
             <div class="products-popup-buttons">
                 <a class="products-popup-button button" href="#">Перейти в избранное</a>

@@ -232,6 +232,46 @@ function initQuantity() {
     });
 }
 
+function openPopupBuy($element) {
+    if (typeof($element) == 'undefined') {
+        $element = $('.js-popup-buy');
+    }
+
+    $.fancybox.open({
+        src  :  $element.data('src'),
+        type : 'ajax',
+        toolbar  : false,
+        smallBtn : true,
+        afterShow: function (data) {
+            initValidate(data.$refs.container.find('.js-form-validate'));
+            initForm();
+            initMask();
+        },
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<svg class="fancybox-close-icon" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                '<path d="M1.75 1.25L12.4313 11.7813" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+                '<path d="M12.4316 1.25L1.75029 11.7813" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+                '</svg>' +
+                '</button>'
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        }
+    });
+}
+
+function initPopupBuy() {
+    $(".js-open-buy").on('click', function() {
+        $.fancybox.close();
+        openPopupBuy($(this));
+    });
+}
+
 function initPopupBasket() {
     $('.js-popup-basket').each(function() {
         $(this).on('click',function(e) {
@@ -248,7 +288,9 @@ function initPopupBasket() {
                     $('.js-form-popup').html(data);
                     initScroll();
                     initQuantity();
-                    //initPopupBuy();
+                    initFormatPrice();
+                    initSelectCheckbox();
+                    initPopupBuy();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -280,6 +322,9 @@ function initPopupWishlist() {
                 success: function (data) {
                     $('.js-form-popup').html(data);
                     initScroll();
+                    initQuantity();
+                    initFormatPrice();
+                    initSelectCheckbox();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -846,6 +891,7 @@ function initAnimateNumerator() {
             live:         true,
             callback:     function(box) {
                 initNumerator();
+                initIndicator();
             },
             scrollContainer: null,
             resetAnimation: false,
@@ -999,6 +1045,36 @@ function initTextareaSize() {
     });
 }
 
+function initSelectCheckbox() {
+    $('.js-selectCheckbox').each(function() {
+        var $input = jQuery(this).find('.js-selectCheckbox-input'),
+            $link = jQuery(this).find('.js-selectCheckbox-link');
+
+        $link.on("change", function() {
+            if (!$input.prop("checked")) {
+                $input.prop("checked", true);
+            } else {
+                $input.prop("checked", false);
+            }
+        });
+    });
+}
+
+function initIndicator() {
+    $('.js-indicator').each(function() {
+        var $element = jQuery(this).find('.js-indicator-element'),
+            $target = jQuery(this).find('.js-indicator-target'),
+            max = jQuery(this).find('.js-indicator-digit').data('numerator-max'),
+            total = $element.data('indicator-total');
+
+        let maxVal =  (max * 100)/total;
+        if (maxVal >= total) {
+            maxVal = total;
+        }
+        $target.attr('stroke-dasharray', maxVal + ',' + total);
+    });
+}
+
 
 function initResizeWindow() {
     var width = $(window).outerWidth();
@@ -1046,6 +1122,7 @@ $(document).ready(function () {
     initPopupProfile();
     initPopupBasket();
     initPopupWishlist();
+    initPopupBuy();
     initSelect();
     initMobileMenu();
     initForm();
@@ -1065,4 +1142,5 @@ $(document).ready(function () {
     initSliderNews();
     initTextareaSize();
     initQuantity();
+    initSelectCheckbox();
 });
