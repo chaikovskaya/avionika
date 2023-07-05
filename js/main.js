@@ -977,6 +977,22 @@ function initShowMoreBrands(showmoreExtra) {
     });
 }
 
+function initShowMoreProducts(showmoreExtra) {
+    if (typeof(ShowMore) === 'undefined' || !jQuery.isFunction(ShowMore)) {
+        return false;
+    }
+    var common = {
+            start: function () {},
+            toggle: function () {}
+        },
+        showmoreExtra = showmoreExtra || {};
+
+    $('.JS-ShowMore-Products').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('showmore'));
+        new ShowMore(this, jQuery.extend({}, common, local, showmoreExtra));
+    });
+}
+
 var sliderNews;
 function initSliderNews() {
     jQuery('.js-slider-news').each(function() {
@@ -1048,10 +1064,10 @@ function initTextareaSize() {
 function initSelectCheckbox() {
     $('.js-selectCheckbox').each(function() {
         var $input = jQuery(this).find('.js-selectCheckbox-input'),
-            $link = jQuery(this).find('.js-selectCheckbox-link');
+            $link = jQuery(this).find('.js-selectCheckbox-link input:checkbox');
 
         $link.on("change", function() {
-            if (!$input.prop("checked")) {
+            if ($link.prop("checked")) {
                 $input.prop("checked", true);
             } else {
                 $input.prop("checked", false);
@@ -1064,14 +1080,21 @@ function initIndicator() {
     $('.js-indicator').each(function() {
         var $element = jQuery(this).find('.js-indicator-element'),
             $target = jQuery(this).find('.js-indicator-target'),
-            max = jQuery(this).find('.js-indicator-digit').data('numerator-max'),
             total = $element.data('indicator-total');
 
-        let maxVal =  (max * 100)/total;
-        if (maxVal >= total) {
-            maxVal = total;
-        }
-        $target.attr('stroke-dasharray', maxVal + ',' + total);
+        $target.attr('stroke-dasharray', total + ',' + total);
+    });
+}
+
+function initCatalogShow() {
+    $('.js-catalog-switcher').each(function() {
+        var $switcher = jQuery(this),
+            $link = jQuery('.js-catalog-link');
+
+        $switcher.on("click", function() {
+            $link.trigger("click");
+            return false;
+        });
     });
 }
 
@@ -1087,6 +1110,7 @@ function initResizeWindow() {
             reInitSliderBrands();
         }
         initShowMoreBrands();
+        initShowMoreProducts();
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
         if (sliderPopular == undefined) {
@@ -1143,4 +1167,5 @@ $(document).ready(function () {
     initTextareaSize();
     initQuantity();
     initSelectCheckbox();
+    initCatalogShow();
 });

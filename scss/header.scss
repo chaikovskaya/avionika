@@ -940,13 +940,12 @@
 
 .mob {
     &-menu {
-        display: none;
         overflow: hidden;
-        margin-right: 24px;
-        min-width: 21px;
     }
     &-menu-switcher {
-        display: block;
+        display: none;
+        min-width: 21px;
+        margin-right: 24px;
     }
     &-menu-switcher-close {
         display: block;
@@ -1321,7 +1320,7 @@
     }
     @media screen
     and (max-width: $mobile){
-        &-menu {
+        &-menu-switcher {
             display: block;
             margin-right: 28px;
         }

@@ -176,6 +176,9 @@
         margin-right: 20px;
         margin-top: 4px;
     }
+    &-img {
+        min-width: 29px;
+    }
     &-info {
         max-width: 185px;
         color: #111;
@@ -206,6 +209,9 @@
             margin: 0 auto 10px;
             max-width: 40px;
             max-height: 33px;
+        }
+        &-img {
+            min-width: auto;
         }
     }
     @media screen
@@ -421,65 +427,67 @@
     @media screen
     and (max-width: $mobile){
         &-link {
-            height: 465px;
+            height: 100%;
+            min-height: 264px;
             overflow: hidden;
         }
         &-pic {
-            height: 465px;
-            width: 100%;
-            order: -1;
+            position: absolute;
+            bottom: -25vw;
+            right: -30vw;
+            height: 60vw;
+            width: 60vw;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-img {
+        }
+        &-item_wide &-img {
+            height: 60%;
+            width: 50%;
         }
         &-item_wide &-link {
             flex-direction: column;
-            height: auto;
+            height: 100%;
         }
         &-info {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
             width: 100%;
             height: 100%;
-            padding: 27px 24px 35px;
-            background-color: rgba(0, 0, 0, 0.1);
+            padding: 8vw 24px 35px;
             &:after {
+                display: none;
                 content: "";
                 position: absolute;
-                top: -27vw;
-                left: -7vw;
+                top: -18vw;
+                left: -3vmin;
                 z-index: -1;
-                width: 65vw;
-                height: 65vw;
+                width: 58vw;
+                height: 58vw;
                 background-color: var(--color13);
                 border-radius: 50%;
             }
         }
         &-name {
-            width: 43vw;
-            min-height: 32vw;
+            max-width: 80%;
             margin-bottom: 3vw;
-            font-size: 5.4vw;
-            font-weight: 500;
+            font-size: 5.9vw;
+            font-weight: 600;
             line-height: 7vw;
-            text-align: center;
+            letter-spacing: -0.22px;
         }
         &-text {
-            margin-bottom: 5px;
+            max-width: 80%;
+            min-height: 40px;
+            margin-bottom: 10px;
             font-weight: 400;
-            line-height: 4.8vw;
-            font-size: 3.4vw;
+            line-height: 5vw;
+            font-size: 3.8vw;
             -webkit-line-clamp: 2;
             line-clamp: 2;
         }
     }
     @media screen
     and (max-width: 500px){
-        &-link {
-            height: 322px;
-        }
-        &-pic {
-            height: 322px;
-        }
     }
 }
 
@@ -838,6 +846,9 @@
             padding-left: 10px;
             padding-right: 10px;
         }
+        &-list-item_hide {
+            display: none;
+        }
         &-img {
             margin-bottom: 13px;
         }
@@ -1048,8 +1059,24 @@
         max-height: none;
         max-width: none;
         path {
-            transition: stroke-dasharray 1.7s linear;
+            transition: stroke-dasharray 2s linear;
         }
+    }
+    &-list-item:nth-child(1) &-indicator,
+    &-list-item:nth-child(6n) &-indicator {
+        transform: scaleX(-1);
+    }
+    &-list-item:nth-child(2n) &-indicator {
+        transform: scaleX(-1);
+    }
+    &-list-item:nth-child(3n) &-indicator {
+        transform: scale(-1);
+    }
+    &-list-item:nth-child(4n) &-indicator {
+        transform: none;
+    }
+    &-list-item:nth-child(5n) &-indicator {
+        transform: scale(-1);
     }
 
     @media screen
@@ -1187,9 +1214,10 @@
         }
         &-more {
             display: block;
+            line-height: 0;
         }
         &-more-link {
-            display: block!important;
+            width: 100%;
         }
         &-more-button {
             display: block;
@@ -1399,6 +1427,8 @@
     @media screen
     and (max-width: $mobile){
         &-block {
+            padding-left: 24px;
+            padding-right: 24px;
             padding-bottom: 34px;
         }
         &-form {
@@ -1407,6 +1437,11 @@
         }
         &-img {
             display: none;
+        }
+        &-title {
+            margin-right: -5px;
+            font-size: 19px;
+            line-height: 25px;
         }
     }
 }
