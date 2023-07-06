@@ -9,7 +9,7 @@
 }
 
 @mixin bgrcolor() {
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.1s ease-in-out;
 }
 
 @mixin fix-rows() {
