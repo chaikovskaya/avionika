@@ -29,6 +29,7 @@ $gutter: calc($gutters/2);
 	--color21: #EEEEEE;
 	--color22: #2D2A1E;
 	--color23: #036D6B;
+	--color24: #CAE8E8;
 	--font-common: 'Manrope';
 	--font-size: 15px;
 	--line-height: 26px;
@@ -884,23 +885,45 @@ and (max-width: $tablet) {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding-left: 5px;
-		padding-right: 5px;
+		width: 42px;
+		height: 42px;
+		padding: 5px;
 		text-decoration: none;
-		font-weight: 500;
-		font-size: 15px;
+		font-size: 14px;
 		line-height: 18px;
 		letter-spacing: 0.015em;
-		color: var(--color6);
+		color: #000;
+		border: 1px solid var(--color6);
+		border-radius: 50em;
 		&:hover {
-			color: var(--color6);
+			background-color: var(--color24);
+			border-color: var(--color24);
+			color: #000;
 		}
 	}
 	&-item_prev &-link {
+		background-color: var(--color6);
+		&:hover {
+			background-color: var(--color24);
+			border-color: var(--color24);
+			path {
+				stroke: #000;
+			}
+		}
 	}
 	&-item_next &-link {
+		background-color: var(--color6);
+		&:hover {
+			background-color: var(--color24);
+			border-color: var(--color24);
+			path {
+				stroke: #000;
+			}
+		}
 	}
 	&-item_active &-link {
+		background-color: var(--color24);
+		border-color: var(--color24);
 	}
 	&-item_disabled {}
 	&-item_disabled &-link:hover {
@@ -994,6 +1017,8 @@ and (max-width: $mobile){
 	&-more-label:hover { }
 	&-more-icon {
 		display: inline-block;
+		vertical-align: middle;
+		margin-left: 11px;
 	}
 	&-switcher_active {
 		display: inline-block;

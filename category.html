@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./libs/Selectric/public/selectric.css" />
     <link rel="stylesheet" href="./libs/simplebar/simplebar.min.css" />
+    <link rel="stylesheet" href="./libs/jquery-ui/jquery-ui.min.css" />
     <link rel="stylesheet" href="./css/common.css" />
 </head>
 
@@ -1059,7 +1060,7 @@
 
         <main class="main-content">
 
-            <div class="catalog-main main container">
+            <div class="catalog-main main main_simple container">
                 <div class="main-container">
                     <div class="main-info">
                         <h1 class="main-title">Бандажи</h1>
@@ -1088,14 +1089,1445 @@
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link" href="#">Каталог</a><span class="breadcrumbs-icon">/</span>
                     </li>
-                    <li class="breadcrumbs-item">Керамогранит</li>
+                    <li class="breadcrumbs-item">Бандажи</li>
                     <li class="breadcrumbs-item breadcrumbs-item_more">
                         <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
                     </li>
                 </ul>
             </div>
 
+            <div class="category container">
+                <div class="category-tag js-slider-category-tag" data-active-class="category-tag-item_active">
+                    <div class="js-slider-list">
+                        <ul class="category-tag-list swiper-wrapper">
+                            <li class="category-tag-item swiper-slide">
+                                <a class="category-tag-link" href="#">Голеностоп</a>
+                            </li>
+                            <li class="category-tag-item category-tag-item_active swiper-slide">
+                                <a class="category-tag-link" href="#">Колено</a>
+                            </li>
+                            <li class="category-tag-item swiper-slide">
+                                <a class="category-tag-link" href="#">Таз</a>
+                            </li>
+                            <li class="category-tag-item swiper-slide">
+                                <a class="category-tag-link" href="#">Поясница</a>
+                            </li>
+                            <li class="category-tag-item swiper-slide">
+                                <a class="category-tag-link" href="#">Локоть</a>
+                            </li>
+                            <li class="category-tag-item swiper-slide">
+                                <a class="category-tag-link" href="#">Плечо</a>
+                            </li>
+                            <li class="category-tag-item swiper-slide">
+                                <a class="category-tag-link" href="#">Шея</a>
+                            </li>
+                            <li class="category-tag-item swiper-slide">
+                                <a class="category-tag-link" href="#">Взрослые</a>
+                            </li>
+                            <li class="category-tag-item swiper-slide">
+                                <a class="category-tag-link" href="#">Детские</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="category-container">
+                    <div class="category-side">
+                        <form>
+                            <div class="catalog-menu-category-item catalog-menu-category-item_active JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
+                                <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
+                                    <svg class="catalog-menu-category-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.9141 3.23002L6.7524 8.39169C6.14281 9.00127 6.14281 9.99877 6.7524 10.6084L11.9141 15.77" stroke="#111111" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg><span class="catalog-menu-category-link">Вид изделия</span>
+                                </a>
+                                <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
+                                'amount': 7,
+                                'classHide': 'catalog-submenu-category-item_hide'
+                            }">
+                                    <ul class="catalog-submenu-checkboxes">
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Ортез (102)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" checked="checked" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Бандаж (26)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Корсет (32)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Воротник Шанца (10)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Тейп (28)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Бинт (98)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Головодержатель (2)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Ортез (102)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" checked="checked" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Бандаж (26)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                    <span class="show-more show-more_show">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Ещё 3<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                        <span class="show-more show-more_hide">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Свернуть<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog-menu-category-item catalog-menu-category-item_active JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
+                                <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
+                                    <svg class="catalog-menu-category-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.9141 3.23002L6.7524 8.39169C6.14281 9.00127 6.14281 9.99877 6.7524 10.6084L11.9141 15.77" stroke="#111111" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg><span class="catalog-menu-category-link">Область применения</span>
+                                </a>
+                                <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
+                                    'amount': 7,
+                                    'classHide': 'catalog-submenu-category-item_hide'
+                                }">
+                                    <ul class="catalog-submenu-checkboxes">
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Шейный отдел</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" checked="checked" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Грудной отдел</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Грудно-поясничный отд.</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Поясничный отдел</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Поясничный-крестов. отд.</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Плечевой сустав</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Логтевой сустав</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Шейный отдел</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" checked="checked" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Грудной отдел</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                    <span class="show-more show-more_show">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Ещё 3<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                        <span class="show-more show-more_hide">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Свернуть<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
+                                <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
+                                    <svg class="catalog-menu-category-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.9141 3.23002L6.7524 8.39169C6.14281 9.00127 6.14281 9.99877 6.7524 10.6084L11.9141 15.77" stroke="#111111" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg><span class="catalog-menu-category-link">Бренд</span>
+                                </a>
+                                <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
+                                'amount': 7,
+                                'classHide': 'catalog-submenu-category-item_hide'
+                            }">
+                                    <ul class="catalog-submenu-checkboxes">
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Название 1</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Название 2</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                    <span class="show-more show-more_show">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Ещё 3<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                        <span class="show-more show-more_hide">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Свернуть<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
+                                <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
+                                    <svg class="catalog-menu-category-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.9141 3.23002L6.7524 8.39169C6.14281 9.00127 6.14281 9.99877 6.7524 10.6084L11.9141 15.77" stroke="#111111" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg><span class="catalog-menu-category-link">Возраст</span>
+                                </a>
+                                <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
+                                'amount': 7,
+                                'classHide': 'catalog-submenu-category-item_hide'
+                            }">
+                                    <ul class="catalog-submenu-checkboxes">
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">30+</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">60+</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                    <span class="show-more show-more_show">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Ещё 3<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                        <span class="show-more show-more_hide">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Свернуть<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog-menu-category-item JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
+                                <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
+                                    <svg class="catalog-menu-category-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.9141 3.23002L6.7524 8.39169C6.14281 9.00127 6.14281 9.99877 6.7524 10.6084L11.9141 15.77" stroke="#111111" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg><span class="catalog-menu-category-link">Локализация</span>
+                                </a>
+                                <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
+                                'amount': 7,
+                                'classHide': 'catalog-submenu-category-item_hide'
+                            }">
+                                    <ul class="catalog-submenu-checkboxes">
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Спина</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Руки</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                    <span class="show-more show-more_show">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Ещё 3<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                        <span class="show-more show-more_hide">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Свернуть<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog-menu-category-item catalog-menu-category-item_active JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
+                                <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
+                                    <svg class="catalog-menu-category-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.9141 3.23002L6.7524 8.39169C6.14281 9.00127 6.14281 9.99877 6.7524 10.6084L11.9141 15.77" stroke="#111111" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg><span class="catalog-menu-category-link">Степень фиксации</span>
+                                </a>
+                                <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
+                                'amount': 5,
+                                'classHide': 'catalog-submenu-category-item_hide'
+                            }">
+                                    <ul class="catalog-submenu-checkboxes">
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Легкая</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" checked="checked" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Средняя</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Сильная</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Переменная (поэтапная)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Полная (иммобилизация)</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Легкая</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Средняя</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                    <span class="show-more show-more_show">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Ещё 3<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                        <span class="show-more show-more_hide">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Свернуть<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog-menu-category-item catalog-menu-category-item_active JS-Accordion" data-accordion="{'classActive': 'catalog-menu-category-item_active'}">
+                                <a class="catalog-menu-category-switcher JS-Accordion-Switcher" href="javascript:;">
+                                    <svg class="catalog-menu-category-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.9141 3.23002L6.7524 8.39169C6.14281 9.00127 6.14281 9.99877 6.7524 10.6084L11.9141 15.77" stroke="#111111" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg><span class="catalog-menu-category-link">Особенности констр.</span>
+                                </a>
+                                <div class="catalog-menu-category-block JS-ShowMore JS-Accordion-Menu" data-showmore="{
+                                    'amount': 4,
+                                    'classHide': 'catalog-submenu-category-item_hide'
+                                }">
+                                    <ul class="catalog-submenu-checkboxes">
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Водостойкие</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" checked="checked" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Классические</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Модульная система</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Перфорированные</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-submenu-checkboxes-item JS-ShowMore-Item">
+                                            <label class="catalog-submenu-checkboxes-label">
+                                            <span class="checkbox">
+                                                <input class="checkbox-input" type="checkbox" name="param1" />
+                                                <span class="checkbox-check" aria-hidden="true">
+                                                    <span class="checkbox-icon"></span>
+                                                </span>
+                                                <span class="catalog-submenu-checkboxes-name">Водостойкие</span>
+                                            </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <a class="catalog-submenu-category-show-switcher show-switcher JS-ShowMore-Switcher" href="javascript:;">
+                                    <span class="show-more show-more_show">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Ещё 3<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                        <span class="show-more show-more_hide">
+                                        <span class="catalog-submenu-category-more show-more-label">
+                                            Свернуть<svg class="show-more-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.37914 1.22083L5.18247 5.02416C5.63164 5.47333 6.36664 5.47333 6.81581 5.02416L10.6191 1.22083" stroke="#036D6B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="catalog-menu-category-item_price catalog-menu-category-item">
+                            <span class="catalog-menu-category-switcher">
+                                <span class="catalog-menu-category-link">Цена</span>
+                            </span>
+                                <div class="catalog-menu-category-block">
+                                    <div class="slider-range js-slider-range" data-code="price">
+                                        <div class="slider-range-panel">
+                                            <div class="slider-range-panel-item">
+                                                <input id="minCost_price"
+                                                       type="text"
+                                                       class="slider-range-input input input_modified js-slider-range-min min-price"
+                                                       name="arrFilter_P1_MIN"
+                                                       placeholder=""
+                                                       value="10"
+                                                       data-value="10"
+                                                />
+                                                <span class="slider-range-currency js-slider-range-currency"><span class="currency">i</span></span>
+                                            </div>
+                                            <div class="slider-range-panel-item">
+                                                <input id="maxCost_price"
+                                                       type="text"
+                                                       class="slider-range-input input input_modified js-slider-range-max max-price"
+                                                       name="arrFilter_P1_MAX"
+                                                       placeholder=""
+                                                       value="5000"
+                                                       data-value="5000"
+                                                />
+                                                <span class="slider-range-currency js-slider-range-currency"><span class="currency">i</span></span>
+                                            </div>
+                                        </div>
+                                        <div class="slider-range-track js-slider-range-track">
+                                            <div class="ui-slider-handle js-ui-slider-handle">
+                                                <div class="slider-range-text js-slider-rating-text-min"></div>
+                                            </div>
+                                            <div class="ui-slider-handle js-ui-slider-handle">
+                                                <div class="slider-range-text slider-range-text_max js-slider-rating-text-max"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog-menu-category-item">
+                                <span class="catalog-menu-category-switcher">
+                                    <span class="catalog-menu-category-link">
+                                        <label class="catalog-menu-category-switch switch">
+                                            Акционные товары
+                                            <input class="switch-checkbox" type="checkbox" name="param8" checked="checked" />
+                                            <span class="catalog-menu-category-switch-decor switch-decor">
+                                                <span class="switch-icon"></span>
+                                            </span>
+                                        </label>
+                                    </span>
+                                </span>
+                            </div>
+                            <ul class="catalog-menu-category-reset">
+                                <li class="catalog-menu-category-reset-item catalog-menu-category-reset-item_reset">
+                                    <button class="catalog-menu-category-button button button_dark" type="button">Показать</button>
+                                </li>
+                                <li class="catalog-menu-category-reset-item catalog-menu-category-reset-item_reset">
+                                    <button class="catalog-menu-category-reset-button button button_modified" type="reset">Сбросить</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="category-content">
+                        <ul class="category-list">
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-2.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label">Хит</span>
+                                                </li>
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
+                                            <div class="products-price-block">
+                                                <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                                <span class="products-price-discount">-10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-3.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">20990</span> <span class="currency">i</span></span>
+                                            <div class="products-price-block">
+                                                <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                                <span class="products-price-discount">-10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-4.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label">Хит</span>
+                                                </li>
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label links-label_active" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">23490</span> <span class="currency">i</span></span>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-5.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">5990</span> <span class="currency">i</span></span>
+                                            <div class="products-price-block">
+                                                <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                                <span class="products-price-discount">-10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-7.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label">Хит</span>
+                                                </li>
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
+                                            <div class="products-price-block">
+                                                <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                                <span class="products-price-discount">-10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-8.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">20990</span> <span class="currency">i</span></span>
+                                            <div class="products-price-block">
+                                                <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                                <span class="products-price-discount">-10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-9.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label">Хит</span>
+                                                </li>
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label links-label_active" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">23490</span> <span class="currency">i</span></span>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-6.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">5990</span> <span class="currency">i</span></span>
+                                            <div class="products-price-block">
+                                                <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                                <span class="products-price-discount">-10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-10.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label">Хит</span>
+                                                </li>
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
+                                            <div class="products-price-block">
+                                                <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                                <span class="products-price-discount">-10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-11.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">20990</span> <span class="currency">i</span></span>
+                                            <div class="products-price-block">
+                                                <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                                <span class="products-price-discount">-10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-12.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label">Хит</span>
+                                                </li>
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label links-label_active" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">23490</span> <span class="currency">i</span></span>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="category-list-item">
+                                <div class="products-box">
+                                    <div class="products-img">
+                                        <a class="products-img-link" href="#">
+                                            <img class="products-pic" src="./images/products/products-img-13.png" alt="" />
+                                        </a>
+                                        <div class="products-actions">
+                                            <ul class="marks">
+                                                <li class="marks-item">
+                                                    <span class="marks-label marks-label_new">New</span>
+                                                </li>
+                                            </ul>
+                                            <div class="products-links">
+                                                <ul class="links">
+                                                    <li class="links-item">
+                                                        <!-- Добавляется класс links-label_active, если активна -->
+                                                        <a class="links-label" href="javascript:;">
+                                                            <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="products-discount">-3% при оплате онлайн</div>
+                                    <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                    <div class="products-container">
+                                        <div class="products-price">
+                                            <span class="products-price-value"><span class="js-format-price">5990</span> <span class="currency">i</span></span>
+                                            <div class="products-price-block">
+                                                <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                                <span class="products-price-discount">-10%</span>
+                                            </div>
+                                        </div>
+                                        <div class="products-buttons-panel">
+                                            <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
+                                            <a class="products-basket" href="#">
+                                                <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
+                                                    <mask id="path-2-inside-1_601_4565" fill="white">
+                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
+                                                    <mask id="path-4-inside-2_601_4565" fill="white">
+                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
+                                                    </mask>
+                                                    <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
+                                                    <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="load-more">
+                            <!-- Спиннер можно показывать в процессе загрузки load-more-icon -->
+                            <a class="load-more-link button button_modified" href="javascript:;">
+                                Показать ещё<i class="load-more-icon"></i>
+                            </a>
+                            <ul class="pager">
+                                <!-- Если не куда листать, добавляется класс pager-item_disabled -->
+                                <li class="pager-item pager-item_prev">
+                                    <a class="pager-link" href="#">
+                                        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.91406 1.23002L1.7524 6.39169C1.14281 7.00127 1.14281 7.99877 1.7524 8.60835L6.91406 13.77" stroke="white" stroke-width="2.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="pager-item pager-item_active"><span class="pager-link">1</span></li>
+                                <li class="pager-item"><a class="pager-link" href="#">2</a></li>
+                                <li class="pager-item"><a class="pager-link" href="#">3</a></li>
+                                <li class="pager-item"><a class="pager-link" href="#">4</a></li>
+                                <!-- Если не куда листать, добавляется класс pager-item_disabled -->
+                                <li class="pager-item pager-item_next">
+                                    <a class="pager-link" href="#">
+                                        <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.08594 1.23002L7.2476 6.39169C7.85719 7.00127 7.85719 7.99877 7.2476 8.60835L2.08594 13.77" stroke="white" stroke-width="2.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="consultation container">
                 <div class="consultation-block">
@@ -1338,6 +2770,8 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./libs/wow/wow.min.js"></script>
     <script src="./libs/jcfilter/jcfilter.js"></script>
+    <script src="./libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="./libs/jquery-ui/jquery.ui.touch-punch.min.js"></script>
     <script src="./js/map.js"></script>
     <script src="./js/JSC.Dropdown.js"></script>
     <script src="./js/JSC.MobileMenu.js"></script>

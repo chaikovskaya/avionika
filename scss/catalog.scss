@@ -97,6 +97,9 @@
         line-height: 26px;
         letter-spacing: 0.15px;
     }
+    &_simple &-container {
+        background-color: var(--color7);
+    }
 
     @media screen
     and (max-width: $tablet){
