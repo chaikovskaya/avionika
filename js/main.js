@@ -1176,60 +1176,35 @@ function initShowMore(showmoreExtra) {
 function initSliderRange() {
     jQuery('.js-slider-range').each(function() {
         var $element = $(this),
-            $track = $element.find('.js-slider-range-track'),
-            $textMin = $element.find('.js-slider-rating-text-min'),
-            $textMax = $element.find('.js-slider-rating-text-max'),
-            $labelMin = $element.find('.js-slider-range-label-min').text() || '',
-            $labelMax = $element.find('.js-slider-range-label-max').text() || '',
-            $currency = $element.find('.js-slider-range-currency').html() || '';
+            $track = $element.find('.js-slider-range-track');
 
         var min = Number($(this).find('.min-price').attr('data-value'));
         var max = Number($(this).find('.max-price').attr('data-value'));
 
-        var minValue = Number($(this).find('.min-price').val()) || min;
-        var maxValue = Number($(this).find('.max-price').val()) || max;
+        var price_id = $(this).attr('data-code');
 
         $track.slider({
             range: true,
             min: min,
             max: max,
             drag: true,
-            values: [minValue, maxValue],
+            values: [min, max],
             classes: {
                 "ui-slider-handle": "slider-range-button",
                 "ui-slider-range": "slider-range-quantity"
             },
             slide: function (event, ui) {
-                if (ui.values[0] <= min) ui.values[0] = '';
-                if (ui.values[1] >= max) ui.values[1] = '';
-                $element.find('.js-slider-range-min').val(ui.values[0]);
-                $element.find('.js-slider-range-max').val(ui.values[1]);
+                $("input#minCost_" + price_id).val(ui.values[0]);
+                $("input#maxCost_" + price_id).val(ui.values[1]);
 
-                $element.find('.js-slider-range-min').trigger('keyup').trigger('change');
-                $element.find('.js-slider-range-max').trigger('keyup').trigger('change');
-
-                $textMin.html( $labelMin + " " + ui.values[0] + " " + $currency );
-                $textMax.html( $labelMax + " " + ui.values[1] + " " + $currency );
+                $('#minCost_' + price_id).trigger('change');
             },
             stop: function (event, ui) {
-                if (ui.values[0] <= min) ui.values[0] = '';
-                if (ui.values[1] >= max) ui.values[1] = '';
-                $element.find('.js-slider-range-min').val(ui.values[0]);
-                $element.find('.js-slider-range-max').val(ui.values[1]);
+                $("input#minCost_" + price_id).val(ui.values[0]);
+                $("input#maxCost_" + price_id).val(ui.values[1]);
 
-                $element.find('.js-slider-range-min').trigger('keyup').trigger('change');
-                $element.find('.js-slider-range-max').trigger('keyup').trigger('change');
-            },
-            create: function() {
-            },
-        });
-
-        $element.find('.js-slider-range-min').on('change keyup', function() {
-            $track.slider('values', 0, this.value);
-        });
-
-        $element.find('.js-slider-range-max').on('change keyup', function() {
-            $track.slider('values', 1, this.value);
+                $('#minCost_' + price_id).trigger('change');
+            }
         });
     });
 }

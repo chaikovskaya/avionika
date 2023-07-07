@@ -321,6 +321,19 @@ label.form-error {
         }
     }
 
+    &_dark {
+        padding-top: 11px;
+        padding-bottom: 11px;
+        border: 1px solid #000;
+        color: #000;
+        background-color: transparent;
+        &:hover {
+            color: #fff;
+            background-color: var(--color7);
+            border-color: var(--color7);
+        }
+    }
+
     @media screen
     and (max-width: $desktop){
     }
@@ -338,6 +351,10 @@ label.form-error {
             font-weight: 800;
         }
         &_modified {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        &_dark {
             padding-top: 8px;
             padding-bottom: 8px;
         }
@@ -776,7 +793,7 @@ and (max-width: $mobile) {
     &-panel {
         display: flex;
         align-items: center;
-        margin-bottom: 47px;
+        margin-bottom: 31px;
     }
     &-panel-item {
         position: relative;
@@ -795,13 +812,13 @@ and (max-width: $mobile) {
         padding-right: 32px;
     }
     &-track {
-        height: 1px;
+        height: 2px;
         margin-left: 5px;
         margin-right: 10px;
-        background-color: #4F4F4F;
+        background-color: var(--color25);
     }
     &-quantity {
-        background-color: #000000;
+        background-color: var(--color6);
     }
     .ui-slider-horizontal &-quantity {
         height: 2px;
@@ -846,8 +863,6 @@ and (max-width: $mobile) {
         cursor: pointer;
         background-color: var(--color6);
         border-width: 0;
-        &:active {
-        }
         &:after {
             content: '';
             position: absolute;
@@ -858,6 +873,10 @@ and (max-width: $mobile) {
             height: 12px;
             background-color: #fff;
             border-radius: 50%;
+        }
+        &:hover:after {
+            width: 16px;
+            height: 16px;
         }
     }
     &-currency {
