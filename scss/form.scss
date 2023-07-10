@@ -369,19 +369,20 @@ label.form-error {
 .selectric {
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 42px;
     border-radius: 50em;
     background-color: transparent;
-    padding: 7px 19px 8px 17px;
+    padding: 8px 20px 8px 19px;
     border: 1px solid var(--color6);
 }
 .selectric .label {
     margin: 0;
     height: auto;
-    font-size: 15px;
-    line-height: 22px;
-    color: var(--color1);
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color23);
     font-weight: 500;
+    letter-spacing: 0.42px;
 }
 .selectric:hover .label {
 }
@@ -412,14 +413,14 @@ label.form-error {
 }
 .selectric-items li:hover {
     background-color: transparent;
-    color: var(--color1);
+    color: var(--color6);
 }
 .selectric-items li.highlighted {
     background-color: transparent;
     color: var(--color1);
 }
 .selectric-items li.selected {
-    color: var(--color1);
+    color: var(--color6);
     background-color: transparent;
 }
 .selectric-button {
@@ -475,6 +476,9 @@ label.form-error {
 and (max-width: $tablet) {
     .selectric {
         height: 35px;
+        padding-top: 7px;
+        padding-left: 16px;
+        padding-right: 14px;
     }
     .selectric .label {
         font-weight: 500;
@@ -486,6 +490,10 @@ and (max-width: $tablet) {
 
 @media screen
 and (max-width: $mobile) {
+    .selectric {
+        padding-left: 18px;
+        padding-right: 15px;
+    }
     .selectric-items {
         display: block;
         position: fixed;
@@ -646,6 +654,7 @@ and (max-width: $mobile) {
     &-link {
         display: flex;
         align-items: center;
+        justify-content: center;
         font-weight: 500;
         padding-left: 39px;
         padding-right: 39px;
@@ -679,15 +688,26 @@ and (max-width: $mobile) {
     }
 
     @media screen
+    and (max-width: $desktop){
+        &-link {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+    @media screen
     and (max-width: $tablet){
         &-link {
+            min-width: 214px;
             padding-left: 19px;
             padding-right: 19px;
         }
     }
     @media screen
     and (max-width: $mobile){
+        flex-direction: column;
+        align-items: normal;
         &-link {
+            margin-bottom: 20px;
             padding: 9px 33px;
             font-size: 14px;
         }
@@ -813,9 +833,27 @@ and (max-width: $mobile) {
     }
     &-track {
         height: 2px;
-        margin-left: 5px;
-        margin-right: 10px;
+        margin-left: 10px;
+        margin-right: 12px;
         background-color: var(--color25);
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 10px;
+            height: 2px;
+            background-color: inherit;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -12px;
+            width: 12px;
+            height: 2px;
+            background-color: inherit;
+        }
     }
     &-quantity {
         background-color: var(--color6);

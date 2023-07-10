@@ -1209,6 +1209,45 @@ function initSliderRange() {
     });
 }
 
+function initPopupFilter() {
+    if (typeof(MobileMenu) === 'undefined' || !jQuery.isFunction(MobileMenu)) {
+        return false;
+    }
+
+    var common = {};
+
+    jQuery('.JS-PopupFilter').not('.JS-MobileMenu-ready').each(function() {
+        var local = GLOBAL.parseData(jQuery(this).data('mobilemenu'));
+        new MobileMenu(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initTabCard() {
+    if (typeof(Tab) === 'undefined' || !jQuery.isFunction(Tab)) {
+        return false;
+    }
+
+    var common = {};
+
+    jQuery('.JS-Tab-Card').not('.JS-Tab-ready').each(function() {
+        var local = GLOBAL.parseData(jQuery(this).data('tab'));
+        new Tab(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initAccordionCard() {
+    if (typeof(Accordion) === 'undefined' || !jQuery.isFunction(Accordion)) {
+        return false;
+    }
+
+    var common = {};
+
+    $('.JS-Accordion-Card').not('.JS-Accordion-ready').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('accordion'));
+        new Accordion(this, jQuery.extend({}, common, local));
+    });
+}
+
 
 function initResizeWindow() {
     var width = $(window).outerWidth();
@@ -1225,6 +1264,7 @@ function initResizeWindow() {
         if (sliderCategoryTag == undefined) {
             initSliderCategoryTag();
         }
+        initAccordionCard();
     } else if (width <= GLOBAL.tablet) {
         GLOBAL.widthWindow = 'isTablet';
         if (sliderPopular == undefined) {
@@ -1236,6 +1276,7 @@ function initResizeWindow() {
         if (sliderCategoryTag == undefined) {
             initSliderCategoryTag();
         }
+        initTabCard();
     } else {
         GLOBAL.widthWindow = '';
         if (sliderPopular == undefined) {
@@ -1247,6 +1288,7 @@ function initResizeWindow() {
         if (sliderCategoryTag) {
             reInitSliderCategoryTag();
         }
+        initTabCard();
     }
 }
 
@@ -1290,4 +1332,5 @@ $(document).ready(function () {
     initCatalogShow();
     initShowMore();
     initSliderRange();
+    initPopupFilter();
 });

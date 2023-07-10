@@ -287,6 +287,12 @@
     }
 }
 
+.inner-page .header {
+    margin-bottom: 29px;
+    box-shadow: 0 0 20px rgba(206, 206, 206, 0.40);
+    border-radius: 0 0 30px 30px;
+}
+
 .menu-catalog {
     margin-right: 25px;
     &-switcher {

@@ -453,9 +453,9 @@ body.mob-form-show .wrapper {
     }
     &-content {
         overflow-y: auto;
+        overflow-x: hidden;
         height: 100%;
-        margin-right: -20px;
-        padding-right: 20px;
+        padding-right: 10px;
     }
     &-list {
     }
@@ -762,6 +762,7 @@ body.mob-form-show .wrapper {
             padding-top: 20px;
         }
         &-form-block {
+            max-width: none;
             padding-top: 66px;
             padding-bottom: 203px;
         }
@@ -855,6 +856,31 @@ body.mob-form-show .wrapper {
             &-form-block {
                 padding-bottom: 165px;
             }
+        }
+    }
+}
+
+.catalog-filter-popup {
+    padding-bottom: 100px;
+    .catalog-filter-block {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .catalog-submenu-checkboxes {
+        column-count: 2;
+    }
+    .products-popup-buttons {
+        padding-top: 15px;
+    }
+
+    @media screen
+    and (max-width: $tablet){
+        padding-bottom: 140px;
+    }
+    @media screen
+    and (max-width: $mobile){
+        .catalog-submenu-checkboxes {
+            column-count: auto;
         }
     }
 }

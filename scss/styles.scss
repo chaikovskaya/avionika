@@ -31,6 +31,8 @@ $gutter: calc($gutters/2);
 	--color23: #036D6B;
 	--color24: #CAE8E8;
 	--color25: #E3E8F1;
+	--color26: rgba(197, 58, 117, 0.11);
+	--color27: rgba(197, 58, 117, 0.2);
 	--font-common: 'Manrope';
 	--font-size: 15px;
 	--line-height: 26px;
@@ -868,7 +870,8 @@ and (max-width: $tablet) {
 	margin-left: auto;
 	margin-right: auto;
 	&-item {
-		margin-right: 12px;
+		margin-left: 6px;
+		margin-right: 6px;
 		font-weight: 500;
 		font-size: 15px;
 		line-height: 18px;
@@ -930,25 +933,63 @@ and (max-width: $tablet) {
 	&-item_disabled &-link:hover {
 		cursor: default;
 	}
+	&-icon {}
 
 	@media screen
 	and (max-width: $desktop){
 		&-item {
-			margin-right: 7px;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		&-item_prev {
+			margin-right: 22px;
+		}
+		&-item_next {
+			margin-left: 22px;
+		}
+		&-link {
+			width: auto;
+			height: auto;
+			font-size: 14px;
+			border-width: 0;
+			&:hover {
+				background-color: transparent;
+			}
+		}
+		&-item_active &-link {
+			background-color: transparent;
+			color: var(--color6);
+			font-weight: 500;
+		}
+		&-item_prev &-link {
+			background-color: transparent;
+			&:hover {
+				background-color: transparent;
+			}
+			path {
+				stroke: #111;
+			}
+		}
+		&-item_next &-link {
+			background-color: transparent;
+			&:hover {
+				background-color: transparent;
+			}
+			path {
+				stroke: #111;
+			}
+		}
+		&-icon {
+			width: 6px;
 		}
 	}
 	@media screen
 	and (max-width: $tablet){
-		&-item {
-			margin-right: 10px;
-		}
-		&-link {
-			font-size: 14px;
-		}
 	}
 	@media screen
 	and (max-width: $mobile){
-		display: none;
+		position: static;
+		transform: none;
 	}
 }
 /* /pager */
@@ -1009,7 +1050,8 @@ and (max-width: $mobile){
 	}
 	&-switcher:hover { }
 	&more-start &-switcher {
-		display: inline-block;
+		display: block;
+		width: fit-content;
 	}
 	&-more {}
 	&-more-label {
