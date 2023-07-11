@@ -1248,6 +1248,62 @@ function initAccordionCard() {
     });
 }
 
+let galleryPhotoThumbs,
+    galleryPhotoTop;
+function initPhotoCard() {
+    let $slider = $(".js-photo-card-thumbs"),
+        $list = $slider.find('.js-slider-list'),
+        sliderLength = $slider.find('.swiper-slide').length,
+        $buttonPrev = $slider.find('.js-gallery-card-prev'),
+        $buttonNext = $slider.find('.js-gallery-card-next');
+
+    let isStart = sliderLength > 1 ? true : false;
+
+    galleryPhotoThumbs = new Swiper($list[0], {
+        loop: false,
+        slidesPerView: "auto",
+        autoHeight: true,
+        pagination: false,
+        threshold: 10,
+        watchSlidesProgress: true,
+        spaceBetween: 12,
+        breakpoints: {
+            0: {
+            },
+            770: {
+            },
+            992: {
+            },
+        }
+    });
+    galleryPhotoTop = new Swiper(".js-photo-card-main", {
+        loop: isStart,
+        direction: "horizontal",
+        navigation: false,
+        pagination: false,
+        thumbs: {
+            swiper: galleryPhotoThumbs
+        },
+        slidesPerView: "auto",
+        threshold: 10,
+        spaceBetween: 15,
+        breakpoints: {
+            0: {
+            },
+            770: {
+            },
+            992: {
+            },
+        },
+    });
+    $buttonPrev.on('click', function(e) {
+        galleryPhotoTop.slidePrev();
+    });
+    $buttonNext.on('click', function(e) {
+        galleryPhotoTop.slideNext();
+    });
+};
+
 
 function initResizeWindow() {
     var width = $(window).outerWidth();
@@ -1333,4 +1389,5 @@ $(document).ready(function () {
     initShowMore();
     initSliderRange();
     initPopupFilter();
+    initPhotoCard();
 });

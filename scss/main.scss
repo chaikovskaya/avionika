@@ -598,12 +598,16 @@
         background-color: #fff;
     }
     &-icon {
-        margin-top: 1px;
+        margin-top: 2px;
     }
     &-label_active &-icon {
         path {
             fill: var(--color6);
         }
+    }
+
+    &_simple &-label {
+        border: 1px solid var(--color6);
     }
 
     @media screen
@@ -668,7 +672,7 @@
         left: 0;
         z-index: 1;
         width: 100%;
-        padding: 20px 20px 0 22px;
+        padding: 15px 15px 0 15px;
         display: flex;
     }
     &-links {
@@ -693,6 +697,10 @@
         font-size: 15px;
         line-height: 22px;
         letter-spacing: 0.413px;
+        &:hover {
+            color: var(--color6);
+            text-shadow: 0 0 .04em var(--color6);
+        }
     }
     &-price {
         display: flex;
@@ -1220,7 +1228,7 @@
             line-height: 0;
         }
         &-more-link {
-            width: 100%;
+            width: 100%!important;
         }
         &-more-button {
             display: block;
