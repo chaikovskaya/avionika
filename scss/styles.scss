@@ -854,17 +854,12 @@ and (max-width: $tablet) {
 
 /* pager */
 .pager {
-	position: absolute;
-	right: 0;
-	top: 50%;
-	transform: translateY(-50%);
+	margin-left: auto;
 	list-style-type: none;
 	text-align: center;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	margin-left: auto;
-	margin-right: auto;
 	&-item {
 		margin-left: 6px;
 		margin-right: 6px;
@@ -933,6 +928,13 @@ and (max-width: $tablet) {
 
 	@media screen
 	and (max-width: $desktop){
+	}
+	@media screen
+	and (max-width: $tablet){
+		position: absolute;
+		right: -4px;
+		top: 50%;
+		transform: translateY(-50%);
 		&-item {
 			margin-left: 5px;
 			margin-right: 5px;
@@ -980,13 +982,10 @@ and (max-width: $tablet) {
 		}
 	}
 	@media screen
-	and (max-width: $tablet){
-		right: -4px;
-	}
-	@media screen
 	and (max-width: $mobile){
 		position: static;
 		transform: none;
+		margin-right: auto;
 	}
 }
 /* /pager */

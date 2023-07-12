@@ -618,7 +618,11 @@
         }
         &-icon {
             width: 18px;
+            margin-top: 1px;
         }
+    }
+    @media screen
+    and (max-width: $mobile) {
     }
 }
 
@@ -800,9 +804,6 @@
         }
         &-img-link {
             height: 214px;
-        }
-        &-actions {
-            padding-left: 20px;
         }
         &-discount {
             margin-bottom: 8px;

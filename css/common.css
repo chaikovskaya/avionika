@@ -866,17 +866,12 @@ blockquote:after {
 }
 /* pager */
 .pager {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-left: auto;
   list-style-type: none;
   text-align: center;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
 }
 .pager-item {
   margin-left: 6px;
@@ -937,7 +932,13 @@ blockquote:after {
 .pager-item_disabled .pager-link:hover {
   cursor: default;
 }
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 992px) {
+  .pager {
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   .pager-item {
     margin-left: 5px;
     margin-right: 5px;
@@ -984,15 +985,11 @@ blockquote:after {
     width: 6px;
   }
 }
-@media screen and (max-width: 992px) {
-  .pager {
-    right: -4px;
-  }
-}
 @media screen and (max-width: 770px) {
   .pager {
     position: static;
     transform: none;
+    margin-right: auto;
   }
 }
 
@@ -1675,8 +1672,6 @@ label.form-error {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 18px;
 }
 .load-more-icon {
   display: none;
@@ -1728,6 +1723,10 @@ label.form-error {
   }
 }
 @media screen and (max-width: 992px) {
+  .load-more {
+    justify-content: center;
+    min-height: 35px;
+  }
   .load-more-link {
     min-width: 214px;
     padding-left: 19px;
@@ -1827,6 +1826,10 @@ label.form-error {
 @media screen and (max-width: 992px) {
   .amount-counter .amount-icon {
     margin-left: 0;
+  }
+  .amount-digit {
+    width: 29px;
+    height: 29px;
   }
 }
 
@@ -5039,9 +5042,9 @@ body.mob-form-show .wrapper {
   }
   .links-icon {
     width: 18px;
+    margin-top: 1px;
   }
 }
-
 .products {
   margin-bottom: 96px;
 }
@@ -5218,9 +5221,6 @@ body.mob-form-show .wrapper {
   }
   .products-img-link {
     height: 214px;
-  }
-  .products-actions {
-    padding-left: 20px;
   }
   .products-discount {
     margin-bottom: 8px;
@@ -6521,17 +6521,27 @@ body.mob-form-show .wrapper {
   margin-bottom: 12px;
 }
 .catalog-menu-button-reset {
+  display: flex;
+  align-items: center;
   background-color: transparent;
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 15px;
-  font-weight: 600;
+  line-height: 20px;
+  color: var(--color2);
 }
 .catalog-menu-button-reset:hover {
   background-color: transparent;
-  text-decoration: none;
+}
+.catalog-menu-button-reset-label {
+  border-bottom: 1px solid var(--color2);
+}
+.catalog-menu-button-reset-icon {
+  margin-right: 4px;
+}
+.catalog-menu-button-reset:hover .catalog-menu-button-reset-label {
+  border-color: transparent;
 }
 .catalog-activity-link {
   display: flex;
@@ -6653,8 +6663,6 @@ body.mob-form-show .wrapper {
 }
 .tabs-simple-menu-icon {
   display: none;
-  font-size: 16px;
-  color: #1d1d1d;
 }
 @media screen and (min-width: 1330px) {
   .tabs-simple-item {
@@ -6662,31 +6670,57 @@ body.mob-form-show .wrapper {
     margin-top: 0 !important;
   }
 }
+@media screen and (max-width: 1330px) {
+  .tabs-simple-menu-link {
+    margin-right: 25px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 @media screen and (max-width: 992px) {
+  .tabs-simple {
+    margin-bottom: 65px;
+  }
+  .tabs-simple-item {
+    top: 50px;
+  }
+  .tabs-simple-menu-link {
+    margin-right: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 21px;
+    border-bottom-width: 1px;
+  }
+  .tabs-simple-menu-item:last-child .tabs-simple-menu-link {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 770px) {
+  .tabs-simple {
+    margin-bottom: 52px;
+  }
   .tabs-simple-menu {
     height: auto;
-    margin-bottom: 52px;
     border-bottom-width: 0;
   }
   .tabs-simple-menu-item {
-    border: solid #eeeeee;
-    border-width: 1px 0 0;
+    margin-bottom: 14px;
   }
   .tabs-simple-menu-item:last-child {
-    border-bottom-width: 1px;
+    margin-bottom: 0;
   }
   .tabs-simple-menu-link {
     float: none;
     display: flex;
+    align-items: center;
     width: 100%;
-    min-height: 50px;
     margin-right: 0;
     margin-bottom: 0;
-    padding-top: 14px;
-    padding-bottom: 14px;
     border-bottom-width: 0;
     text-align: left;
-    color: #1d1d1d;
+    color: var(--color1);
+    font-size: 20px;
+    line-height: 30px;
   }
   .tabs-simple-menu-link:hover {
     color: #1d1d1d;
@@ -6695,7 +6729,7 @@ body.mob-form-show .wrapper {
     float: none;
     margin-left: 0;
     top: 13px;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
   .tabs-simple-menu-icon {
     display: block;
@@ -6705,38 +6739,27 @@ body.mob-form-show .wrapper {
     transform: scaleY(-1);
   }
 }
-@media screen and (max-width: 770px) {
-  .tabs-simple-menu {
-    margin-bottom: 47px;
-  }
-  .tabs-simple-item {
-    top: 7px;
-    margin-bottom: 40px;
-  }
-  .tabs-simple-item h2 {
-    font-size: 20px;
-  }
-}
 
 /* /tabs-simple */
 .card-content {
   display: flex;
   margin-bottom: 60px;
 }
-.card-container {
-  flex-grow: 1;
-}
 .card-gallery {
-  min-width: 427px;
-  width: 427px;
+  width: 34%;
   padding-right: 30px;
+}
+.card-container {
+  width: 66%;
+}
+.card-gallery-main-inner {
+  height: 475px;
+  margin-bottom: 25px;
 }
 .card-gallery-main {
   position: relative;
-  height: 475px;
   width: 100%;
   overflow: hidden;
-  margin-bottom: 25px;
 }
 .card-gallery-main-item {
   width: 100%;
@@ -6748,7 +6771,6 @@ body.mob-form-show .wrapper {
   justify-content: center;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   overflow: hidden;
 }
 .card-gallery-thumbs {
@@ -6768,17 +6790,17 @@ body.mob-form-show .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 64px;
-  width: 64px;
-  height: 64px;
-  border: 1px solid transparent;
   overflow: hidden;
   text-align: center;
+  height: 64px !important;
+}
+.card-thumbs-item.swiper-slide-thumb-active {
+  opacity: 0.5;
 }
 .card-thumbs-img {
   display: block;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .card-gallery-slider-decor {
@@ -6825,8 +6847,11 @@ body.mob-form-show .wrapper {
 .card-gallery-button:hover .card-gallery-icon path {
   stroke: var(--color6);
 }
+.card-gallery-pagination {
+  display: none;
+}
 .card-description-container {
-  width: 56%;
+  width: 56.5%;
   float: left;
   padding-right: 30px;
 }
@@ -6864,6 +6889,8 @@ body.mob-form-show .wrapper {
 }
 .card-actions-label {
   margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 22px;
 }
 .card-actions-list {
   display: flex;
@@ -6891,9 +6918,11 @@ body.mob-form-show .wrapper {
 }
 .card-actions-icon {
   margin-right: 5px;
+  max-width: 16px;
+  max-height: 16px;
 }
 .card-props-container {
-  width: 56%;
+  width: 56.5%;
   float: left;
   padding-right: 30px;
 }
@@ -6976,12 +7005,12 @@ body.mob-form-show .wrapper {
   stroke: var(--color6);
 }
 .card-order {
-  width: 41%;
+  width: 43.4%;
   float: right;
 }
 .card-order-block {
   margin-bottom: 36px;
-  padding: 20px 30px 30px;
+  padding: 20px 29px 30px;
   border-radius: 20px;
   box-shadow: 0 0 20px 0 rgba(206, 206, 206, 0.4);
 }
@@ -6991,18 +7020,24 @@ body.mob-form-show .wrapper {
 .card-activity-item:last-child {
   margin-bottom: 0;
 }
+.card-activity-item_basket {
+  display: flex;
+}
 .card-activity-button {
   display: block;
 }
 .card-activity-button_basket {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .card-activity-basket-icon {
   margin-top: -3px;
   margin-bottom: -1px;
   margin-right: 12px;
+}
+.card-amount {
+  margin-right: 17px;
 }
 .card-delivery {
   margin-left: 24px;
@@ -7043,4 +7078,370 @@ body.mob-form-show .wrapper {
 }
 .card-delivery-link:hover {
   text-decoration: none;
+}
+.card-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.card-price-value {
+  margin-right: 10px;
+  color: var(--color1);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.card-price-old {
+  position: relative;
+  margin-right: 8px;
+  color: var(--color2);
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 1.275px;
+  white-space: nowrap;
+}
+.card-price-old:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color2);
+}
+.card-price-discount {
+  margin-top: 2px;
+  border-radius: 50em;
+  padding: 3px 6px 4px;
+  color: #FFF;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2em;
+  letter-spacing: 0.935px;
+  background-color: var(--color7);
+  white-space: nowrap;
+}
+.card-info {
+  display: flex;
+  margin-bottom: 17px;
+}
+.card-info-text {
+  color: var(--color12);
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+}
+.card-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 23px;
+  width: 23px;
+  height: 23px;
+  margin-right: 12px;
+  text-align: center;
+  background-color: var(--color5);
+  border-radius: 50em;
+}
+.card-size-wrapper {
+  margin-bottom: 20px;
+}
+.card-size {
+  margin-bottom: 10px;
+}
+.card-size:last-child {
+  margin-bottom: 0;
+}
+.card-size-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color23);
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.286px;
+}
+.card-size-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+}
+.card-size-list-item {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.card-size-link {
+  display: block;
+  height: 30px;
+  min-width: 71px;
+  white-space: nowrap;
+  padding: 3px 10px 5px;
+  border-radius: 10px;
+  border: 1px solid var(--color19);
+  text-decoration: none;
+  text-align: center;
+  color: var(--color2);
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.308px;
+}
+.card-size-link_active {
+  font-weight: 500;
+  border-color: var(--color2);
+}
+.card-size-link_disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+@media screen and (max-width: 1330px) {
+  .card-gallery {
+    min-width: 330px;
+    padding-right: 25px;
+  }
+  .card-order-block {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .card-gallery-main-inner {
+    height: 370px;
+  }
+  .card-description-container {
+    padding-right: 25px;
+  }
+  .card-props-container {
+    padding-right: 25px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .card-content {
+    margin-bottom: 51px;
+  }
+  .card-gallery {
+    width: 51%;
+  }
+  .card-container {
+    width: 49%;
+  }
+  .card-gallery-main-inner {
+    height: 393px;
+    margin-bottom: 20px;
+  }
+  .card-description-container {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+  .card-order {
+    width: 100%;
+    float: none;
+    margin-bottom: 33px;
+  }
+  .card-props-container {
+    width: 100%;
+    float: none;
+    padding-right: 0;
+  }
+  .card-code {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .card-panel {
+    margin-bottom: 0;
+  }
+  .card-marks {
+    margin-bottom: 5px;
+  }
+  .card-marks .marks-label {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  .card-name {
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .card-actions-label {
+    margin-bottom: 11px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .card-actions-list {
+    margin-bottom: 7px;
+  }
+  .card-actions-list-item {
+    margin-right: 13px;
+    margin-bottom: 13px;
+  }
+  .card-actions-block {
+    padding: 5px 10px 7px;
+    font-size: 11px;
+    line-height: 1em;
+  }
+  .card-actions-icon {
+    max-width: 12px;
+    max-height: 12px;
+    margin-right: 4px;
+  }
+  .card-order-block {
+    margin-bottom: 30px;
+  }
+  .card-price-value {
+    font-size: 24px;
+    margin-right: 9px;
+  }
+  .card-price-value .currency {
+    font-size: 23px;
+  }
+  .card-price-old {
+    margin-right: 7px;
+    font-size: 15px;
+  }
+  .card-price-discount {
+    padding-top: 2px;
+    padding-bottom: 3px;
+  }
+  .card-info {
+    margin-bottom: 14px;
+  }
+  .card-info-icon {
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  .card-info-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .card-size-wrapper {
+    margin-bottom: 25px;
+  }
+  .card-size {
+    margin-bottom: 1px;
+  }
+  .card-size-list {
+    margin-right: -12px;
+  }
+  .card-size-list-item {
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+  .card-size-link {
+    font-size: 13px;
+    line-height: 21px;
+  }
+  .card-amount {
+    margin-right: 15px;
+  }
+  .card-gallery-thumbs-inner {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .card-gallery-button {
+    width: 35px;
+    height: 35px;
+  }
+  .card-delivery-img {
+    min-width: 23px;
+    width: 23px;
+    margin-right: 11px;
+  }
+  .card-delivery {
+    margin-left: 0;
+  }
+  .card-delivery-name {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .card-delivery-text {
+    margin-bottom: 3px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .card-delivery-link {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .card-props-title {
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .card-props-item {
+    margin-bottom: 13px;
+  }
+  .card-props-name {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .card-props-value {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .card-more-list-item {
+    margin-bottom: 12px;
+  }
+  .card-more-list-link {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .card-thumbs-item {
+    height: 52px !important;
+  }
+}
+@media screen and (max-width: 770px) {
+  .card-content {
+    flex-direction: column;
+  }
+  .card-gallery {
+    min-width: auto;
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 27px;
+  }
+  .card-gallery .slider-pagination {
+    margin-top: 13px;
+  }
+  .card-gallery-main-inner {
+    height: 330px;
+    margin-bottom: 0;
+  }
+  .card-container {
+    width: 100%;
+  }
+  .card-gallery-thumbs-wrapper {
+    display: none;
+  }
+  .card-actions-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-order-block {
+    padding-bottom: 23px;
+  }
+  .card-size-wrapper {
+    margin-bottom: 5px;
+  }
+  .card-size {
+    margin-bottom: 0;
+  }
+  .card-size-list {
+    margin-right: -15px;
+  }
+  .card-size-list-item {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  .card-activity-item {
+    margin-bottom: 20px;
+  }
+  .card-size-link {
+    height: 25px;
+    min-width: 73px;
+    padding-top: 1px;
+    padding-bottom: 2px;
+  }
+  .card-gallery-pagination {
+    display: block;
+  }
 }

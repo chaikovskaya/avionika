@@ -639,8 +639,6 @@ and (max-width: $mobile) {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 18px;
     &-label {
     }
     &_active {}
@@ -700,6 +698,8 @@ and (max-width: $mobile) {
     }
     @media screen
     and (max-width: $tablet){
+        justify-content: center;
+        min-height: 35px;
         &-link {
             min-width: 214px;
             padding-left: 19px;
@@ -807,6 +807,10 @@ and (max-width: $mobile) {
     and (max-width: $tablet){
         &-counter &-icon {
             margin-left: 0;
+        }
+        &-digit {
+            width: 29px;
+            height: 29px;
         }
     }
 }

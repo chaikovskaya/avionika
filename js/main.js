@@ -1255,36 +1255,50 @@ function initPhotoCard() {
         $list = $slider.find('.js-slider-list'),
         sliderLength = $slider.find('.swiper-slide').length,
         $buttonPrev = $slider.find('.js-gallery-card-prev'),
-        $buttonNext = $slider.find('.js-gallery-card-next');
+        $buttonNext = $slider.find('.js-gallery-card-next'),
+        $sliderMain = $(".js-photo-card-main"),
+        $listMain = $sliderMain.find('.js-slider-list'),
+        $pagination = $sliderMain.find('.js-slider-pagination')[0];
 
     let isStart = sliderLength > 1 ? true : false;
 
     galleryPhotoThumbs = new Swiper($list[0], {
         loop: false,
-        slidesPerView: "auto",
         autoHeight: true,
         pagination: false,
         threshold: 10,
         watchSlidesProgress: true,
-        spaceBetween: 12,
         breakpoints: {
             0: {
+                spaceBetween: 10,
+                slidesPerView: 4,
             },
             770: {
+                spaceBetween: 10,
+                slidesPerView: 4,
             },
             992: {
+                spaceBetween: 12,
+                slidesPerView: 3,
+            },
+            1330: {
+                spaceBetween: 12,
+                slidesPerView: 4,
             },
         }
     });
-    galleryPhotoTop = new Swiper(".js-photo-card-main", {
+    galleryPhotoTop = new Swiper($listMain[0], {
         loop: isStart,
         direction: "horizontal",
         navigation: false,
-        pagination: false,
+        pagination: {
+            el: $pagination,
+            clickable: true,
+        },
         thumbs: {
             swiper: galleryPhotoThumbs
         },
-        slidesPerView: "auto",
+        slidesPerView: 1,
         threshold: 10,
         spaceBetween: 15,
         breakpoints: {
@@ -1303,6 +1317,17 @@ function initPhotoCard() {
         galleryPhotoTop.slideNext();
     });
 };
+
+function initAnchorShow() {
+    $('.js-anchor-switcher').each(function() {
+        var $switcher = jQuery(this);
+
+        $switcher.on("click", function() {
+            let id = $(this).attr("href");
+            $(id).trigger("click");
+        });
+    });
+}
 
 
 function initResizeWindow() {
@@ -1329,8 +1354,8 @@ function initResizeWindow() {
         if (sliderBrands == undefined) {
             initSliderBrands();
         }
-        if (sliderCategoryTag == undefined) {
-            initSliderCategoryTag();
+        if (sliderCategoryTag) {
+            reInitSliderCategoryTag();
         }
         initTabCard();
     } else {
@@ -1390,4 +1415,5 @@ $(document).ready(function () {
     initSliderRange();
     initPopupFilter();
     initPhotoCard();
+    initAnchorShow();
 });
