@@ -511,7 +511,7 @@ function initAccordion() {
 
     var common = {};
 
-    $('.JS-Accordion').not('.JS-Accordion-ready').each(function(){
+    $('.JS-Accordion').each(function(){
         var local = GLOBAL.parseData(jQuery(this).data('accordion'));
         new Accordion(this, jQuery.extend({}, common, local));
     });
@@ -1227,7 +1227,8 @@ function initTabCard() {
         return false;
     }
 
-    var common = {};
+    var common = {
+    };
 
     jQuery('.JS-Tab-Card').not('.JS-Tab-ready').each(function() {
         var local = GLOBAL.parseData(jQuery(this).data('tab'));
@@ -1416,4 +1417,5 @@ $(document).ready(function () {
     initPopupFilter();
     initPhotoCard();
     initAnchorShow();
+    ymaps.ready(initMapShops);
 });
