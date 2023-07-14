@@ -1330,6 +1330,51 @@ function initAnchorShow() {
     });
 }
 
+function initPopupGallery() {
+    $(".js-popup-gallery").fancybox({
+        loop: true,
+        infobar: false,
+        toolbar  : false,
+        smallBtn : true,
+        arrows : false,
+        animationEffect: "fade",
+        hash : false,
+        btnTpl: {
+            smallBtn:
+                '<button type="button" data-fancybox-close class="fancybox-close" title="{{CLOSE}}">' +
+                '<svg class="fancybox-close-icon" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                '<path d="M1.75 1.25L12.4313 11.7813" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+                '<path d="M12.4316 1.25L1.75029 11.7813" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+                '</svg>' +
+                '</button>'
+        },
+        beforeClose: function (instance) {
+        },
+        afterShow: function(instance, current) {
+            if ( instance.group.length > 1 && current.$content ) {
+                current.$content.append('' +
+                    '<button class="fancybox-button fancybox-button--arrow_left prev" data-fancybox-prev>' +
+                    '<span class="fancybox-button-icon fancybox-button-icon_left"><svg class="fancybox-button-arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                    '<path d="M6.91406 1.23002L1.7524 6.39169C1.14281 7.00127 1.14281 7.99877 1.7524 8.60835L6.91406 13.77" stroke="white" stroke-width="2.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+                    '</svg></span>\n' +
+                    '</button>' +
+                    '<button class="fancybox-button fancybox-button--arrow_right next" data-fancybox-next>' +
+                    '<span class="fancybox-button-icon fancybox-button-icon_right"><svg class="fancybox-button-arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                    '<path d="M2.08594 1.23002L7.2476 6.39169C7.85719 7.00127 7.85719 7.99877 7.2476 8.60835L2.08594 13.77" stroke="white" stroke-width="2.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>\n' +
+                    '</svg></span>\n' +
+                    '</button>'
+                );
+            }
+        },
+        lang: "ru",
+        i18n: {
+            ru: {
+                CLOSE: "Закрыть",
+            },
+        },
+    });
+}
+
 
 function initResizeWindow() {
     var width = $(window).outerWidth();
@@ -1394,7 +1439,7 @@ $(document).ready(function () {
     initSelect();
     initMobileMenu();
     initForm();
-    ymaps.ready(initMap);
+    //ymaps.ready(initMap);
     initAdaptiveMenu();
     initSliderMainBanner();
     initAccordion();
@@ -1418,4 +1463,5 @@ $(document).ready(function () {
     initPhotoCard();
     initAnchorShow();
     ymaps.ready(initMapShops);
+    initPopupGallery();
 });

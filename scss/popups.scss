@@ -47,9 +47,6 @@
 .fancybox-button .fancybox-button-arrow {
     width: 14px;
     height: 10px;
-    path {
-        fill: #fff;
-    }
 }
 
 .fancybox-nav-block {
@@ -69,6 +66,10 @@
     width: 40px;
     height: 100%;
     background: transparent;
+    svg path {
+        fill: transparent;
+        stroke-width: 2;
+    }
 }
 
 .fancybox-button--arrow_right {
@@ -81,20 +82,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    border: 1px solid #fff;
+    background-color: var(--color6);
     &_left { }
     &_right { }
 }
 .fancybox-button:hover .fancybox-button-icon {
-    background-color: hsla(var(--color0), 89%, 55%, 1);
-    border-width: 0;
 }
 .fancybox-button:active .fancybox-button-icon {
-    background-color: hsla(var(--color0), 82%, 44%, 1);
-    border-width: 0;
 }
 .fancybox-button[disabled] .fancybox-button-icon {
 }
@@ -126,12 +123,18 @@ and (max-width: $mobile) {
     .fancybox-close {
         top: -32px;
         margin-left: -24px;
+        width: 28px;
+        height: 28px;
     }
     .fancybox-button--arrow_right {
         right: 10px;
     }
     .fancybox-button--arrow_left {
         left: 10px;
+    }
+    .fancybox-button-icon {
+        width: 35px;
+        height: 35px;
     }
 }
 /* /Fancybox */
