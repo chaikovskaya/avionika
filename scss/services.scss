@@ -17,6 +17,7 @@
         display: block;
         height: 275px;
         text-decoration: none;
+        overflow: hidden;
         &:hover {
             text-decoration: none;
         }
@@ -37,6 +38,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.2s linear;
     }
     &-list-block {
         position: relative;
@@ -74,9 +76,12 @@
     &-list-link:hover &-list-icon {
         opacity: 1;
     }
+    &-list-link:hover &-list-img {
+        transform: scale(1.1);
+    }
 
     @media screen
-    and (min-width: $desktop){
+    and (min-width: $tablet){
         &-list-item:nth-child(3),
         &-list-item:nth-child(4),
         &-list-item:nth-child(8),

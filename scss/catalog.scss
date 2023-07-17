@@ -143,6 +143,12 @@
     &-button {}
 
     @media screen
+    and (max-width: $desktop){
+        &-price {
+            margin-right: 30px;
+        }
+    }
+    @media screen
     and (max-width: $tablet){
         margin-bottom: 25px;
         &-container {
@@ -173,7 +179,7 @@
             margin-top: 30px;
         }
         &-price {
-            margin-right: 32px;
+            margin-right: 19px;
             margin-top: -9px;
         }
         &-price-label {

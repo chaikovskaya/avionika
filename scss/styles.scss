@@ -34,6 +34,7 @@ $gutter: calc($gutters/2);
 	--color26: rgba(197, 58, 117, 0.11);
 	--color27: rgba(197, 58, 117, 0.2);
 	--color28: #BDBDBD;
+	--color29: #F0F5FE;
 	--font-common: 'Manrope';
 	--font-size: 15px;
 	--line-height: 24px;
@@ -537,9 +538,6 @@ blockquote {
 		h2 {
 			margin-top: 30px;
 		}
-		img {
-			border-radius: 25px;
-		}
 		ul {
 			margin-bottom: 20px;
 		}
@@ -1011,6 +1009,11 @@ and (max-width: $tablet){
 		margin-bottom: 16px;
 		font-size: 20px;
 		line-height: 30px;
+	}
+	h3,
+	.h3 {
+		font-size: 16px;
+		line-height: 21px;
 	}
 	.img-right {
 		margin-left: 20px;

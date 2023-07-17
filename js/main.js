@@ -581,29 +581,6 @@ function initFormatPrice() {
     });
 }
 
-function initAnchorScroll() {
-    let $page = $('html, body'),
-        speed = 500,
-        $container = $('.main-menu-container');
-
-    $(document).on('click', 'a[href*="#"]', function() {
-        let _this = this,
-            lengthString = $(_this).attr('href').length;
-
-        if (lengthString > 1) {
-            let heightBlock,
-                targetPosition = $($.attr(_this, 'href')).offset().top;
-
-            heightBlock = $container.height() || 0;
-
-            $page.animate({
-                scrollTop: (targetPosition) - heightBlock
-            }, speed);
-            return false;
-        }
-    });
-}
-
 function initMainmenu() {
     $('.js-main-menu-item').each(function(){
         let $element = $(this),
@@ -1375,6 +1352,31 @@ function initPopupGallery() {
     });
 }
 
+function initFind() {
+    $('.js-find').each(function () {
+        var $element = $(this),
+            $input = $element.find('.js-find-input'),
+            $item = $element.find('.js-find-container'),
+            $value = $element.find('.js-find-value');
+
+        $input.on('input change', function(){
+            var value = this.value.toUpperCase(),
+                classHide = 'find-hide';
+
+            $item.removeClass(classHide);
+
+            if (value.length) {
+                for (let i = 0; i < $value.length; i++) {
+                    var text = $($value[i]).text().toUpperCase();
+                    if (!(text.indexOf(value) + 1)) {
+                        $($value[i]).closest('.js-find-container').addClass(classHide);
+                    }
+                }
+            }
+        });
+    });
+}
+
 
 function initResizeWindow() {
     var width = $(window).outerWidth();
@@ -1446,7 +1448,6 @@ $(document).ready(function () {
     initTextFilterCity();
     initExpand();
     initFormatPrice();
-    initAnchorScroll();
     initMainmenu();
     initSliderActions();
     initSliderProducts();
@@ -1464,4 +1465,5 @@ $(document).ready(function () {
     initAnchorShow();
     ymaps.ready(initMapShops);
     initPopupGallery();
+    initFind();
 });

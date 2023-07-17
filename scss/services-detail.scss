@@ -9,6 +9,12 @@
         .main-title {
             text-transform: none;
         }
+        .main-info {
+            width: 49%;
+        }
+        .main-img {
+            width: 51%;
+        }
     }
     &-symptoms {
         display: flex;
@@ -24,13 +30,13 @@
     &-symptoms-info {
         width: 61%;
         padding: 40px 60px 48px 40px;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 300;
         ul li {
             margin-bottom: 26px;
             padding-left: 52px;
             padding-top: 6px;
-            font-size: 20px;
-            line-height: 30px;
-            font-weight: 300;
             &:before {
                 top: 6px;
                 left: 0;
@@ -60,8 +66,13 @@
 
     @media screen
     and (max-width: $desktop){
-        &-symptoms-pic {
-
+        &-main {
+            .main-info {
+                width: 53%;
+            }
+            .main-img {
+                width: 47%;
+            }
         }
         &-symptoms-info {
             padding: 30px;
@@ -78,24 +89,59 @@
                 line-height: 30px;
             }
             .main-info {
-                width: 65%;
-                padding-right: 15px;
-            }
+                width: 100%;
+             }
             .main-img {
-                width: 35%;
+               display: none;
             }
+        }
+        &-symptoms {
+            min-height: 287px;
+            margin-bottom: 55px;
+        }
+        &-symptoms-info {
+            font-size: 14px;
+            line-height: 21px;
+            ul {
+                margin-bottom: 10px;
+            }
+            ul li {
+                margin-bottom: 11px;
+                padding-top: 4px;
+                padding-left: 34px;
+                &:before {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        &-symptoms-img {
+            width: 32%;
+        }
+        &-symptoms-pic {
+            clip-path: ellipse(100% 68% at left center);
+        }
+        &-symptoms-info {
+            width: 68%;
+            padding: 27px 20px 25px;
         }
     }
     @media screen
     and (max-width: $mobile){
-        &-main {
-            .main-img {
-                display: none;
-            }
-            .main-info {
-                width: 100%;
-                padding-right: 25px;
-            }
+        &-symptoms {
+            flex-direction: column;
+        }
+        &-symptoms-img {
+            width: 100%;
+        }
+        &-symptoms-info {
+            order: -1;
+            width: 100%;
+        }
+        &-symptoms-pic {
+            position: static;
+            max-height: 220px;
+            clip-path: ellipse(65% 100% at bottom center);
         }
     }
 }
