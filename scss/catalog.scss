@@ -112,6 +112,9 @@
     &_simple &-container {
         background-color: var(--color7);
     }
+    &_modified &-container {
+        background-color: var(--color13);
+    }
     &-panel {
         display: flex;
         align-items: center;

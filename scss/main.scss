@@ -574,6 +574,12 @@
     &-icon {
         margin-left: 13px;
     }
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+       color: var(--color6);
+    }
 
     @media screen
     and (max-width: $tablet) {

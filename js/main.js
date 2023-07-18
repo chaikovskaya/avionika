@@ -1441,7 +1441,7 @@ $(document).ready(function () {
     initSelect();
     initMobileMenu();
     initForm();
-    //ymaps.ready(initMap);
+    ymaps.ready(initMap);
     initAdaptiveMenu();
     initSliderMainBanner();
     initAccordion();
