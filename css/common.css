@@ -109,15 +109,15 @@ h1,
 
 h2,
 .h2 {
-  margin-bottom: 21px;
-  font: 600 30px/42px var(--font-common), sans-serif;
+  margin-bottom: 20px;
+  font: 600 24px/36px var(--font-common), sans-serif;
   color: var(--color2);
 }
 
 h3,
 .h3 {
   margin-bottom: 13px;
-  font: 600 22px/32px var(--font-common), sans-serif;
+  font: 600 20px/32px var(--font-common), sans-serif;
   color: var(--color2);
 }
 
@@ -442,7 +442,7 @@ blockquote:after {
 }
 
 .content h2 {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .content h2:first-child {
   margin-top: 0;
@@ -573,7 +573,7 @@ blockquote:after {
     line-height: 24px;
   }
   .content h2 {
-    margin-top: 30px;
+    margin-top: 23px;
   }
   .content ul {
     margin-bottom: 20px;
@@ -1005,9 +1005,9 @@ blockquote:after {
   }
   h2,
   .h2 {
-    margin-bottom: 16px;
-    font-size: 20px;
-    line-height: 30px;
+    margin-bottom: 11px;
+    font-size: 18px;
+    line-height: 27px;
   }
   h3,
   .h3 {
@@ -8079,6 +8079,7 @@ body.mob-form-show .wrapper {
   display: flex;
   overflow: hidden;
   min-height: 408px;
+  margin-top: 20px;
   margin-bottom: 84px;
   background-color: var(--color3);
 }
@@ -8333,6 +8334,13 @@ body.mob-form-show .wrapper {
 .actions-common-link .actions-info {
   display: none;
 }
+.actions-common-link:hover .actions-common-button {
+  background-color: var(--color7);
+}
+.actions-common-link:hover .actions-info {
+  color: var(--color6);
+  text-shadow: 0 0 0.04em var(--color6);
+}
 .actions-list-item:nth-child(3) .actions-common-link .actions-info, .actions-list-item:nth-child(4) .actions-common-link .actions-info, .actions-list-item:nth-child(5) .actions-common-link .actions-info, .actions-list-item:nth-child(5n+3) .actions-common-link .actions-info, .actions-list-item:nth-child(5n+4) .actions-common-link .actions-info, .actions-list-item:nth-child(5n+5) .actions-common-link .actions-info {
   display: block;
 }
@@ -8495,5 +8503,41 @@ body.mob-form-show .wrapper {
   }
   .actions-list-item:nth-child(3) .actions-common-block, .actions-list-item:nth-child(4) .actions-common-block, .actions-list-item:nth-child(5) .actions-common-block, .actions-list-item:nth-child(5n+3) .actions-common-block, .actions-list-item:nth-child(5n+4) .actions-common-block, .actions-list-item:nth-child(5n+5) .actions-common-block {
     height: 224px;
+  }
+}
+
+.actions-detail {
+  margin-bottom: 76px;
+}
+.actions-detail-main .main-container {
+  min-height: 323px;
+  background-color: var(--color13);
+}
+.actions-detail-main .main-title {
+  font-size: 28px;
+  line-height: 39px;
+  text-transform: none;
+}
+.actions-detail-main .main-panel {
+  margin-top: 35px;
+}
+@media screen and (max-width: 992px) {
+  .actions-detail {
+    margin-bottom: 50px;
+  }
+  .actions-detail-main .main-container {
+    min-height: 280px;
+  }
+  .actions-detail-main .main-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .actions-detail-main .main-panel {
+    margin-top: 28px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .actions-detail-main .main-container {
+    min-height: auto;
   }
 }

@@ -121,6 +121,13 @@
     &-common-link &-info {
         display: none;
     }
+    &-common-link:hover &-common-button {
+        background-color: var(--color7);
+    }
+    &-common-link:hover &-info {
+        color: var(--color6);
+        text-shadow: 0 0 .04em var(--color6);
+    }
     &-list-item:nth-child(3) &-common-link &-info,
     &-list-item:nth-child(4) &-common-link &-info,
     &-list-item:nth-child(5) &-common-link &-info,

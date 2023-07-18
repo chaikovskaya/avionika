@@ -78,15 +78,15 @@ h1,
 
 h2,
 .h2 {
-	margin-bottom: 21px;
-	font: 600 30px/42px var(--font-common), sans-serif;
+	margin-bottom: 20px;
+	font: 600 24px/36px var(--font-common), sans-serif;
 	color: var(--color2);
 }
 
 h3,
 .h3 {
 	margin-bottom: 13px;
-    font: 600 22px/32px var(--font-common), sans-serif;
+    font: 600 20px/32px var(--font-common), sans-serif;
 	color: var(--color2);
 }
 
@@ -399,7 +399,7 @@ blockquote {
 
 .content {
 	h2 {
-		margin-top: 60px;
+		margin-top: 40px;
 		&:first-child {
 			margin-top: 0;
 		}
@@ -536,7 +536,7 @@ blockquote {
 		font-size: 14px;
 		line-height: 24px;
 		h2 {
-			margin-top: 30px;
+			margin-top: 23px;
 		}
 		ul {
 			margin-bottom: 20px;
@@ -1006,9 +1006,9 @@ and (max-width: $tablet){
 	}
 	h2,
 	.h2 {
-		margin-bottom: 16px;
-		font-size: 20px;
-		line-height: 30px;
+		margin-bottom: 11px;
+		font-size: 18px;
+		line-height: 27px;
 	}
 	h3,
 	.h3 {
