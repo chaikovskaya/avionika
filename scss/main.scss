@@ -1097,6 +1097,15 @@
         transform: scale(-1);
     }
 
+    &_modified {
+        .video-play-icon path {
+            fill: var(--color7);
+        }
+    }
+    &_modified &-info {
+        background-color: var(--color7);
+    }
+
     @media screen
     and (max-width: $tablet){
         margin-bottom: 56px;
