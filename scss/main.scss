@@ -1098,6 +1098,7 @@
     }
 
     &_modified {
+        margin-bottom: 71px;
         .video-play-icon path {
             fill: var(--color7);
         }
@@ -1333,8 +1334,8 @@
         line-height: 170%;
         letter-spacing: 0.16px;
         @include fix-rows();
-        -webkit-line-clamp: 3;
-        line-clamp: 3;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
     }
     &-link:hover {
         background-color: var(--color6);
@@ -1404,8 +1405,6 @@
         }
         &-detail {
             font-size: 16px;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
         }
     }
 }

@@ -511,23 +511,15 @@ blockquote {
 	}
 
 	&_simple {
-		ol {
-			list-style-type: decimal;
-			padding-left: 18px;
-		}
-		ol li {
-			min-height: auto;
-			padding-left: 0;
-			margin-bottom: 17px;
+		ul li {
+			padding-left: 28px;
 			&:before {
-				display: none;
+				top: 7px;
+				left: 0;
+				width: 15px;
+				height: 11px;
+				background: url("../images/about/about-check-icon.svg") no-repeat 0 0;
 			}
-		}
-		ol li::marker {
-			font-weight: 600;
-			color: var(--color6);
-			text-indent: 10px;
-			font-family: 'Montserrat';
 		}
 	}
 
@@ -573,8 +565,12 @@ blockquote {
 			margin-left: 20px;
 		}
 		&_simple {
-			ol li {
-				padding-left: 0;
+			ul li {
+				padding-left: 24px;
+				&:before {
+					width: 15px;
+					height: 11px;
+				}
 			}
 		}
 	}
