@@ -1101,6 +1101,7 @@
     }
     &-map {
         width: 56%;
+        height: 479px;
     }
     &-map-value {
         width: 100%;
@@ -1178,6 +1179,9 @@
         flex-direction: column;
         &-sidebar {
             padding-right: 20px;
+            height: 360px;
+        }
+        &-map {
             height: 360px;
         }
         &-shops-link {

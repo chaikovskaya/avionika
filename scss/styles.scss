@@ -359,7 +359,7 @@ blockquote {
 
 /* simplebar */
 .simplebar-track.simplebar-vertical {
-	width: 7px;
+	width: 10px;
 }
 .simplebar-scrollbar:before {
 	left: 0;
@@ -375,6 +375,13 @@ blockquote {
 }
 .simplebar-scrollbar.simplebar-visible:before {
 	opacity: 1;
+}
+
+@media screen
+and (max-width: $tablet){
+	.simplebar-track.simplebar-vertical {
+		width: 7px;
+	}
 }
 /* /simplebar */
 
