@@ -325,6 +325,8 @@ function initPopupWishlist() {
                     initQuantity();
                     initFormatPrice();
                     initSelectCheckbox();
+                    initMask();
+                    initValidate();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -1040,10 +1042,11 @@ function initTextareaSize() {
 
 function initSelectCheckbox() {
     $('.js-selectCheckbox').each(function() {
-        var $input = jQuery(this).find('.js-selectCheckbox-input'),
-            $link = jQuery(this).find('.js-selectCheckbox-link input:checkbox');
-
+        var context = this;
+        var $link = jQuery(this).find('.js-selectCheckbox-link input:checkbox');
+        
         $link.on("change", function() {
+            var $input = jQuery(context).find('.js-selectCheckbox-input');
             if ($link.prop("checked")) {
                 $input.prop("checked", true);
             } else {
