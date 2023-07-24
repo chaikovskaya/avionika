@@ -616,6 +616,21 @@
         border: 1px solid var(--color6);
     }
 
+    &_horizontal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &_horizontal &-label {
+        box-shadow: 0 4px 20px 0 rgba(206, 206, 206, 0.40);
+    }
+    &_horizontal &-item {
+        margin-right: 18px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &-icon_reset {}
+
     @media screen
     and (max-width: $tablet) {
         &-label {
@@ -625,6 +640,9 @@
         &-icon {
             width: 18px;
             margin-top: 1px;
+        }
+        &_horizontal &-item {
+            margin-right: 12px;
         }
     }
     @media screen

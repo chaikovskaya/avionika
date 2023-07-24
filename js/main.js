@@ -572,7 +572,7 @@ function initFormatPrice() {
         let classActive = 'js-format-price-active';
 
         if (!$(this).hasClass(classActive)) {
-            let str = parseFloat($(this).text()) || "";
+            let str = parseFloat($(this).text()) || "0";
 
             let strNew = str.toLocaleString();
             $(this).text(strNew);
