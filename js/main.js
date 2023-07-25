@@ -237,8 +237,12 @@ function openPopupBuy($element) {
         $element = $('.js-popup-buy');
     }
 
+    var url = $element.data('src');
+    if ($element.attr('data-id')) url += '?id=' + $element.attr('data-id');
+    if ($element.attr('data-quantity')) url += '?quantity=' + $element.attr('data-quantity');
+
     $.fancybox.open({
-        src  :  $element.data('src'),
+        src  :  url,
         type : 'ajax',
         toolbar  : false,
         smallBtn : true,
