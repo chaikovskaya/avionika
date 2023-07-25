@@ -9,7 +9,7 @@
     <!-- Не переносить на продакшен -->
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>Корзина. Авионика</title>
+    <title>Поиск не найдено. Авионика</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="./css/common.css" />
 </head>
 
-<!-- Добавлен класс inner-page -->
-<body class="inner-page">
+<body>
     <div class="wrapper">
         <header class="header">
             <div class="header-top">
@@ -1060,6 +1059,23 @@
 
         <main class="main-content">
 
+            <div class="search-result-form container">
+                <div class="search-result-block">
+                    <span class="search-result-name h1">Что вы ищите?</span>
+                    <form>
+                        <div class="search-result-field">
+                            <input class="search-result-input input" type="text" placeholder="Что вы ищете?" />
+                            <button class="search-result-button" type="submit">
+                                <svg class="search-icon" width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5212 20.1251C16.5493 20.1251 20.6253 16.049 20.6253 11.0209C20.6253 5.99282 16.5493 1.91675 11.5212 1.91675C6.49307 1.91675 2.41699 5.99282 2.41699 11.0209C2.41699 16.049 6.49307 20.1251 11.5212 20.1251Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21.5837 21.0834L19.667 19.1667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <div class="breadcrumbs container js-expand" data-expand="{
                 'classActive': 'breadcrumbs_active',
                 'classShow': 'breadcrumbs_show'
@@ -1074,257 +1090,25 @@
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link" href="/">Главная</a><span class="breadcrumbs-icon">/</span>
                     </li>
-                    <li class="breadcrumbs-item">Корзина</li>
+                    <li class="breadcrumbs-item">Поиск</li>
                     <li class="breadcrumbs-item breadcrumbs-item_more">
                         <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="basket container">
-                <div class="basket-content">
-                    <div class="basket-panel">
-                        <h1 class="basket-title">Корзина</h1>
-                        <div class="basket-activity">
-                            <a class="basket-reset" href="#">
-                                <svg class="basket-reset-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M18.8484 9.14001L18.1984 19.21C18.0884 20.78 17.9984 22 15.2084 22H8.78844C5.99844 22 5.90844 20.78 5.79844 19.21L5.14844 9.14001" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>Очистить корзину
-                            </a>
-                        </div>
-                    </div>
-
-                    <ul class="basket-list">
-                        <li class="basket-item">
-                            <div class="basket-description basket-col">
-                                <a class="basket-pic-link" href="#">
-                                    <img class="basket-pic" src="./images/basket/basket-img-1.jpg" alt="" />
-                                </a>
-                                <div class="basket-detail">
-                                    <div class="basket-code">Код изделия: 3578-003</div>
-                                    <a class="basket-name" href="#">Женский корсет поддерживающий Berenman Viviana, 2 класс компрессии, тёмно-серый, унисекс</a>
-                                    <ul class="basket-props">
-                                        <li class="basket-props-item">Полнота: стандартная</li>
-                                        <li class="basket-props-item">Длина: длинный</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="basket-order basket-col">
-                                <div class="basket-amount">
-                                    <div class="amount JS-Quantity" data-quantity="{
-                                        'maxNumber': '1000',
-                                        'classDisabled': 'amount_disabled'
-                                    }">
-                                        <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon">-</i></a>
-                                        <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
-                                        <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon">+</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="basket-price basket-col">
-                                <div class="basket-discount-wrapper">
-                                    <span class="basket-price-old">
-                                        <span class="js-format-price">4200</span>&nbsp;<span class="currency">i</span>
-                                    </span>
-                                    <span class="basket-discount">-10%</span>
-                                </div>
-                                <div class="basket-price-value">
-                                    <span class="js-format-price">15990</span>&nbsp;<span class="currency">i</span>
-                                </div>
-                                <div class="basket-links">
-                                    <ul class="links links_horizontal">
-                                        <li class="links-item">
-                                            <a class="links-label links-label_reset" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M18.8484 9.14001L18.1984 19.21C18.0884 20.78 17.9984 22 15.2084 22H8.78844C5.99844 22 5.90844 20.78 5.79844 19.21L5.14844 9.14001" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="links-item">
-                                            <!-- Добавляется класс links-label_active, если активна -->
-                                            <a class="links-label links-label_active" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="basket-item">
-                            <div class="basket-description basket-col">
-                                <a class="basket-pic-link" href="#">
-                                    <img class="basket-pic" src="./images/basket/basket-img-1.jpg" alt="" />
-                                </a>
-                                <div class="basket-detail">
-                                    <div class="basket-code">Код изделия: 3578-003</div>
-                                    <a class="basket-name" href="#">Женский корсет поддерживающий Berenman Viviana, 2 класс компрессии, тёмно-серый, унисекс</a>
-                                    <ul class="basket-props">
-                                        <li class="basket-props-item">Полнота: стандартная</li>
-                                        <li class="basket-props-item">Длина: длинный</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="basket-order basket-col">
-                                <div class="basket-amount">
-                                    <div class="amount JS-Quantity" data-quantity="{
-                                        'maxNumber': '1000',
-                                        'classDisabled': 'amount_disabled'
-                                    }">
-                                        <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon">-</i></a>
-                                        <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
-                                        <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon">+</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="basket-price basket-col">
-                                <div class="basket-discount-wrapper">
-                                    <span class="basket-price-old">
-                                        <span class="js-format-price">4200</span>&nbsp;<span class="currency">i</span>
-                                    </span>
-                                    <span class="basket-discount">-10%</span>
-                                </div>
-                                <div class="basket-price-value">
-                                    <span class="js-format-price">15990</span>&nbsp;<span class="currency">i</span>
-                                </div>
-                                <div class="basket-links">
-                                    <ul class="links links_horizontal">
-                                        <li class="links-item">
-                                            <a class="links-label links-label_reset" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M18.8484 9.14001L18.1984 19.21C18.0884 20.78 17.9984 22 15.2084 22H8.78844C5.99844 22 5.90844 20.78 5.79844 19.21L5.14844 9.14001" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="links-item">
-                                            <!-- Добавляется класс links-label_active, если активна -->
-                                            <a class="links-label links-label_active" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- После нажатия на кнопку Удалить добавить класс basket-item_preload -->
-                        <li class="basket-item basket-item_preload">
-                            <div class="basket-description basket-col">
-                                <a class="basket-pic-link" href="#">
-                                    <img class="basket-pic" src="./images/basket/basket-img-1.jpg" alt="" />
-                                </a>
-                                <div class="basket-detail">
-                                    <div class="basket-code">Код изделия: 3578-003</div>
-                                    <a class="basket-name" href="#">Женский корсет поддерживающий Berenman Viviana, 2 класс компрессии, тёмно-серый, унисекс</a>
-                                    <ul class="basket-props">
-                                        <li class="basket-props-item">Полнота: стандартная</li>
-                                        <li class="basket-props-item">Длина: длинный</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="basket-order basket-col">
-                                <div class="basket-amount">
-                                    <div class="amount JS-Quantity" data-quantity="{
-                                        'maxNumber': '1000',
-                                        'classDisabled': 'amount_disabled'
-                                    }">
-                                        <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon">-</i></a>
-                                        <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
-                                        <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon">+</i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="basket-price basket-col">
-                                <div class="basket-discount-wrapper">
-                                    <span class="basket-price-old">
-                                        <span class="js-format-price">4200</span>&nbsp;<span class="currency">i</span>
-                                    </span>
-                                    <span class="basket-discount">-10%</span>
-                                </div>
-                                <div class="basket-price-value">
-                                    <span class="js-format-price">15990</span>&nbsp;<span class="currency">i</span>
-                                </div>
-                                <div class="basket-links">
-                                    <ul class="links links_horizontal">
-                                        <li class="links-item">
-                                            <a class="links-label links-label_reset" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M18.8484 9.14001L18.1984 19.21C18.0884 20.78 17.9984 22 15.2084 22H8.78844C5.99844 22 5.90844 20.78 5.79844 19.21L5.14844 9.14001" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="links-item">
-                                            <!-- Добавляется класс links-label_active, если активна -->
-                                            <a class="links-label links-label_active" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="basket-side JS-Sticky" data-sticky="{
-                        'classActive': 'basket-side-block_fix',
-                        'classBottom': 'basket-side-block_bottom'
-                }">
-                    <div class="basket-side-block JS-Sticky-Item">
-                        <div class="basket-sum">
-                            <div class="basket-sum-inner">
-                                <dl class="basket-sum-item">
-                                    <dt class="basket-sum-name">Товары (3)</dt>
-                                    <dd class="basket-sum-value">
-                                        <span class="js-format-price">25790</span>&nbsp;<span class="currency">i</span>
-                                    </dd>
-                                </dl>
-                                <dl class="basket-sum-item">
-                                    <dt class="basket-sum-name">Сумма скидок и акции</dt>
-                                    <dd class="basket-sum-value basket-sum-value_discount">
-                                        <span class="js-format-price">0</span>&nbsp;<span class="currency">i</span>
-                                    </dd>
-                                </dl>
-                                <dl class="basket-sum-item basket-sum-item_total">
-                                    <dt class="basket-sum-name">Итого:</dt>
-                                    <dd class="basket-sum-value">
-                                        <span class="js-format-price">13800</span>&nbsp;<span class="basket-sum-value-currency currency">i</span>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="basket-buttons">
-                                <a class="basket-sum-button button" href="#">Оформить заказ</a>
-                                <a class="basket-sum-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">Купить в 1 клик</a>
-                            </div>
-                        </div>
-                        <div class="basket-important">
-                            <span class="basket-important-icon">
-                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.56088 5.24902C9.56088 4.93836 9.30904 4.68652 8.99838 4.68652C8.68772 4.68652 8.43588 4.93836 8.43588 5.24902V9.74902C8.43588 10.0597 8.68772 10.3115 8.99838 10.3115C9.30904 10.3115 9.56088 10.0597 9.56088 9.74902V5.24902Z" fill="#009B97"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7524 1.30936C9.6359 0.812245 8.36086 0.812245 7.24433 1.30936C6.54621 1.62018 5.98247 2.21584 5.4003 3.03984C4.81996 3.86124 4.17005 4.98693 3.33043 6.4412L3.29975 6.49434C2.46013 7.94861 1.8102 9.0743 1.38902 9.98758C0.966494 10.9038 0.732512 11.6898 0.812391 12.4498C0.940146 13.6653 1.57766 14.7695 2.56644 15.4879C3.18468 15.9371 3.98241 16.1275 4.9871 16.2196C5.98861 16.3115 7.28843 16.3115 8.96765 16.3115H9.02907C10.7083 16.3115 12.0081 16.3115 13.0097 16.2196C14.0144 16.1275 14.8121 15.9371 15.4303 15.4879C16.4191 14.7695 17.0566 13.6653 17.1844 12.4498C17.2643 11.6898 17.0303 10.9038 16.6077 9.98758C16.1866 9.07429 15.5366 7.94859 14.697 6.4943L14.6663 6.44114C13.8267 4.9869 13.1768 3.86123 12.5965 3.03984C12.0143 2.21584 11.4505 1.62018 10.7524 1.30936ZM7.70191 2.3371C8.52717 1.96967 9.46959 1.96967 10.2949 2.3371C10.7098 2.52186 11.1289 2.91237 11.6777 3.689C12.2247 4.46323 12.8493 5.54393 13.7074 7.03027C14.5655 8.51661 15.1891 9.59788 15.5862 10.4587C15.9844 11.3222 16.113 11.8804 16.0655 12.3322C15.9711 13.2306 15.4999 14.0468 14.7691 14.5778C14.4016 14.8448 13.8538 15.0125 12.9069 15.0994C11.9629 15.186 10.7147 15.1865 8.99838 15.1865C7.2821 15.1865 6.03389 15.186 5.08988 15.0994C4.14295 15.0125 3.59521 14.8448 3.2277 14.5778C2.49686 14.0468 2.02566 13.2306 1.93123 12.3322C1.88374 11.8804 2.01238 11.3222 2.41061 10.4587C2.80761 9.59788 3.43123 8.51661 4.28937 7.03027C5.14751 5.54393 5.7721 4.46323 6.31911 3.689C6.86781 2.91237 7.28692 2.52186 7.70191 2.3371Z" fill="#009B97"/>
-                                    <path d="M9.74841 11.999C9.74841 12.4132 9.41263 12.749 8.99841 12.749C8.5842 12.749 8.24841 12.4132 8.24841 11.999C8.24841 11.5848 8.5842 11.249 8.99841 11.249C9.41263 11.249 9.74841 11.5848 9.74841 11.999Z" fill="#009B97"/>
-                                </svg>
-                            </span>
-                            <div class="basket-important-info">Бесплатная доставка от 2000 тыс рублей, самовывоз без ограничений</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="search-result-empty content container">
+                <p>По запросу <b>"Шорты"</b> ничего не найдено</p>
+                <p>Советы:</p>
+                <ul>
+                    <li>Убедитесь, что все слова написаны правильно.</li>
+                    <li>Попробуйте ввесети другие ключевые слова.</li>
+                </ul>
             </div>
 
             <section class="new container">
                 <h2 class="title-common title h1">
-                    Вам может пригодиться
+                    Вы недавно смотрели
                     <a class="title-icon" href="#">
                         <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.45801 1.39998L6.89134 6.83331C7.53301 7.47498 7.53301 8.52498 6.89134 9.16664L1.45801 14.6" stroke="#111111" stroke-width="2.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1901,7 +1685,6 @@
     <script src="./js/JSC.ShowMore.js"></script>
     <script src="./js/JSC.Quantity.js"></script>
     <script src="./js/JSC.Tab.js"></script>
-    <script src="./js/JSC.StickyFix.js"></script>
 
     <script src="./js/main.js"></script>
 

@@ -1,5 +1,6 @@
 
 .search-result {
+    &-form {}
     &-block {
         margin-bottom: 30px;
         padding: 38px 31px 48px;
@@ -61,6 +62,16 @@
     }
     &-sections-item_active &-sections-link {
         color: var(--color6);
+        font-weight: 600;
+    }
+
+    &-actions {
+        margin-bottom: 95px;
+    }
+    &-empty {
+        margin-bottom: 62px;
+        font-size: 16px;
+        font-weight: 300;
     }
 
 
@@ -69,19 +80,48 @@
     }
     @media screen
     and (max-width: $tablet){
+        &-name {
+            margin-bottom: 18px;
+        }
         &-sections {
-            margin-bottom: 7px;
+            margin-bottom: 17px;
         }
         &-sections-item {
             margin-right: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         &-sections-link {
             font-size: 16px;
             line-height: 22px;
         }
+        &-block {
+            margin-bottom: 30px;
+            padding: 20px 21px 38px;
+        }
+        &-button {
+            width: 35px;
+            height: 35px;
+        }
+        &-input {
+            padding-left: 20px;
+            padding-right: 45px;
+        }
+
+        &-actions {
+            margin-bottom: 56px;
+        }
+        &-empty {
+            margin-bottom: 56px;
+            font-size: 15px;
+        }
     }
     @media screen
     and (max-width: $mobile){
+        &-form {
+            margin-top: 10px;
+        }
+        &-block {
+            padding-bottom: 33px;
+        }
     }
 }

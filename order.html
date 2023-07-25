@@ -9,7 +9,7 @@
     <!-- Не переносить на продакшен -->
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>Корзина. Авионика</title>
+    <title>Оформление заказа. Авионика</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="./css/common.css" />
 </head>
 
-<!-- Добавлен класс inner-page -->
 <body class="inner-page">
     <div class="wrapper">
         <header class="header">
@@ -1074,241 +1073,418 @@
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link" href="/">Главная</a><span class="breadcrumbs-icon">/</span>
                     </li>
-                    <li class="breadcrumbs-item">Корзина</li>
+                    <li class="breadcrumbs-item">
+                        <a class="breadcrumbs-link" href="#">Корзина</a><span class="breadcrumbs-icon">/</span>
+                    </li>
+                    <li class="breadcrumbs-item">Оформление заказа</li>
                     <li class="breadcrumbs-item breadcrumbs-item_more">
                         <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="basket container">
-                <div class="basket-content">
-                    <div class="basket-panel">
-                        <h1 class="basket-title">Корзина</h1>
-                        <div class="basket-activity">
-                            <a class="basket-reset" href="#">
-                                <svg class="basket-reset-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M18.8484 9.14001L18.1984 19.21C18.0884 20.78 17.9984 22 15.2084 22H8.78844C5.99844 22 5.90844 20.78 5.79844 19.21L5.14844 9.14001" stroke="#4F4F4F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>Очистить корзину
-                            </a>
-                        </div>
-                    </div>
+            <div class="container">
+                <form class="js-form-validate-order" action="/">
+                    <div class="order">
+                        <div class="order-content">
+                            <h1 class="order-title">Оформление заказа</h1>
+                            <ol class="order-list">
+                                <!-- Добавить класс order-list-item_active если все поля верно заполнены -->
+                                <li class="order-list-item js-form-validate-order-item">
+                                    <div class="order-info-buyer">
+                                        <div class="order-list-panel">
+                                            <span class="order-number">1</span><span class="order-name">Информация о покупателе</span>
+                                        </div>
 
-                    <ul class="basket-list">
-                        <li class="basket-item">
-                            <div class="basket-description basket-col">
-                                <a class="basket-pic-link" href="#">
-                                    <img class="basket-pic" src="./images/basket/basket-img-1.jpg" alt="" />
-                                </a>
-                                <div class="basket-detail">
-                                    <div class="basket-code">Код изделия: 3578-003</div>
-                                    <a class="basket-name" href="#">Женский корсет поддерживающий Berenman Viviana, 2 класс компрессии, тёмно-серый, унисекс</a>
-                                    <ul class="basket-props">
-                                        <li class="basket-props-item">Полнота: стандартная</li>
-                                        <li class="basket-props-item">Длина: длинный</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="basket-order basket-col">
-                                <div class="basket-amount">
-                                    <div class="amount JS-Quantity" data-quantity="{
-                                        'maxNumber': '1000',
-                                        'classDisabled': 'amount_disabled'
-                                    }">
-                                        <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon">-</i></a>
-                                        <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
-                                        <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon">+</i></a>
+                                        <div class="order-row">
+                                            <div class="order-col order-col-user">
+                                                <div class="order-field field js-form-validate-field">
+                                                    <input class="order-input input" type="text" placeholder="*Имя" id="order-name" name="order-name" required />
+                                                </div>
+                                                <div class="order-field field js-form-validate-field">
+                                                    <input class="order-input input js-mask-phone" type="text" placeholder="Телефон для связи" id="order-phone" name="order-phone" />
+                                                </div>
+                                            </div>
+                                            <div class="order-col order-col-user">
+                                                <div class="order-field field js-form-validate-field">
+                                                    <input class="order-input input" type="text" placeholder="*Фамилия" id="order-surname" name="order-surname" required />
+                                                </div>
+                                                <div class="order-field field js-form-validate-field">
+                                                    <input class="order-input input js-mask-email" type="text" placeholder="Электроннная почта" id="order-email" name="order-email" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="order-switch-field">
+                                            <label class="switch">
+                                                <input class="switch-checkbox" type="checkbox" name="notifications" checked="checked" />
+                                                <span class="switch-decor">
+                                                    <span class="switch-icon"></span>
+                                                </span>
+                                                <span class="switch-label">Я хочу получать рекламные сообщения и новости о товарах и услугах</span>
+                                            </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="basket-price basket-col">
-                                <div class="basket-discount-wrapper">
-                                    <span class="basket-price-old">
-                                        <span class="js-format-price">4200</span>&nbsp;<span class="currency">i</span>
-                                    </span>
-                                    <span class="basket-discount">-10%</span>
-                                </div>
-                                <div class="basket-price-value">
-                                    <span class="js-format-price">15990</span>&nbsp;<span class="currency">i</span>
-                                </div>
-                                <div class="basket-links">
-                                    <ul class="links links_horizontal">
-                                        <li class="links-item">
-                                            <a class="links-label links-label_reset" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M18.8484 9.14001L18.1984 19.21C18.0884 20.78 17.9984 22 15.2084 22H8.78844C5.99844 22 5.90844 20.78 5.79844 19.21L5.14844 9.14001" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="links-item">
-                                            <!-- Добавляется класс links-label_active, если активна -->
-                                            <a class="links-label links-label_active" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="basket-item">
-                            <div class="basket-description basket-col">
-                                <a class="basket-pic-link" href="#">
-                                    <img class="basket-pic" src="./images/basket/basket-img-1.jpg" alt="" />
-                                </a>
-                                <div class="basket-detail">
-                                    <div class="basket-code">Код изделия: 3578-003</div>
-                                    <a class="basket-name" href="#">Женский корсет поддерживающий Berenman Viviana, 2 класс компрессии, тёмно-серый, унисекс</a>
-                                    <ul class="basket-props">
-                                        <li class="basket-props-item">Полнота: стандартная</li>
-                                        <li class="basket-props-item">Длина: длинный</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="basket-order basket-col">
-                                <div class="basket-amount">
-                                    <div class="amount JS-Quantity" data-quantity="{
-                                        'maxNumber': '1000',
-                                        'classDisabled': 'amount_disabled'
-                                    }">
-                                        <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon">-</i></a>
-                                        <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
-                                        <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon">+</i></a>
+                                </li>
+                                <li class="order-list-item js-form-validate-order-item">
+                                    <div class="order-list-panel">
+                                        <span class="order-number">2</span><span class="order-name">Способ плолучения заказа</span>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="basket-price basket-col">
-                                <div class="basket-discount-wrapper">
-                                    <span class="basket-price-old">
-                                        <span class="js-format-price">4200</span>&nbsp;<span class="currency">i</span>
-                                    </span>
-                                    <span class="basket-discount">-10%</span>
-                                </div>
-                                <div class="basket-price-value">
-                                    <span class="js-format-price">15990</span>&nbsp;<span class="currency">i</span>
-                                </div>
-                                <div class="basket-links">
-                                    <ul class="links links_horizontal">
-                                        <li class="links-item">
-                                            <a class="links-label links-label_reset" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M18.8484 9.14001L18.1984 19.21C18.0884 20.78 17.9984 22 15.2084 22H8.78844C5.99844 22 5.90844 20.78 5.79844 19.21L5.14844 9.14001" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li class="links-item">
-                                            <!-- Добавляется класс links-label_active, если активна -->
-                                            <a class="links-label links-label_active" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- После нажатия на кнопку Удалить добавить класс basket-item_preload -->
-                        <li class="basket-item basket-item_preload">
-                            <div class="basket-description basket-col">
-                                <a class="basket-pic-link" href="#">
-                                    <img class="basket-pic" src="./images/basket/basket-img-1.jpg" alt="" />
-                                </a>
-                                <div class="basket-detail">
-                                    <div class="basket-code">Код изделия: 3578-003</div>
-                                    <a class="basket-name" href="#">Женский корсет поддерживающий Berenman Viviana, 2 класс компрессии, тёмно-серый, унисекс</a>
-                                    <ul class="basket-props">
-                                        <li class="basket-props-item">Полнота: стандартная</li>
-                                        <li class="basket-props-item">Длина: длинный</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="basket-order basket-col">
-                                <div class="basket-amount">
-                                    <div class="amount JS-Quantity" data-quantity="{
-                                        'maxNumber': '1000',
-                                        'classDisabled': 'amount_disabled'
-                                    }">
-                                        <a class="amount-counter JS-Quantity-Minus" href="javascript:;"><i class="amount-icon">-</i></a>
-                                        <input class="amount-digit JS-Quantity-Number" type="number" value="1" />
-                                        <a class="amount-counter JS-Quantity-Plus" href="javascript:;"><i class="amount-icon">+</i></a>
+                                    <div class="order-obtain order-row">
+                                        <div class="order-obtain-item order-col">
+                                            <label class="order-radio-field">
+                                                <span class="radio-field">
+                                                    <span class="order-obtain-radio radio">
+                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" />
+                                                        <i class="order-obtain-radio-check radio-check"></i>
+                                                        <span class="order-obtain-radio-label">Самовывоз</span>
+                                                        <span class="order-radio-decor"></span>
+                                                    </span>
+                                                </span>
+                                                <div class="order-obtain-info">Сегодня, Бесплатно</div>
+                                                <a class="order-obtain-link order-link" href="#">Показать все магазины на карте</a>
+                                            </label>
+                                        </div>
+                                        <div class="order-obtain-item order-col">
+                                            <label class="order-radio-field">
+                                                <span class="radio-field">
+                                                    <span class="order-obtain-radio radio">
+                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" checked="checked" />
+                                                        <i class="order-obtain-radio-check radio-check"></i>
+                                                        <span class="order-obtain-radio-label">Доставка</span>
+                                                        <span class="order-radio-decor"></span>
+                                                    </span>
+                                                </span>
+                                                <div class="order-obtain-info">Доставим с 15 июля 2022</div>
+                                                <div class="order-obtain-price">от 990 р</div>
+                                            </label>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="basket-price basket-col">
-                                <div class="basket-discount-wrapper">
-                                    <span class="basket-price-old">
-                                        <span class="js-format-price">4200</span>&nbsp;<span class="currency">i</span>
-                                    </span>
-                                    <span class="basket-discount">-10%</span>
-                                </div>
-                                <div class="basket-price-value">
-                                    <span class="js-format-price">15990</span>&nbsp;<span class="currency">i</span>
-                                </div>
-                                <div class="basket-links">
-                                    <ul class="links links_horizontal">
-                                        <li class="links-item">
-                                            <a class="links-label links-label_reset" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5.97998C17.67 5.64998 14.32 5.47998 10.98 5.47998C9 5.47998 7.02 5.57998 5.04 5.77998L3 5.97998" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M8.5 4.97L8.72 3.66C8.88 2.71 9 2 10.69 2H13.31C15 2 15.13 2.75 15.28 3.67L15.5 4.97" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M18.8484 9.14001L18.1984 19.21C18.0884 20.78 17.9984 22 15.2084 22H8.78844C5.99844 22 5.90844 20.78 5.79844 19.21L5.14844 9.14001" stroke="#009B97" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
+                                </li>
+                                <li class="order-list-item js-form-validate-order-item">
+                                    <div class="order-list-panel">
+                                        <span class="order-number">3</span><span class="order-name">Адрес доставки</span>
+                                    </div>
+                                    <div class="order-row">
+                                        <div class="order-col order-col-street">
+                                            <div class="order-field field js-form-validate-field">
+                                                <input class="order-input input input_dark" type="text" placeholder="Улица" id="order-street" name="order-street" required />
+                                            </div>
+                                        </div>
+                                        <div class="order-col order-col-home">
+                                            <div class="order-field field js-form-validate-field">
+                                                <input class="order-input input input_dark" type="text" placeholder="Дом" id="order-home" name="order-home" required />
+                                            </div>
+                                        </div>
+                                        <div class="order-col order-col-home">
+                                            <div class="order-field field js-form-validate-field">
+                                                <input class="order-input input input_dark input_number" type="number" placeholder="Квартира" id="order-flat" name="order-flat" />
+                                            </div>
+                                        </div>
+                                        <div class="order-col order-col-wide">
+                                            <div class="order-field field js-form-validate-field">
+                                                <textarea class="order-input input input_dark input_textarea js-textarea-size" placeholder="*Добавить комментарий курьеру" name="order-comment-1"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-map-values js-map"
+                                         data-objectcoord="[59.8672,30.2595]"
+                                         data-map-id="map"
+                                         data-map-icon="./images/card/card-map-icon.svg"
+                                         data-map-icon-hover="./images/card/card-map-icon-1.svg"
+                                         data-icon-size="[42, 42]"
+                                         data-map-zoom="12"
+                                    >
+                                        <div class="js-map-item" data-objectid="1" data-objectcoord="[59.8672,30.2595]">
+                                            <span class="js-map-item-value">
+                                                Адрес 1
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="order-map" id="map"></div>
+
+                                    <div class="order-floor js-radio-switch" data-radio-switch-class="order-floor_active">
+                                        <div class="order-switch-field">
+                                            <div class="order-switch-inner">
+                                                <label class="switch">
+                                                    <input class="switch-checkbox js-radio-switch-input" type="checkbox" name="order-floor-required" />
+                                                    <span class="switch-decor">
+                                                        <span class="switch-icon"></span>
+                                                    </span>
+                                                    <span class="order-switch-label">Требуется подъем на этаж</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="order-row-floor order-row">
+                                            <div class="order-col">
+                                                <div class="order-floor-field js-form-validate-field">
+                                                    <input class="order-input-floor order-input input input_dark input_number js-radio-switch-field" type="number" placeholder="Этаж" id="order-floor" name="order-floor" />
+                                                </div>
+                                            </div>
+                                            <div class="order-col order-col-floor">
+                                                <div class="order-floor-field js-form-validate-field">
+                                                    <input class="order-input-floor order-input input input_dark js-radio-switch-field" type="text" placeholder="Подъезд" id="order-entrance" name="order-entrance" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- Самовывоз
+
+                                <li class="order-list-item js-form-validate-order-item">
+                                    <div class="order-list-panel">
+                                        <span class="order-number">3</span><span class="order-name">Выберете магазин</span>
+                                    </div>
+                                    <ul class="order-shop">
+                                        <li class="order-shop-item">
+                                            <div class="order-shop-block">
+                                                <div class="order-shop-detail">
+                                                    <div class="order-shop-info">
+                                                        <div class="order-shop-info-item">
+                                                            <div class="order-shop-title">ТЦ Южный</div>
+                                                            <div class="order-shop-content content">г. Москва, ул. Нагорная 57</div>
+                                                            <div class="order-shop-date content">Забрать 15 февраля после 14.00</div>
+                                                        </div>
+                                                        <div class="order-shop-info-item">
+                                                            <div class="order-shop-title">Режим работы</div>
+                                                            <div class="order-shop-content content">пн-вс с 8.00 до&nbsp;19.00</div>
+                                                        </div>
+                                                    </div>
+                                                    <label class="order-shop-radio-label">
+                                                        <input class="order-shop-radio-input radio-input" type="radio" name="order-shop-param-1" />
+                                                        <span class="order-shop-button button button_modified">Выбрать</span>
+                                                        <span class="order-shop-button order-shop-button_selected button button_modified">Выбран</span>
+                                                        <span class="order-shop-decor"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="order-shop-map">
+                                                    <div class="order-map-values js-map"
+                                                         data-objectcoord="[59.8672,30.2595]"
+                                                         data-map-id="map-1"
+                                                         data-map-icon="./images/order/map-icon.svg"
+                                                         data-map-icon-hover="./images/order/map-icon-hover.svg"
+                                                         data-icon-size="[33, 33]"
+                                                         data-map-zoom="12"
+                                                    >
+                                                        <div class="js-map-item" data-objectid="1" data-objectcoord="[59.8672,30.2595]">
+                                                            <span class="js-map-item-value">г. Москва, ул. Нагорная 57</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-shop-map-element" id="map-1"></div>
+                                                </div>
+                                            </div>
                                         </li>
-                                        <li class="links-item">
-                                            <!-- Добавляется класс links-label_active, если активна -->
-                                            <a class="links-label links-label_active" href="javascript:;">
-                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </a>
+                                        <li class="order-shop-item">
+                                            <div class="order-shop-block">
+                                                <div class="order-shop-detail">
+                                                    <div class="order-shop-info">
+                                                        <div class="order-shop-info-item">
+                                                            <div class="order-shop-title">ТЦ Южный</div>
+                                                            <div class="order-shop-content content">г. Москва, ул. Нагорная 57</div>
+                                                            <div class="order-shop-date content">Забрать 15 февраля после 14.00</div>
+                                                        </div>
+                                                        <div class="order-shop-info-item">
+                                                            <div class="order-shop-title">Режим работы</div>
+                                                            <div class="order-shop-content content">пн-вс с 8.00 до&nbsp;19.00</div>
+                                                        </div>
+                                                    </div>
+                                                    <label class="order-shop-radio-label">
+                                                        <input class="order-shop-radio-input radio-input" type="radio" name="order-shop-param-1" />
+                                                        <span class="order-shop-button button button_modified">Выбрать</span>
+                                                        <span class="order-shop-button order-shop-button_selected button button_modified">Выбран</span>
+                                                        <span class="order-shop-decor"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="order-shop-map">
+                                                    <div class="order-map-values js-map"
+                                                         data-objectcoord="[59.8672,30.2595]"
+                                                         data-map-id="map-2"
+                                                         data-map-icon="./images/order/map-icon.svg"
+                                                         data-map-icon-hover="./images/order/map-icon-hover.svg"
+                                                         data-icon-size="[33, 33]"
+                                                         data-map-zoom="12"
+                                                    >
+                                                        <div class="js-map-item" data-objectid="1" data-objectcoord="[59.8672,30.2595]">
+                                                            <span class="js-map-item-value">г. Москва, ул. Нагорная 57</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-shop-map-element" id="map-2"></div>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="basket-side JS-Sticky" data-sticky="{
-                        'classActive': 'basket-side-block_fix',
-                        'classBottom': 'basket-side-block_bottom'
-                }">
-                    <div class="basket-side-block JS-Sticky-Item">
-                        <div class="basket-sum">
-                            <div class="basket-sum-inner">
-                                <dl class="basket-sum-item">
-                                    <dt class="basket-sum-name">Товары (3)</dt>
-                                    <dd class="basket-sum-value">
-                                        <span class="js-format-price">25790</span>&nbsp;<span class="currency">i</span>
-                                    </dd>
-                                </dl>
-                                <dl class="basket-sum-item">
-                                    <dt class="basket-sum-name">Сумма скидок и акции</dt>
-                                    <dd class="basket-sum-value basket-sum-value_discount">
-                                        <span class="js-format-price">0</span>&nbsp;<span class="currency">i</span>
-                                    </dd>
-                                </dl>
-                                <dl class="basket-sum-item basket-sum-item_total">
-                                    <dt class="basket-sum-name">Итого:</dt>
-                                    <dd class="basket-sum-value">
-                                        <span class="js-format-price">13800</span>&nbsp;<span class="basket-sum-value-currency currency">i</span>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="basket-buttons">
-                                <a class="basket-sum-button button" href="#">Оформить заказ</a>
-                                <a class="basket-sum-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">Купить в 1 клик</a>
-                            </div>
+
+                                    <div class="field js-form-validate-field">
+                                        <textarea class="order-input input input_textarea js-textarea-size" placeholder="Добавить комментарий курьеру" name="order-comment-2"></textarea>
+                                    </div>
+                                </li>
+
+                                <!-- /Самовывоз -->
+                                <li class="order-list-item js-form-validate-order-item order-list-item_active">
+                                    <div class="order-list-panel">
+                                        <span class="order-number">4</span><span class="order-name">Состав заказа</span>
+                                    </div>
+                                    <div class="JS-AjaxMore">
+                                        <ul class="order-elements JS-AjaxMore-Content">
+                                            <li class="order-elements-item">
+                                                <a class="order-elements-link" href="#">
+                                                    <span class="order-elements-img">
+                                                        <img src="./images/order/order-img-1.png" alt="" />
+                                                    </span>
+                                                    <span class="order-elements-detail">
+                                                        <span class="order-elements-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</span>
+                                                        <span class="order-elements-block">
+                                                            <span class="order-elements-amount">Количество: 256</span>
+                                                            <span class="order-elements-price-wrapper">
+                                                                <!-- Если скидки нет,блок order-discount-wrapper не убирать -->
+                                                                <span class="order-discount-wrapper">
+                                                                    <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
+                                                                    <span class="product-discount">sale</span>
+                                                                </span>
+                                                                <span class="order-elements-price">123 800 <span class="currency">i</span></span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="order-elements-item">
+                                                <a class="order-elements-link" href="#">
+                                                    <span class="order-elements-img">
+                                                        <img src="./images/order/order-img-2.png" alt="" />
+                                                    </span>
+                                                    <span class="order-elements-detail">
+                                                        <span class="order-elements-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</span>
+                                                        <span class="order-elements-block">
+                                                            <span class="order-elements-amount">Количество: 256</span>
+                                                            <span class="order-elements-price-wrapper">
+                                                                <span class="order-discount-wrapper">
+                                                                    <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
+                                                                    <span class="product-discount">sale</span>
+                                                                </span>
+                                                                <span class="order-elements-price">123 800 <span class="currency">i</span></span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="order-elements-item">
+                                                <a class="order-elements-link" href="#">
+                                                    <span class="order-elements-img">
+                                                        <img src="./images/order/order-img-3.png" alt="" />
+                                                    </span>
+                                                    <span class="order-elements-detail">
+                                                        <span class="order-elements-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</span>
+                                                        <span class="order-elements-block">
+                                                            <span class="order-elements-amount">Количество: 256</span>
+                                                            <span class="order-elements-price-wrapper">
+                                                                <span class="order-discount-wrapper">
+                                                                    <span class="product-price-old">4 200<span class="product-price-old-currency currency">i</span></span>
+                                                                    <span class="product-discount">sale</span>
+                                                                </span>
+                                                                <span class="order-elements-price">123 800 <span class="currency">i</span></span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="order-elements-item">
+                                                <a class="order-elements-link" href="#">
+                                                    <span class="order-elements-img">
+                                                        <img src="./images/order/order-img-4.png" alt="" />
+                                                    </span>
+                                                    <span class="order-elements-detail">
+                                                        <span class="order-elements-name">Керамический декор мозаичный 30,1X30,1 авеллино серый глянцевый</span>
+                                                        <span class="order-elements-block">
+                                                            <span class="order-elements-amount">Количество: 256</span>
+                                                            <span class="order-elements-price-wrapper">
+                                                                <span class="order-discount-wrapper"></span>
+                                                                <span class="order-elements-price">123 800 <span class="currency">i</span></span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <a class="order-more-link button button_modified JS-AjaxMore-Link" href="javascript:;" data-ajaxmore-url="./ajax/order.html">
+                                            Показать ещё<i class="load-more-icon"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="order-list-item js-form-validate-order-item">
+                                    <div class="order-list-panel">
+                                        <span class="order-number">5</span><span class="order-name">Способ оплаты</span>
+                                    </div>
+                                    <div class="order-obtain order-row">
+                                        <div class="order-obtain-item order-col">
+                                            <label class="order-radio-field">
+                                                <span class="radio-field">
+                                                    <span class="order-obtain-radio radio">
+                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param2" />
+                                                        <i class="order-obtain-radio-check radio-check"></i>
+                                                        <span class="order-obtain-radio-label">Наличными</span>
+                                                        <span class="order-radio-decor"></span>
+                                                    </span>
+                                                </span>
+                                                <span class="order-obtain-info order-obtain-info_simple">Оплата наличными при получении заказа</span>
+                                            </label>
+                                        </div>
+                                        <div class="order-obtain-item order-col">
+                                            <label class="order-radio-field">
+                                                <span class="radio-field">
+                                                    <span class="order-obtain-radio radio">
+                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param2" checked="checked" />
+                                                        <i class="order-obtain-radio-check radio-check"></i>
+                                                        <span class="order-obtain-radio-label">Картой на сайте</span>
+                                                        <span class="order-radio-decor"></span>
+                                                    </span>
+                                                </span>
+                                                <span class="order-pay">
+                                                     <div class="payment-method payment-method_modified">
+                                                        <img class="payment-method-img" src="./images/payment/payment-img-1.png" alt="" />
+                                                        <img class="payment-method-img" src="./images/payment/payment-img-2.png" alt="" />
+                                                        <img class="payment-method-img" src="./images/payment/payment-img-3.png" alt="" />
+                                                        <img class="payment-method-img" src="./images/payment/payment-img-4.png" alt="" />
+                                                    </div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
                         </div>
-                        <div class="basket-important">
+                        <div class="order-side JS-Sticky" data-sticky="{
+                            'classActive': 'basket-side-block_fix',
+                            'classBottom': 'basket-side-block_bottom'
+                        }">
+                            <div class="basket-side-block JS-Sticky-Item">
+                                <div class="basket-sum">
+                                    <div class="basket-sum-inner">
+                                        <dl class="basket-sum-item">
+                                            <dt class="basket-sum-name">Товары (3)</dt>
+                                            <dd class="basket-sum-value">
+                                                <span class="js-format-price">25790</span>&nbsp;<span class="currency">i</span>
+                                            </dd>
+                                        </dl>
+                                        <dl class="basket-sum-item">
+                                            <dt class="basket-sum-name">Сумма скидок и акции</dt>
+                                            <dd class="basket-sum-value basket-sum-value_discount">
+                                                <span class="js-format-price">0</span>&nbsp;<span class="currency">i</span>
+                                            </dd>
+                                        </dl>
+                                        <dl class="basket-sum-item basket-sum-item_total">
+                                            <dt class="basket-sum-name">Итого:</dt>
+                                            <dd class="basket-sum-value">
+                                                <span class="js-format-price">13800</span>&nbsp;<span class="basket-sum-value-currency currency">i</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="basket-buttons">
+                                        <a class="basket-sum-button button" href="#">Оформить заказ</a>
+                                        <a class="basket-sum-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">Купить в 1 клик</a>
+                                    </div>
+                                </div>
+                                <div class="basket-important">
                             <span class="basket-important-icon">
                                 <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9.56088 5.24902C9.56088 4.93836 9.30904 4.68652 8.99838 4.68652C8.68772 4.68652 8.43588 4.93836 8.43588 5.24902V9.74902C8.43588 10.0597 8.68772 10.3115 8.99838 10.3115C9.30904 10.3115 9.56088 10.0597 9.56088 9.74902V5.24902Z" fill="#009B97"/>
@@ -1316,383 +1492,13 @@
                                     <path d="M9.74841 11.999C9.74841 12.4132 9.41263 12.749 8.99841 12.749C8.5842 12.749 8.24841 12.4132 8.24841 11.999C8.24841 11.5848 8.5842 11.249 8.99841 11.249C9.41263 11.249 9.74841 11.5848 9.74841 11.999Z" fill="#009B97"/>
                                 </svg>
                             </span>
-                            <div class="basket-important-info">Бесплатная доставка от 2000 тыс рублей, самовывоз без ограничений</div>
+                                    <div class="basket-important-info">Бесплатная доставка от 2000 тыс рублей, самовывоз без ограничений</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
-
-            <section class="new container">
-                <h2 class="title-common title h1">
-                    Вам может пригодиться
-                    <a class="title-icon" href="#">
-                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.45801 1.39998L6.89134 6.83331C7.53301 7.47498 7.53301 8.52498 6.89134 9.16664L1.45801 14.6" stroke="#111111" stroke-width="2.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </h2>
-                <div class="products-block js-slider-products">
-                    <div class="products-wrapper">
-                        <div class="products-inner js-slider-list">
-                            <ul class="new-products-list swiper-wrapper">
-                                <li class="new-products-list-item swiper-slide">
-                                    <div class="products-box">
-                                        <div class="products-img">
-                                            <a class="products-img-link" href="#">
-                                                <img class="products-pic" src="./images/products/products-img-1.png" alt="" />
-                                            </a>
-                                            <div class="products-actions">
-                                                <ul class="marks">
-                                                    <li class="marks-item">
-                                                        <span class="marks-label marks-label_new">New</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="products-links">
-                                                    <ul class="links">
-                                                        <li class="links-item">
-                                                            <!-- Добавляется класс links-label_active, если активна -->
-                                                            <a class="links-label links-label_active" href="javascript:;">
-                                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                                </svg>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="products-discount">-3% при оплате онлайн</div>
-                                        <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
-                                        <div class="products-container">
-                                            <div class="products-price">
-                                                <span class="products-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
-                                                <div class="products-price-block">
-                                                    <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
-                                                    <span class="products-price-discount">-10%</span>
-                                                </div>
-                                            </div>
-                                            <div class="products-buttons-panel">
-                                                <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
-                                                <a class="products-basket" href="#">
-                                                    <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
-                                                        <mask id="path-2-inside-1_601_4565" fill="white">
-                                                            <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
-                                                        <mask id="path-4-inside-2_601_4565" fill="white">
-                                                            <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="new-products-list-item swiper-slide">
-                                    <div class="products-box">
-                                        <div class="products-img">
-                                            <a class="products-img-link" href="#">
-                                                <img class="products-pic" src="./images/products/products-img-2.png" alt="" />
-                                            </a>
-                                            <div class="products-actions">
-                                                <ul class="marks">
-                                                    <li class="marks-item">
-                                                        <span class="marks-label marks-label_new">New</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="products-links">
-                                                    <ul class="links">
-                                                        <li class="links-item">
-                                                            <!-- Добавляется класс links-label_active, если активна -->
-                                                            <a class="links-label" href="javascript:;">
-                                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                                </svg>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="products-discount">-3% при оплате онлайн</div>
-                                        <a class="products-name" href="#">Ортез на коленный сустав BAUERFEIND GenuTrain</a>
-                                        <div class="products-container">
-                                            <div class="products-price">
-                                                <span class="products-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
-                                                <div class="products-price-block">
-                                                    <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
-                                                    <span class="products-price-discount">-10%</span>
-                                                </div>
-                                            </div>
-                                            <div class="products-buttons-panel">
-                                                <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
-                                                <a class="products-basket" href="#">
-                                                    <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
-                                                        <mask id="path-2-inside-1_601_4565" fill="white">
-                                                            <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
-                                                        <mask id="path-4-inside-2_601_4565" fill="white">
-                                                            <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="new-products-list-item swiper-slide">
-                                    <div class="products-box">
-                                        <div class="products-img">
-                                            <a class="products-img-link" href="#">
-                                                <img class="products-pic" src="./images/products/products-img-3.png" alt="" />
-                                            </a>
-                                            <div class="products-actions">
-                                                <ul class="marks">
-                                                    <li class="marks-item">
-                                                        <span class="marks-label marks-label_new">New</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="products-links">
-                                                    <ul class="links">
-                                                        <li class="links-item">
-                                                            <!-- Добавляется класс links-label_active, если активна -->
-                                                            <a class="links-label" href="javascript:;">
-                                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                                </svg>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="products-discount">-3% при оплате онлайн</div>
-                                        <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
-                                        <div class="products-container">
-                                            <div class="products-price">
-                                                <span class="products-price-value"><span class="js-format-price">20990</span> <span class="currency">i</span></span>
-                                                <div class="products-price-block">
-                                                    <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
-                                                    <span class="products-price-discount">-10%</span>
-                                                </div>
-                                            </div>
-                                            <div class="products-buttons-panel">
-                                                <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
-                                                <a class="products-basket" href="#">
-                                                    <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
-                                                        <mask id="path-2-inside-1_601_4565" fill="white">
-                                                            <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
-                                                        <mask id="path-4-inside-2_601_4565" fill="white">
-                                                            <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="new-products-list-item swiper-slide">
-                                    <div class="products-box">
-                                        <div class="products-img">
-                                            <a class="products-img-link" href="#">
-                                                <img class="products-pic" src="./images/products/products-img-4.png" alt="" />
-                                            </a>
-                                            <div class="products-actions">
-                                                <ul class="marks">
-                                                    <li class="marks-item">
-                                                        <span class="marks-label marks-label_new">New</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="products-links">
-                                                    <ul class="links">
-                                                        <li class="links-item">
-                                                            <!-- Добавляется класс links-label_active, если активна -->
-                                                            <a class="links-label" href="javascript:;">
-                                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                                </svg>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="products-discount">-3% при оплате онлайн</div>
-                                        <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
-                                        <div class="products-container">
-                                            <div class="products-price">
-                                                <span class="products-price-value"><span class="js-format-price">23490</span> <span class="currency">i</span></span>
-                                                <div class="products-price-block">
-                                                    <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
-                                                    <span class="products-price-discount">-10%</span>
-                                                </div>
-                                            </div>
-                                            <div class="products-buttons-panel">
-                                                <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
-                                                <a class="products-basket" href="#">
-                                                    <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
-                                                        <mask id="path-2-inside-1_601_4565" fill="white">
-                                                            <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
-                                                        <mask id="path-4-inside-2_601_4565" fill="white">
-                                                            <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="new-products-list-item swiper-slide">
-                                    <div class="products-box">
-                                        <div class="products-img">
-                                            <a class="products-img-link" href="#">
-                                                <img class="products-pic" src="./images/products/products-img-5.png" alt="" />
-                                            </a>
-                                            <div class="products-actions">
-                                                <ul class="marks">
-                                                    <li class="marks-item">
-                                                        <span class="marks-label marks-label_new">New</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="products-links">
-                                                    <ul class="links">
-                                                        <li class="links-item">
-                                                            <!-- Добавляется класс links-label_active, если активна -->
-                                                            <a class="links-label" href="javascript:;">
-                                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                                </svg>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="products-discount">-3% при оплате онлайн</div>
-                                        <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
-                                        <div class="products-container">
-                                            <div class="products-price">
-                                                <span class="products-price-value"><span class="js-format-price">5990</span> <span class="currency">i</span></span>
-                                                <div class="products-price-block">
-                                                    <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
-                                                    <span class="products-price-discount">-10%</span>
-                                                </div>
-                                            </div>
-                                            <div class="products-buttons-panel">
-                                                <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
-                                                <a class="products-basket" href="#">
-                                                    <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
-                                                        <mask id="path-2-inside-1_601_4565" fill="white">
-                                                            <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
-                                                        <mask id="path-4-inside-2_601_4565" fill="white">
-                                                            <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="new-products-list-item swiper-slide">
-                                    <div class="products-box">
-                                        <div class="products-img">
-                                            <a class="products-img-link" href="#">
-                                                <img class="products-pic" src="./images/products/products-img-2.png" alt="" />
-                                            </a>
-                                            <div class="products-actions">
-                                                <ul class="marks">
-                                                    <li class="marks-item">
-                                                        <span class="marks-label marks-label_new">New</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="products-links">
-                                                    <ul class="links">
-                                                        <li class="links-item">
-                                                            <!-- Добавляется класс links-label_active, если активна -->
-                                                            <a class="links-label" href="javascript:;">
-                                                                <svg class="links-icon" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M12.672 20.8166C12.3037 20.95 11.697 20.95 11.3287 20.8166C8.18699 19.7158 1.16699 15.1237 1.16699 7.34047C1.16699 3.90473 3.86449 1.125 7.19033 1.125C9.16199 1.125 10.9062 2.8372 12.0003 4.34938C13.0945 2.8372 14.8495 1.125 16.8103 1.125C20.1362 1.125 22.8337 3.90473 22.8337 7.34047C22.8337 15.1237 15.8137 19.7158 12.672 20.8166Z" fill="white" stroke="#009B97" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                                                                </svg>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="products-discount">-3% при оплате онлайн</div>
-                                        <a class="products-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
-                                        <div class="products-container">
-                                            <div class="products-price">
-                                                <span class="products-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
-                                                <div class="products-price-block">
-                                                    <span class="products-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
-                                                    <span class="products-price-discount">-10%</span>
-                                                </div>
-                                            </div>
-                                            <div class="products-buttons-panel">
-                                                <a class="products-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">В 1 клик</a>
-                                                <a class="products-basket" href="#">
-                                                    <svg class="products-basket-icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M3.63519 2.47137L18.5573 3.87033C19.4725 3.95613 20.1455 4.76678 20.0614 5.68218L19.8569 7.90831C19.788 8.65885 19.2239 9.26972 18.4812 9.39814L6.18959 11.5236M0.980469 0.745239L2.28749 1.00392C2.93271 1.13162 3.44249 1.62685 3.58881 2.2681L6.36745 14.4453C6.54044 15.2034 7.21472 15.7412 7.99235 15.7412H19.9227" stroke="white" stroke-width="1.44444" stroke-linecap="round"/>
-                                                        <mask id="path-2-inside-1_601_4565" fill="white">
-                                                            <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="6.36718" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M6.26942 18.7009C6.26942 18.6328 6.30081 18.5832 6.32326 18.5618C6.33397 18.5516 6.34386 18.546 6.35166 18.5428C6.35572 18.5412 6.35934 18.5402 6.36228 18.5396C6.36374 18.5393 6.36493 18.5392 6.36582 18.5391C6.36625 18.539 6.36659 18.539 6.36683 18.539C6.36707 18.539 6.36719 18.539 6.36718 18.539V21.4279C7.84146 21.4279 9.1583 20.2726 9.1583 18.7009H6.26942ZM6.36718 18.539C6.36718 18.539 6.3673 18.539 6.36754 18.539C6.36777 18.539 6.36811 18.539 6.36855 18.5391C6.36944 18.5392 6.37063 18.5393 6.37208 18.5396C6.37503 18.5402 6.37864 18.5412 6.38271 18.5428C6.39051 18.546 6.4004 18.5516 6.41111 18.5618C6.43356 18.5832 6.46495 18.6328 6.46495 18.7009H3.57606C3.57606 20.2726 4.89291 21.4279 6.36718 21.4279V18.539ZM6.46495 18.7009C6.46495 18.769 6.43356 18.8186 6.41111 18.84C6.4004 18.8502 6.39051 18.8558 6.38271 18.8589C6.37864 18.8606 6.37503 18.8616 6.37208 18.8622C6.37063 18.8624 6.36944 18.8626 6.36855 18.8627C6.36811 18.8627 6.36777 18.8628 6.36754 18.8628C6.3673 18.8628 6.36718 18.8628 6.36718 18.8628V15.9739C4.89291 15.9739 3.57606 17.1292 3.57606 18.7009H6.46495ZM6.36718 18.8628C6.36719 18.8628 6.36707 18.8628 6.36683 18.8628C6.36659 18.8628 6.36625 18.8627 6.36582 18.8627C6.36493 18.8626 6.36374 18.8624 6.36228 18.8622C6.35934 18.8616 6.35572 18.8606 6.35166 18.8589C6.34386 18.8558 6.33397 18.8502 6.32326 18.84C6.30081 18.8186 6.26942 18.769 6.26942 18.7009H9.1583C9.1583 17.1292 7.84146 15.9739 6.36718 15.9739V18.8628Z" fill="white" mask="url(#path-2-inside-1_601_4565)"/>
-                                                        <mask id="path-4-inside-2_601_4565" fill="white">
-                                                            <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255"/>
-                                                        </mask>
-                                                        <ellipse cx="16.3115" cy="18.7009" rx="1.34668" ry="1.28255" fill="white"/>
-                                                        <path d="M16.2138 18.7009C16.2138 18.6328 16.2451 18.5832 16.2676 18.5618C16.2783 18.5516 16.2882 18.546 16.296 18.5428C16.3001 18.5412 16.3037 18.5402 16.3066 18.5396C16.3081 18.5393 16.3093 18.5392 16.3102 18.5391C16.3106 18.539 16.3109 18.539 16.3112 18.539C16.3114 18.539 16.3115 18.539 16.3115 18.539V21.4279C17.7858 21.4279 19.1026 20.2726 19.1026 18.7009H16.2138ZM16.3115 18.539C16.3115 18.539 16.3116 18.539 16.3119 18.539C16.3121 18.539 16.3125 18.539 16.3129 18.5391C16.3138 18.5392 16.315 18.5393 16.3164 18.5396C16.3194 18.5402 16.323 18.5412 16.327 18.5428C16.3348 18.546 16.3447 18.5516 16.3554 18.5618C16.3779 18.5832 16.4093 18.6328 16.4093 18.7009H13.5204C13.5204 20.2726 14.8372 21.4279 16.3115 21.4279V18.539ZM16.4093 18.7009C16.4093 18.769 16.3779 18.8186 16.3554 18.84C16.3447 18.8502 16.3348 18.8558 16.327 18.8589C16.323 18.8606 16.3194 18.8616 16.3164 18.8622C16.315 18.8624 16.3138 18.8626 16.3129 18.8627C16.3125 18.8627 16.3121 18.8628 16.3119 18.8628C16.3116 18.8628 16.3115 18.8628 16.3115 18.8628V15.9739C14.8372 15.9739 13.5204 17.1292 13.5204 18.7009H16.4093ZM16.3115 18.8628C16.3115 18.8628 16.3114 18.8628 16.3112 18.8628C16.3109 18.8628 16.3106 18.8627 16.3102 18.8627C16.3093 18.8626 16.3081 18.8624 16.3066 18.8622C16.3037 18.8616 16.3001 18.8606 16.296 18.8589C16.2882 18.8558 16.2783 18.8502 16.2676 18.84C16.2451 18.8186 16.2138 18.769 16.2138 18.7009H19.1026C19.1026 17.1292 17.7858 15.9739 16.3115 15.9739V18.8628Z" fill="white" mask="url(#path-4-inside-2_601_4565)"/>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="products-slider-button slider-button slider-button_prev js-slider-prev">
-                            <svg class="slider-button-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.91504 1.23002L1.75337 6.39169C1.14379 7.00127 1.14379 7.99877 1.75337 8.60835L6.91504 13.77" stroke="#33AFAC" stroke-width="2.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <div class="products-slider-button slider-button slider-button_next js-slider-next">
-                            <svg class="slider-button-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.1157 13.7817L7.25219 8.59495C7.8588 7.98241 7.85395 6.98492 7.24141 6.37831L2.05469 1.24182" stroke="#33AFAC" stroke-width="2.2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="slider-pagination js-slider-pagination"></div>
-                </div>
-            </section>
 
         </main>
 

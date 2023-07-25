@@ -1377,6 +1377,41 @@ function initFind() {
     });
 }
 
+function initSticky() {
+    if (typeof(StickyFix) === 'undefined' || !jQuery.isFunction(StickyFix)) {
+        return false;
+    }
+
+    var common = {
+        update: function (){
+        }
+    };
+
+    $('.JS-Sticky').each(function(){
+        var local = GLOBAL.parseData(jQuery(this).data('sticky'));
+        new StickyFix(this, jQuery.extend({}, common, local));
+    });
+}
+
+function initRadioSwitch() {
+    $(".js-radio-switch").each(function(){
+        var $element = $(this),
+            $input = $element.find('.js-radio-switch-input'),
+            $field = $element.find('.js-radio-switch-field'),
+            classActive = $element.data('radio-switch-class') || 'active';
+
+        $input.on('change.js-radio-active', function(e){
+            e.stopPropagation();
+            if ($input.is(':checked') && !$element.hasClass()) {
+                $element.addClass(classActive);
+            } else {
+                $element.removeClass(classActive);
+                $field.val('');
+            }
+        });
+    });
+}
+
 
 function initResizeWindow() {
     var width = $(window).outerWidth();
@@ -1402,8 +1437,8 @@ function initResizeWindow() {
         if (sliderBrands == undefined) {
             initSliderBrands();
         }
-        if (sliderCategoryTag) {
-            reInitSliderCategoryTag();
+        if (sliderCategoryTag == undefined) {
+            initSliderCategoryTag();
         }
         initTabCard();
     } else {
@@ -1426,6 +1461,7 @@ $(document).ready(function () {
     $(window).resize(function(){
         initResizeWindow();
         initAdaptiveMenu();
+        initSticky();
     });
 
     initDropdown();
@@ -1466,4 +1502,6 @@ $(document).ready(function () {
     ymaps.ready(initMapShops);
     initPopupGallery();
     initFind();
+    initSticky();
+    initRadioSwitch();
 });

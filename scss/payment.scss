@@ -6,12 +6,20 @@
     }
     &-method {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
     &-method-img {
         max-width: 75px;
+        max-height: 50px;
         margin-right: 10px;
         margin-bottom: 10px;
+    }
+    &-method_modified {}
+    &-method_modified &-method-img {
+        max-width: 47px;
+        max-height: 27px;
+        margin-right: 15px;
     }
     &-return {
     }
@@ -45,6 +53,11 @@
             max-width: 63px;
             margin-right: 7px;
             margin-bottom: 7px;
+        }
+        &-method_modified &-method-img {
+            max-width: 41px;
+            max-height: 21px;
+            margin-right: 14px;
         }
     }
     @media screen

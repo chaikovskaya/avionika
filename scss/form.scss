@@ -70,6 +70,13 @@
             font-weight: 500;
         }
     }
+    &_dark {
+        border: 1px solid var(--color20);
+        &:focus {
+            border-color: var(--color11);
+        }
+    }
+
 
     &_textarea {
         display: block;
@@ -221,31 +228,23 @@ label.form-error {
         letter-spacing: -0.01em;
     }
     &-check {
-        position: relative;
-        width: 22px;
-        height: 22px;
+        width: 25px;
+        height: 25px;
         margin-right: 11px;
         border-radius: 50%;
         text-align: center;
         background-color: #fff;
-        box-shadow: 0 0 6px rgba(206, 206, 206, 0.8);
-        &:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
+        border: 1px solid var(--color6);
     }
     &-input:checked + &-check {
-        &:after {
-            background-color: red;
-        }
+        border-width: 6px;
     }
-    &-input:checked ~ &-label {
+
+    @media screen
+    and (max-width: $tablet){
+        &-check {
+            margin-right: 9px;
+        }
     }
 }
 
@@ -593,6 +592,7 @@ and (max-width: $mobile) {
         transition: left 0.1s ease-in-out 0s;
     }
     &-label {
+        margin-top: -2px;
         line-height: 21px;
         font-size: 14px;
         color: var(--color19);
@@ -621,6 +621,7 @@ and (max-width: $mobile) {
     @media screen
     and (max-width: $tablet){
         &-label {
+            margin-top: 0;
             font-size: 12px;
             line-height: 18px;
             letter-spacing: -0.01em;
@@ -633,7 +634,6 @@ and (max-width: $mobile) {
     and (max-width: $mobile){
         &-label {
             max-width: 220px;
-            margin-top: -3px;
         }
     }
 }
