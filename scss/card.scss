@@ -1169,11 +1169,26 @@
         font-size: 10px;
         letter-spacing: -0.1px;
     }
-
-    @media screen
-    and (min-width: $tablet) and (max-width: $desktop){
-
+    &-shops-panel {
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 12px;
     }
+    .radio-check {
+        margin-top: -1px;
+    }
+    &-shops-item.active .radio-check {
+        border-width: 6px;
+    }
+    &-shops-panel &-shops-label {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .simplebar-track.simplebar-vertical {
+        right: 10px;
+    }
+
     @media screen
     and (max-width: $tablet){
         flex-direction: column;
@@ -1194,6 +1209,9 @@
         &-shops-right {
             padding: 15px;
             width: 100%;
+        }
+        .simplebar-track.simplebar-vertical {
+            right: 7px;
         }
     }
 
@@ -1230,6 +1248,9 @@
         }
         &-shops-info {
             margin-bottom: 5px;
+        }
+        .simplebar-track.simplebar-vertical {
+            right: 0;
         }
     }
 }

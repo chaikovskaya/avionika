@@ -1,0 +1,186 @@
+
+.profile {
+    margin-bottom: 88px;
+    &-container {
+        display: flex;
+    }
+    &-side {
+        width: 26%;
+        padding-right: 30px;
+    }
+    &-content {
+        width: 74%;
+    }
+    &-menu {}
+    &-menu-item {
+        margin-bottom: 22px;
+    }
+    &-menu-link {
+        display: flex;
+        text-decoration: none;
+    }
+    &-menu-icon {
+        margin-right: 17px;
+    }
+    &-menu-name {
+        color: var(--color2);
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.352px;
+    }
+    &-menu-link:hover &-menu-name {
+        color: var(--color6);
+        text-shadow: 0 0 .04em var(--color6);
+    }
+    &-menu-link:hover &-menu-icon svg {
+        path {
+            stroke: var(--color6);
+        }
+    }
+    &-menu-item_active &-menu-name {
+        color: var(--color6);
+        text-shadow: 0 0 .04em var(--color6);
+    }
+    &-menu-item_active &-menu-icon svg {
+        path {
+            stroke: var(--color6);
+        }
+    }
+    &-sections {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+    &-sections-item {
+
+    }
+    &-sections-link {
+        display: flex;
+        flex-direction: column;
+        min-height: 234px;
+        border-radius: 20px;
+        padding: 29px 27px 34px;
+        text-decoration: none;
+        border: 1px solid var(--color6);
+    }
+    &-sections-name {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 35px;
+        color: var(--color6);
+    }
+    &-sections-info {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.16px;
+    }
+    &-sections-panel {
+        margin-top: auto;
+    }
+    &-sections-button {
+        margin-right: 18px;
+        background-color: #fff;
+        color: var(--color6);
+        border-radius: 50em;
+        padding: 4px 23px 6px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 21px;
+    }
+    &-sections-amount {
+        position: relative;
+        top: 3px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 35px;
+    }
+    &-sections-item_user &-sections-link {
+        background: url("../images/profile/profile-user-bgr.jpg") no-repeat 0 0;
+        background-size: cover;
+        border-width: 0;
+    }
+    &-sections-item_user &-sections-amount {
+        color: #fff;
+    }
+    &-sections-item_user &-sections-name {
+        color: #fff;
+    }
+    &-sections-item_user &-sections-info {
+        color: #fff;
+    }
+    &-sections-label {
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 0.15px;
+    }
+    &-sections-price {
+        white-space: nowrap;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 1.87px;
+    }
+    &-sections-item_orders {
+    }
+    &-sections-item_orders &-sections-link {
+        background: url("../images/profile/profile-orders-bgr.jpg") no-repeat 0 0;
+        background-size: cover;
+        border-width: 0;
+    }
+    &-sections-item_orders &-sections-name {
+        color: #fff;
+    }
+    &-sections-item_orders &-sections-info {
+        color: #fff;
+    }
+    &-sections-item_orders &-sections-label {
+        color: #fff;
+    }
+    &-sections-item_orders &-sections-price {
+        color: #fff;
+    }
+    &-sections-item_wishlist {}
+    &-sections-item_wishlist &-sections-link {
+        border-color: var(--color7);
+    }
+    &-sections-item_wishlist &-sections-name {
+       color: var(--color7);
+    }
+    &-sections-item_history {}
+    &-sections-products {
+        display: grid;
+        grid-template-columns: repeat(6, 54px);
+        grid-auto-rows: auto;
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+    }
+    &-sections-products-item {
+        background-color: var(--color3);
+    }
+    &-sections-products-img {
+        display: block;
+        width: 100%;
+        height: 54px;
+    }
+    &-sections-block {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    @media screen
+    and (max-width: $desktop){
+    }
+    @media screen
+    and (max-width: $tablet){
+    }
+    @media screen
+    and (max-width: $mobile){
+    }
+}

@@ -9,7 +9,7 @@
     <!-- Не переносить на продакшен -->
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>Оформление заказа. Авионика</title>
+    <title>Оформление заказа САМОВЫВОЗ. Авионика</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
@@ -1134,7 +1134,7 @@
                                             <label class="order-radio-field">
                                                 <span class="radio-field">
                                                     <span class="order-obtain-radio radio">
-                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" />
+                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" checked="checked" />
                                                         <i class="order-obtain-radio-check radio-check"></i>
                                                         <span class="order-obtain-radio-label">Самовывоз</span>
                                                         <span class="order-radio-decor"></span>
@@ -1148,7 +1148,7 @@
                                             <label class="order-radio-field">
                                                 <span class="radio-field">
                                                     <span class="order-obtain-radio radio">
-                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" checked="checked" />
+                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" />
                                                         <i class="order-obtain-radio-check radio-check"></i>
                                                         <span class="order-obtain-radio-label">Доставка</span>
                                                         <span class="order-radio-decor"></span>
@@ -1160,69 +1160,80 @@
                                         </div>
                                     </div>
                                 </li>
+                                <!-- Самовывоз -->
                                 <li class="order-list-item">
                                     <div class="order-list-panel">
-                                        <span class="order-number">3</span><span class="order-name">Адрес доставки</span>
+                                        <span class="order-number">3</span><span class="order-name">Введите адрес</span>
                                     </div>
-                                    <div class="order-row">
-                                        <div class="order-col order-col-street order-field field js-form-validate-field">
-                                            <label class="form-error" for="order-street"></label>
-                                            <input class="order-input input input_dark" type="text" placeholder="Улица" id="order-street" name="order-street" required />
+                                    <div class="points js-find">
+                                        <div class="points-select">
+                                            <input class="input input_simple js-find-input" type="text" placeholder="Найдите магазин" name="points-search" />
                                         </div>
-                                        <div class="order-col order-col-home order-field field js-form-validate-field">
-                                            <label class="form-error" for="order-home"></label>
-                                            <input class="order-input input input_dark" type="text" placeholder="Дом" id="order-home" name="order-home" required />
-                                        </div>
-                                        <div class="order-col order-col-home order-field field js-form-validate-field">
-                                             <input class="order-input input input_dark input_number" type="number" placeholder="Квартира" id="order-flat" name="order-flat" />
-                                        </div>
-                                        <div class="order-col order-col-wide order-field field js-form-validate-field">
-                                             <textarea class="order-input input input_dark input_textarea js-textarea-size" placeholder="*Добавить комментарий курьеру" name="order-comment-1"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="order-map-values js-map"
-                                         data-objectcoord="[59.8672,30.2595]"
-                                         data-map-id="map"
-                                         data-map-icon="./images/card/card-map-icon.svg"
-                                         data-map-icon-hover="./images/card/card-map-icon-1.svg"
-                                         data-icon-size="[42, 42]"
-                                         data-map-zoom="12"
-                                    >
-                                        <div class="js-map-item" data-objectid="1" data-objectcoord="[59.8672,30.2595]">
-                                            <span class="js-map-item-value">
-                                                Адрес 1
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="order-map" id="map"></div>
-
-                                    <div class="order-floor js-radio-switch" data-radio-switch-class="order-floor_active">
-                                        <div class="order-switch-field">
-                                            <div class="order-switch-inner">
-                                                <label class="switch">
-                                                    <input class="switch-checkbox js-radio-switch-input" type="checkbox" name="order-floor-required" />
-                                                    <span class="switch-decor">
-                                                        <span class="switch-icon"></span>
-                                                    </span>
-                                                    <span class="order-switch-label">Требуется подъем на этаж</span>
-                                                </label>
+                                        <div class="points-inner">
+                                            <div class="points-sidebar js-custom-scroll">
+                                                <ul class="points-shops js-map-shops js-textfilter-city-list"
+                                                    data-objectcoord="[59.9193,30.4645]"
+                                                    data-map-id="map-shops"
+                                                    data-map-icon="./images/card/card-map-icon.svg"
+                                                    data-map-icon-hover="./images/card/card-map-icon-1.svg"
+                                                    data-map-zoom="16"
+                                                >
+                                                    <li class="points-shops-item js-map-item js-find-container" data-objectid="1" data-objectcoord="[59.8672,30.2595]">
+                                                        <div class="points-shops-link">
+                                                            <div class="points-shops-left">
+                                                                <div class="points-shops-panel">
+                                                                    <i class="radio-check"></i>
+                                                                    <div class="points-shops-name">ТЦ "ЮЖНЫЙ"</div>
+                                                                </div>
+                                                                <div class="points-shops-label js-map-item-value js-find-value">г. Пенза, ул. Нагорная 57,строение 15</div>
+                                                                <div class="points-shops-hours">Режим работы: пн-пт 9:00-18.00</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="points-shops-item js-map-item js-find-container" data-objectid="2" data-objectcoord="[59.8601,30.2487]">
+                                                        <div class="points-shops-link">
+                                                            <div class="points-shops-left">
+                                                                <div class="points-shops-panel">
+                                                                    <i class="radio-check"></i>
+                                                                    <div class="points-shops-name">ТЦ "ЮЖНЫЙ"</div>
+                                                                </div>
+                                                                <div class="points-shops-label js-map-item-value js-find-value">г. Пенза, ул. Нагорная 57,строение 15</div>
+                                                                <div class="points-shops-hours">Режим работы: пн-пт 9:00-18.00</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="points-shops-item js-map-item js-find-container" data-objectid="3" data-objectcoord="[60.0149,30.3856]">
+                                                        <div class="points-shops-link">
+                                                            <div class="points-shops-left">
+                                                                <div class="points-shops-panel">
+                                                                    <i class="radio-check"></i>
+                                                                    <div class="points-shops-label js-map-item-value js-find-value">г. Пенза, ул. проезд Виноградова 57, строение 18</div>
+                                                                </div>
+                                                                <div class="points-shops-hours">Режим работы: пн-пт 9:00-18.00</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="points-shops-item js-map-item js-find-container" data-objectid="4" data-objectcoord="[59.9193,30.4645]">
+                                                        <div class="points-shops-link">
+                                                            <div class="points-shops-left">
+                                                                <div class="points-shops-panel">
+                                                                    <i class="radio-check"></i>
+                                                                    <div class="points-shops-name">ТЦ "ЮЖНЫЙ"</div>
+                                                                </div>
+                                                                <div class="points-shops-label js-map-item-value js-find-value">г. Пенза, ул. Нагорная 57,строение 15</div>
+                                                                <div class="points-shops-hours">Режим работы: пн-пт 9:00-18.00</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </div>
-                                        <div class="order-row-floor order-row">
-                                            <div class="order-col">
-                                                <div class="order-floor-field js-form-validate-field">
-                                                    <input class="order-input-floor order-input input input_dark input_number js-radio-switch-field" type="number" placeholder="Этаж" id="order-floor" name="order-floor" />
-                                                </div>
-                                            </div>
-                                            <div class="order-col order-col-floor">
-                                                <div class="order-floor-field js-form-validate-field">
-                                                    <input class="order-input-floor order-input input input_dark js-radio-switch-field" type="text" placeholder="Подъезд" id="order-entrance" name="order-entrance" />
-                                                </div>
+                                            <div class="points-map">
+                                                <div class="points-map-value" id="map-shops"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
+                                <!-- /Самовывоз -->
                                 <li class="order-list-item">
                                     <div class="order-list-panel">
                                         <span class="order-number">4</span><span class="order-name">Состав заказа</span>

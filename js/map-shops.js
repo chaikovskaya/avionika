@@ -20,7 +20,8 @@ function initMapShops () {
         objectManager = new ymaps.ObjectManager(),
         masObjects =[];
 
-        myMap.behaviors.disable('drag');
+        //myMap.behaviors.disable('drag');
+        myMap.behaviors.disable('scrollZoom');
         myMap.geoObjects.add(objectManager);
 
         $('.js-map-item').each(function () {
