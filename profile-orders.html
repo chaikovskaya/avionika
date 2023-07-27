@@ -9,7 +9,7 @@
     <!-- Не переносить на продакшен -->
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>ЛК. Авионика</title>
+    <title>ЛК. Текущие заказы. Авионика</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
@@ -1073,7 +1073,10 @@
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link" href="/">Главная</a><span class="breadcrumbs-icon">/</span>
                     </li>
-                    <li class="breadcrumbs-item">Личный кабинет</li>
+                    <li class="breadcrumbs-item">
+                        <a class="breadcrumbs-link" href="#">Личный кабинет</a><span class="breadcrumbs-icon">/</span>
+                    </li>
+                    <li class="breadcrumbs-item">Текущие заказы</li>
                     <li class="breadcrumbs-item breadcrumbs-item_more">
                         <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
                     </li>
@@ -1096,7 +1099,7 @@
                                     <span class="profile-menu-name">Личная инфорамация</span>
                                 </a>
                             </li>
-                            <li class="profile-menu-item">
+                            <li class="profile-menu-item profile-menu-item_active">
                                 <a class="profile-menu-link" href="#">
                                     <span class="profile-menu-icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1132,91 +1135,34 @@
                         </ul>
                     </div>
                     <div class="profile-content">
-                        <ul class="profile-sections">
-                            <li class="profile-sections-item profile-sections-item_user">
-                                <a class="profile-sections-link" href="#">
-                                    <span class="profile-sections-name">Иван Петровский</span>
-                                    <span class="profile-sections-info">+7 948 487-34-56</span>
-                                    <span class="profile-sections-panel">
-                                        <span class="profile-sections-button">Бонусная карта</span>
-                                        <span class="profile-sections-amount">1034 балла</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="profile-sections-item profile-sections-item_orders">
-                                <a class="profile-sections-link" href="#">
-                                    <span class="profile-sections-name">Текущие заказы</span>
-                                    <span class="profile-sections-info">Заказ от 03.05.2023</span>
-                                    <span class="profile-sections-panel">
-                                        <span class="profile-sections-price-wrapper">
-                                            <span class="profile-sections-label">Ожидается заказ на сумму:</span>&nbsp;
-                                            <span class="profile-sections-price">
-                                                <span class="js-format-price">220660</span> <span class="currency">i</span>
-                                            </span>
+                        <div class="profile-title h2">Текущие заказы</div>
+                        <ul class="profile-orders">
+                            <li class="profile-orders-item">
+                                <a class="profile-orders-link" href="#">
+                                    <span class="profile-orders-panel">
+                                        <span class="profile-orders-name">№ 567 от 22 ноября 2021</span>
+                                        <span class="profile-orders-price">
+                                            <span class="js-format-price">210100</span> <span class="currency">i</span>
                                         </span>
                                     </span>
-                                </a>
-                            </li>
-                            <li class="profile-sections-item profile-sections-item_wishlist">
-                                <a class="profile-sections-link" href="#">
-                                    <span class="profile-sections-name">Избранное</span>
-                                    <span class="profile-sections-panel">
-                                         <span class="profile-sections-block">
-                                            <span class="profile-sections-label">Вам понравилось 7 товаров:</span>
-                                         </span>
-                                         <span class="profile-sections-products">
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-1.jpg" alt="" />
+                                    <span class="profile-orders-content">
+                                        <span class="profile-orders-delivery-label">Доставка в пункт выдачи</span>
+                                        <span class="profile-orders-status button">Принят в работу</span>
+                                        <span class="profile-orders-products-list">
+                                            <span class="profile-orders-products-item">
+                                                <img class="profile-orders-products-img" src="./images/profile-orders/profile-orders-img-1.png" alt="" />
                                             </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-2.png" alt="" />
+                                            <span class="profile-orders-products-item">
+                                                <img class="profile-orders-products-img" src="./images/profile-orders/profile-orders-img-2.png" alt="" />
                                             </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-3.png" alt="" />
+                                            <span class="profile-orders-products-item">
+                                                <img class="profile-orders-products-img" src="./images/profile-orders/profile-orders-img-3.png" alt="" />
                                             </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-4.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-5.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-6.png" alt="" />
-                                            </span>
-                                         </span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="profile-sections-item profile-sections-item_history">
-                                <a class="profile-sections-link" href="#">
-                                    <span class="profile-sections-name">Избранное</span>
-                                    <span class="profile-sections-panel">
-                                        <span class="profile-sections-price-wrapper">
-                                            <span class="profile-sections-label">Вы купили товары на сумму:</span>
-                                            <span class="profile-sections-price">
-                                                <span class="js-format-price">220660</span> <span class="currency">i</span>
+                                            <span class="profile-orders-products-item">
+                                                <img class="profile-orders-products-img" src="./images/profile-orders/profile-orders-img-1.png" alt="" />
                                             </span>
                                         </span>
-                                        <span class="profile-sections-products">
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-1.jpg" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-2.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-3.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-4.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-5.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-6.png" alt="" />
-                                            </span>
-                                         </span>
+                                        <span class="profile-orders-more">Подробнее</span>
                                     </span>
                                 </a>
                             </li>

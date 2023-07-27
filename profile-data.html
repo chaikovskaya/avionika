@@ -9,7 +9,7 @@
     <!-- Не переносить на продакшен -->
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>ЛК. Авионика</title>
+    <title>ЛК. Личные данные. Авионика</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
@@ -1073,7 +1073,10 @@
                     <li class="breadcrumbs-item">
                         <a class="breadcrumbs-link" href="/">Главная</a><span class="breadcrumbs-icon">/</span>
                     </li>
-                    <li class="breadcrumbs-item">Личный кабинет</li>
+                    <li class="breadcrumbs-item">
+                        <a class="breadcrumbs-link" href="#">Личный кабинет</a><span class="breadcrumbs-icon">/</span>
+                    </li>
+                    <li class="breadcrumbs-item">Личные данные</li>
                     <li class="breadcrumbs-item breadcrumbs-item_more">
                         <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
                     </li>
@@ -1085,7 +1088,7 @@
                 <div class="profile-container">
                     <div class="profile-side">
                         <ul class="profile-menu">
-                            <li class="profile-menu-item">
+                            <li class="profile-menu-item profile-menu-item_active">
                                 <a class="profile-menu-link" href="#">
                                     <span class="profile-menu-icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1132,95 +1135,97 @@
                         </ul>
                     </div>
                     <div class="profile-content">
-                        <ul class="profile-sections">
-                            <li class="profile-sections-item profile-sections-item_user">
-                                <a class="profile-sections-link" href="#">
-                                    <span class="profile-sections-name">Иван Петровский</span>
-                                    <span class="profile-sections-info">+7 948 487-34-56</span>
-                                    <span class="profile-sections-panel">
-                                        <span class="profile-sections-button">Бонусная карта</span>
-                                        <span class="profile-sections-amount">1034 балла</span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="profile-sections-item profile-sections-item_orders">
-                                <a class="profile-sections-link" href="#">
-                                    <span class="profile-sections-name">Текущие заказы</span>
-                                    <span class="profile-sections-info">Заказ от 03.05.2023</span>
-                                    <span class="profile-sections-panel">
-                                        <span class="profile-sections-price-wrapper">
-                                            <span class="profile-sections-label">Ожидается заказ на сумму:</span>&nbsp;
-                                            <span class="profile-sections-price">
-                                                <span class="js-format-price">220660</span> <span class="currency">i</span>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="profile-sections-item profile-sections-item_wishlist">
-                                <a class="profile-sections-link" href="#">
-                                    <span class="profile-sections-name">Избранное</span>
-                                    <span class="profile-sections-panel">
-                                         <span class="profile-sections-block">
-                                            <span class="profile-sections-label">Вам понравилось 7 товаров:</span>
-                                         </span>
-                                         <span class="profile-sections-products">
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-1.jpg" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-2.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-3.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-4.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-5.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-6.png" alt="" />
-                                            </span>
-                                         </span>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="profile-sections-item profile-sections-item_history">
-                                <a class="profile-sections-link" href="#">
-                                    <span class="profile-sections-name">Избранное</span>
-                                    <span class="profile-sections-panel">
-                                        <span class="profile-sections-price-wrapper">
-                                            <span class="profile-sections-label">Вы купили товары на сумму:</span>
-                                            <span class="profile-sections-price">
-                                                <span class="js-format-price">220660</span> <span class="currency">i</span>
-                                            </span>
-                                        </span>
-                                        <span class="profile-sections-products">
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-1.jpg" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-2.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-3.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-4.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-5.png" alt="" />
-                                            </span>
-                                            <span class="profile-sections-products-item">
-                                                <img class="profile-sections-products-img" src="./images/profile/profile-img-6.png" alt="" />
-                                            </span>
-                                         </span>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="profile-title h2">Настройки профиля</div>
+                        <form>
+                            <fieldset class="profile-data-fieldset">
+                                <div class="profile-data-side">
+                                    <span class="profile-data-label profile-data-label_common">Личные данные</span>
+                                </div>
+                                <div class="profile-data-content">
+                                    <div class="form-row">
+                                        <div class="form-col-2 field js-form-validate-field">
+                                            <label class="form-error" for="name-1"></label>
+                                            <input class="input input_simple" type="text" placeholder="Ваше имя" id="name-1" name="name-1" value="Александр" />
+                                        </div>
+                                        <div class="form-col-2 field js-form-validate-field">
+                                            <label class="form-error" for="surname-1"></label>
+                                            <input class="input input_simple" type="text" placeholder="Фамилия" id="surname-1" name="surname-1" />
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-col-2 field js-form-validate-field">
+                                            <label class="form-error" for="name-1"></label>
+                                            <input class="input input_simple" type="text" placeholder="Дата рождения" id="name-1" name="name-1" />
+                                        </div>
+                                        <div class="form-col-2 field js-form-validate-field">
+                                            <div class="profile-data-gender">
+                                                <span class="profile-data-gender-name">Пол</span>
+                                                <label class="profile-data-gender-radio radio">
+                                                    <input class="radio-input" type="radio" name="param1" />
+                                                    <i class="radio-check"></i>
+                                                    <span class="profile-data-gender-label">Мужской</span>
+                                                </label>
+                                                <label class="profile-data-gender-radio radio">
+                                                    <input class="radio-input" type="radio" name="param1" checked="checked" />
+                                                    <i class="radio-check"></i>
+                                                    <span class="profile-data-gender-label">Женский</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="profile-data-fieldset">
+                                <div class="profile-data-side">
+                                    <span class="profile-data-label profile-data-label_common">Адрес доставки</span>
+                                </div>
+                                <div class="profile-data-content">
+                                    <div class="profile-data-address">
+                                        <div class="field js-form-validate-field">
+                                            <label class="form-error" for="city-1"></label>
+                                            <input class="input input_simple" type="text" placeholder="Город" id="city-1" name="city-1" />
+                                        </div>
+                                        <div class="field js-form-validate-field">
+                                            <label class="form-error" for="street-1"></label>
+                                            <input class="input input_simple" type="text" placeholder="Улица" id="street-1" name="street-1" />
+                                        </div>
+                                        <div class="field js-form-validate-field">
+                                            <label class="form-error" for="home-1"></label>
+                                            <input class="input input_simple" type="text" placeholder="Дом" id="home-1" name="home-1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="profile-data-fieldset">
+                                <ul class="profile-data-fields">
+                                    <li class="profile-data-fields-item JS-Dropdown" data-dropdown="{
+                                        'classActive': 'profile-data-fields-item_active',
+                                        'backgroundDisabled': 'true'
+                                    }">
+                                        <span class="profile-data-label">Номер телефона</span>
+                                        <div class="profile-data-fields-value">+ 7 (937) 459-58-90</div>
+                                        <a class="profile-data-fields-link JS-Dropdown-Switcher" href="javascript:;">Изменить</a>
+                                        <div class="profile-data-fields-block JS-Dropdown-Menu">
+                                            <input class="input input_simple js-mask-phone" type="text" placeholder="Телефон" id="phone-1" name="phone-1" value="9374595890" />
+                                        </div>
+                                    </li>
+                                    <li class="profile-data-fields-item JS-Dropdown" data-dropdown="{
+                                        'classActive': 'profile-data-fields-item_active',
+                                        'backgroundDisabled': 'true'
+                                    }">
+                                        <span class="profile-data-label">E-mail</span>
+                                        <div class="profile-data-fields-value">petrov_3@mail.ru</div>
+                                        <a class="profile-data-fields-link JS-Dropdown-Switcher" href="javascript:;">Изменить</a>
+                                        <div class="profile-data-fields-block JS-Dropdown-Menu">
+                                            <input class="input input_simple js-mask-email" type="text" placeholder="E-mail" id="email-1" name="email-1" value="petrov_3@mail.ru" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <div class="profile-data-buttons">
+                                <button class="profile-data-button button">Сохранить</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
