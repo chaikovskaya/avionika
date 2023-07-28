@@ -9,7 +9,7 @@
     <!-- Не переносить на продакшен -->
     <meta name="robots" content="noindex, nofollow" />
 
-    <title>Оформление заказа. Авионика</title>
+    <title>ЛК. Карточка заказа. Авионика</title>
 
     <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
@@ -1074,321 +1074,223 @@
                         <a class="breadcrumbs-link" href="/">Главная</a><span class="breadcrumbs-icon">/</span>
                     </li>
                     <li class="breadcrumbs-item">
-                        <a class="breadcrumbs-link" href="#">Корзина</a><span class="breadcrumbs-icon">/</span>
+                        <a class="breadcrumbs-link" href="#">Личный кабинет</a><span class="breadcrumbs-icon">/</span>
                     </li>
-                    <li class="breadcrumbs-item">Оформление заказа</li>
+                    <li class="breadcrumbs-item">История заказа</li>
                     <li class="breadcrumbs-item breadcrumbs-item_more">
                         <a class="breadcrumbs-link js-expand-link" href="javascript:;">...</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="container">
-                <form class="js-form-validate" action="/">
-                    <div class="order">
-                        <div class="order-content">
-                            <h1 class="order-title">Оформление заказа</h1>
-                            <ol class="order-list">
-                                <li class="order-list-item">
-                                    <div class="order-info-buyer">
-                                        <div class="order-list-panel">
-                                            <span class="order-number">1</span><span class="order-name">Информация о покупателе</span>
-                                        </div>
-
-                                        <div class="order-row">
-                                            <div class="order-col order-col-user order-field field js-form-validate-field">
-                                                <label class="form-error" for="order-name"></label>
-                                                <input class="order-input input" type="text" placeholder="*Имя" id="order-name" name="order-name" required />
-                                            </div>
-                                            <div class="order-col order-col-user order-field field js-form-validate-field">
-                                                <label class="form-error" for="order-surname"></label>
-                                                <input class="order-input input" type="text" placeholder="*Фамилия" id="order-surname" name="order-surname" required />
-                                            </div>
-                                        </div>
-                                        <div class="order-row">
-                                            <div class="order-col order-col-user order-field field js-form-validate-field">
-                                                <input class="order-input input js-mask-phone" type="text" placeholder="Телефон для связи" id="order-phone" name="order-phone" />
-                                            </div>
-                                            <div class="order-col order-col-user order-field field js-form-validate-field">
-                                                <input class="order-input input js-mask-email" type="text" placeholder="Электроннная почта" id="order-email" name="order-email" />
-                                            </div>
-                                        </div>
-
-                                        <div class="order-switch-field">
-                                            <label class="switch">
-                                                <input class="switch-checkbox" type="checkbox" name="notifications" checked="checked" />
-                                                <span class="switch-decor">
-                                                    <span class="switch-icon"></span>
-                                                </span>
-                                                <span class="switch-label">Я хочу получать рекламные сообщения и новости о товарах и услугах</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="order-list-item">
-                                    <div class="order-list-panel">
-                                        <span class="order-number">2</span><span class="order-name">Способ плолучения заказа</span>
-                                    </div>
-                                    <div class="order-obtain order-row">
-                                        <div class="order-obtain-item order-col">
-                                            <label class="order-radio-field">
-                                                <span class="radio-field">
-                                                    <span class="order-obtain-radio radio">
-                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" />
-                                                        <i class="order-obtain-radio-check radio-check"></i>
-                                                        <span class="order-obtain-radio-label">Самовывоз</span>
-                                                        <span class="order-radio-decor"></span>
-                                                    </span>
-                                                </span>
-                                                <div class="order-obtain-info">Сегодня, Бесплатно</div>
-                                                <a class="order-obtain-link order-link" href="#">Показать все магазины на карте</a>
-                                            </label>
-                                        </div>
-                                        <div class="order-obtain-item order-col">
-                                            <label class="order-radio-field">
-                                                <span class="radio-field">
-                                                    <span class="order-obtain-radio radio">
-                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param1" checked="checked" />
-                                                        <i class="order-obtain-radio-check radio-check"></i>
-                                                        <span class="order-obtain-radio-label">Доставка</span>
-                                                        <span class="order-radio-decor"></span>
-                                                    </span>
-                                                </span>
-                                                <div class="order-obtain-info">Доставим с 15 июля 2022</div>
-                                                <div class="order-obtain-price">от 990 р</div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="order-list-item">
-                                    <div class="order-list-panel">
-                                        <span class="order-number">3</span><span class="order-name">Адрес доставки</span>
-                                    </div>
-                                    <div class="order-row">
-                                        <div class="order-col order-col-street order-field field js-form-validate-field">
-                                            <label class="form-error" for="order-street"></label>
-                                            <input class="order-input input input_dark" type="text" placeholder="Улица" id="order-street" name="order-street" required />
-                                        </div>
-                                        <div class="order-col order-col-home order-field field js-form-validate-field">
-                                            <label class="form-error" for="order-home"></label>
-                                            <input class="order-input input input_dark" type="text" placeholder="Дом" id="order-home" name="order-home" required />
-                                        </div>
-                                        <div class="order-col order-col-home order-field field js-form-validate-field">
-                                             <input class="order-input input input_dark input_number" type="number" placeholder="Квартира" id="order-flat" name="order-flat" />
-                                        </div>
-                                        <div class="order-col order-col-wide order-field field js-form-validate-field">
-                                             <textarea class="order-input input input_dark input_textarea js-textarea-size" placeholder="*Добавить комментарий курьеру" name="order-comment-1"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="order-map-values js-map"
-                                         data-objectcoord="[59.8672,30.2595]"
-                                         data-map-id="map"
-                                         data-map-icon="./images/card/card-map-icon.svg"
-                                         data-map-icon-hover="./images/card/card-map-icon-1.svg"
-                                         data-icon-size="[42, 42]"
-                                         data-map-zoom="12"
-                                    >
-                                        <div class="js-map-item" data-objectid="1" data-objectcoord="[59.8672,30.2595]">
-                                            <span class="js-map-item-value">
-                                                Адрес 1
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="order-map" id="map"></div>
-
-                                    <div class="order-floor js-radio-switch" data-radio-switch-class="order-floor_active">
-                                        <div class="order-switch-field">
-                                            <div class="order-switch-inner">
-                                                <label class="switch">
-                                                    <input class="switch-checkbox js-radio-switch-input" type="checkbox" name="order-floor-required" />
-                                                    <span class="switch-decor">
-                                                        <span class="switch-icon"></span>
-                                                    </span>
-                                                    <span class="order-switch-label">Требуется подъем на этаж</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="order-row-floor order-row">
-                                            <div class="order-col">
-                                                <div class="order-floor-field js-form-validate-field">
-                                                    <input class="order-input-floor order-input input input_dark input_number js-radio-switch-field" type="number" placeholder="Этаж" id="order-floor" name="order-floor" />
-                                                </div>
-                                            </div>
-                                            <div class="order-col order-col-floor">
-                                                <div class="order-floor-field js-form-validate-field">
-                                                    <input class="order-input-floor order-input input input_dark js-radio-switch-field" type="text" placeholder="Подъезд" id="order-entrance" name="order-entrance" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="order-list-item">
-                                    <div class="order-list-panel">
-                                        <span class="order-number">4</span><span class="order-name">Состав заказа</span>
-                                    </div>
-                                    <ul class="order-elements">
-                                        <li class="order-elements-item">
-                                            <div class="order-elements-link">
-                                                <a class="order-elements-img" href="#">
-                                                    <img src="./images/products/products-img-5.png" alt="" />
-                                                </a>
-                                                <div class="order-elements-detail">
-                                                    <div class="order-elements-discount">-3% при оплате онлайн</div>
-                                                    <a class="order-elements-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
-                                                    <div class="order-elements-price">
-                                                        <span class="order-elements-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
-                                                        <span class="order-elements-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
-                                                        <span class="order-elements-price-discount">-10%</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="order-elements-item">
-                                            <div class="order-elements-link">
-                                                <a class="order-elements-img" href="#">
-                                                    <img src="./images/products/products-img-2.png" alt="" />
-                                                </a>
-                                                <div class="order-elements-detail">
-                                                    <div class="order-elements-discount">-3% при оплате онлайн</div>
-                                                    <a class="order-elements-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
-                                                    <div class="order-elements-price">
-                                                        <span class="order-elements-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
-                                                        <span class="order-elements-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
-                                                        <span class="order-elements-price-discount">-10%</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="order-elements-item">
-                                            <div class="order-elements-link">
-                                                <a class="order-elements-img" href="#">
-                                                    <img src="./images/products/products-img-1.png" alt="" />
-                                                </a>
-                                                <div class="order-elements-detail">
-                                                    <div class="order-elements-discount">-3% при оплате онлайн</div>
-                                                    <a class="order-elements-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
-                                                    <div class="order-elements-price">
-                                                        <span class="order-elements-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
-                                                        <span class="order-elements-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
-                                                        <span class="order-elements-price-discount">-10%</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="order-elements-item">
-                                            <div class="order-elements-link">
-                                                <a class="order-elements-img" href="#">
-                                                    <img src="./images/products/products-img-4.png" alt="" />
-                                                </a>
-                                                <div class="order-elements-detail">
-                                                    <div class="order-elements-discount">-3% при оплате онлайн</div>
-                                                    <a class="order-elements-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
-                                                    <div class="order-elements-price">
-                                                        <span class="order-elements-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
-                                                        <span class="order-elements-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
-                                                        <span class="order-elements-price-discount">-10%</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="load-more">
-                                        <!-- После ajax выполнить фуенкцию initFormatPrice() -->
-                                        <!-- Спиннер можно показывать в процессе загрузки load-more-icon -->
-                                        <a class="load-more-link button button_modified" href="javascript:;">
-                                            Показать ещё<i class="load-more-icon"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="order-list-item">
-                                    <div class="order-list-panel">
-                                        <span class="order-number">5</span><span class="order-name">Способ оплаты</span>
-                                    </div>
-                                    <div class="order-obtain order-row">
-                                        <div class="order-obtain-item order-col">
-                                            <label class="order-radio-field">
-                                                <span class="radio-field">
-                                                    <span class="order-obtain-radio radio">
-                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param2" />
-                                                        <i class="order-obtain-radio-check radio-check"></i>
-                                                        <span class="order-obtain-radio-label">Наличными</span>
-                                                        <span class="order-radio-decor"></span>
-                                                    </span>
-                                                </span>
-                                                <span class="order-obtain-info order-obtain-info_simple">Оплата наличными при получении заказа</span>
-                                            </label>
-                                        </div>
-                                        <div class="order-obtain-item order-col">
-                                            <label class="order-radio-field">
-                                                <span class="radio-field">
-                                                    <span class="order-obtain-radio radio">
-                                                        <input class="order-obtain-radio-input radio-input" type="radio" name="delivery-param2" checked="checked" />
-                                                        <i class="order-obtain-radio-check radio-check"></i>
-                                                        <span class="order-obtain-radio-label">Картой на сайте</span>
-                                                        <span class="order-radio-decor"></span>
-                                                    </span>
-                                                </span>
-                                                <span class="order-pay">
-                                                    <!-- Добавлен класс payment-method_modified -->
-                                                     <div class="payment-method payment-method_modified">
-                                                        <img class="payment-method-img" src="./images/payment/payment-img-1.png" alt="" />
-                                                        <img class="payment-method-img" src="./images/payment/payment-img-2.png" alt="" />
-                                                        <img class="payment-method-img" src="./images/payment/payment-img-3.png" alt="" />
-                                                        <img class="payment-method-img" src="./images/payment/payment-img-4.png" alt="" />
-                                                    </div>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ol>
+            <div class="profile container">
+                <h1 class="title-common">Личный кабинет</h1>
+                <div class="profile-container">
+                    <div class="profile-side">
+                        <ul class="profile-menu">
+                            <li class="profile-menu-item">
+                                <a class="profile-menu-link" href="#">
+                                    <span class="profile-menu-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M20.5862 22C20.5862 18.13 16.7362 15 11.9962 15C7.25625 15 3.40625 18.13 3.40625 22" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                    <span class="profile-menu-name">Личная инфорамация</span>
+                                </a>
+                            </li>
+                            <li class="profile-menu-item">
+                                <a class="profile-menu-link" href="#">
+                                    <span class="profile-menu-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.17188 7.4375L12.0019 12.5475L20.7719 7.4675" stroke="#333333" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 21.6091V12.5391" stroke="#333333" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.93062 2.48126L4.59063 5.44126C3.38063 6.11126 2.39062 7.79126 2.39062 9.17126V14.8213C2.39062 16.2013 3.38063 17.8813 4.59063 18.5513L9.93062 21.5213C11.0706 22.1513 12.9406 22.1513 14.0806 21.5213L19.4206 18.5513C20.6306 17.8813 21.6206 16.2013 21.6206 14.8213V9.17126C21.6206 7.79126 20.6306 6.11126 19.4206 5.44126L14.0806 2.47126C12.9306 1.84126 11.0706 1.84126 9.93062 2.48126Z" stroke="#333333" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                    <span class="profile-menu-name">Текущие заказы</span>
+                                </a>
+                            </li>
+                            <li class="profile-menu-item profile-menu-item_active">
+                                <a class="profile-menu-link" href="#">
+                                    <span class="profile-menu-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.75 12.0019L10.58 14.8319L16.25 9.17188" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                    <span class="profile-menu-name">История заказов</span>
+                                </a>
+                            </li>
+                            <li class="profile-menu-item">
+                                <a class="profile-menu-link" href="#">
+                                    <span class="profile-menu-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.62 21.9039C12.28 22.032 11.72 22.032 11.38 21.9039C8.48 20.8472 2 16.4388 2 8.96685C2 5.66854 4.49 3 7.56 3C9.38 3 10.99 4.64372 12 6.0954C13.01 4.64372 14.63 3 16.44 3C19.51 3 22 5.66854 22 8.96685C22 16.4388 15.52 20.8472 12.62 21.9039Z" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                    <span class="profile-menu-name">Избранные товары</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-title h2">История заказа</div>
+                        <div class="profile-card-status-wrapper">
+                            <span class="profile-orders-status">Собирается на складе</span>
                         </div>
-                        <div class="order-side JS-Sticky" data-sticky="{
-                            'classActive': 'basket-side-block_fix',
-                            'classBottom': 'basket-side-block_bottom'
-                        }">
-                            <div class="basket-side-block JS-Sticky-Item">
-                                <div class="basket-sum">
-                                    <div class="basket-sum-inner">
-                                        <dl class="basket-sum-item">
-                                            <dt class="basket-sum-name">Товары (3)</dt>
-                                            <dd class="basket-sum-value">
-                                                <span class="js-format-price">25790</span>&nbsp;<span class="currency">i</span>
-                                            </dd>
-                                        </dl>
-                                        <dl class="basket-sum-item">
-                                            <dt class="basket-sum-name">Сумма скидок и акции</dt>
-                                            <dd class="basket-sum-value basket-sum-value_discount">
-                                                <span class="js-format-price">0</span>&nbsp;<span class="currency">i</span>
-                                            </dd>
-                                        </dl>
-                                        <dl class="basket-sum-item basket-sum-item_total">
-                                            <dt class="basket-sum-name">Итого:</dt>
-                                            <dd class="basket-sum-value">
-                                                <span class="js-format-price">13800</span>&nbsp;<span class="basket-sum-value-currency currency">i</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                    <div class="basket-buttons">
-                                        <button class="basket-sum-button button">Оформить заказ</button>
-                                        <a class="basket-sum-button button button_simple js-open-buy" href="javascript:;" data-src="./ajax/buy.html">Купить в 1 клик</a>
+                        <ul class="profile-card-info">
+                            <li class="profile-card-info-item">
+                                <div class="profile-card-info-block">
+                                    <span class="profile-card-info-name">Окуда:</span> Пенза
+                                </div>
+                            </li>
+                            <li class="profile-card-info-item">
+                                <div class="profile-card-info-block">
+                                    <span class="profile-card-info-name">Куда:</span> Москва, ул. Прохоровская, 8-10
+                                </div>
+                            </li>
+                            <li class="profile-card-info-item">
+                                <div class="profile-card-info-block">
+                                    <span class="profile-card-info-name">Дата отправки:</span> 28.11.2021
+                                </div>
+                            </li>
+                            <li class="profile-card-info-item">
+                                <div class="profile-card-info-block">
+                                    <span class="profile-card-info-name">Предварительно получение заказа:</span> 29.11.2021
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="profile-card-info-add">
+                            <div class="profile-card-info-add-item">
+                                <div class="profile-card-info-block">
+                                    <span class="profile-card-info-name">ФИО:</span> Иванов Иван Николевич
+                                </div>
+                            </div>
+                            <div class="profile-card-info-add-item">
+                                <div class="profile-card-info-block">
+                                    <span class="profile-card-info-name">Телефон:</span> +7 (878) 406-94-90
+                                </div>
+                                <div class="profile-card-info-block">
+                                    <span class="profile-card-info-name">E-mail</span> Petrov19@mail.ru
+                                </div>
+                                <div class="profile-card-info-block">
+                                    <span class="profile-card-info-name">Получение:</span> Самовывоз
+                                </div>
+                                <div class="profile-card-info-block">
+                                    <span class="profile-card-info-name">Оплата:</span> Наличными
+                                </div>
+                                <div class="profile-card-info-block">
+                                    <span class="profile-card-info-name">Статус оплаты:</span> Не оплачен
+                                </div>
+                            </div>
+                        </div>
+                        <span class="profile-card-subtitle">Статус заказа</span>
+                        <ul class="profile-card-status">
+                            <li class="profile-card-status-item">
+                                <span class="profile-card-status-number">1</span>
+                                <div class="profile-card-status-name">Заказ принят в работу</div>
+                            </li>
+                            <li class="profile-card-status-item">
+                                <span class="profile-card-status-number">2</span>
+                                <div class="profile-card-status-name">Заказ собирается на складе</div>
+                            </li>
+                            <li class="profile-card-status-item profile-card-status-item_active">
+                                <span class="profile-card-status-number">3</span>
+                                <div class="profile-card-status-name">Заказ собран и готов к&nbsp;отправке</div>
+                            </li>
+                            <li class="profile-card-status-item">
+                                <span class="profile-card-status-number">4</span>
+                                <div class="profile-card-status-name">Готов к&nbsp;получению</div>
+                            </li>
+                        </ul>
+                        <span class="profile-card-subtitle">Состав заказа</span>
+                        <div class="profile-card-elements">
+                            <ul class="order-elements">
+                            <li class="order-elements-item">
+                                <div class="order-elements-link">
+                                    <a class="order-elements-img" href="#">
+                                        <img src="./images/products/products-img-5.png" alt="" />
+                                    </a>
+                                    <div class="order-elements-detail">
+                                        <div class="order-elements-discount">-3% при оплате онлайн</div>
+                                        <a class="order-elements-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                        <div class="order-elements-price">
+                                            <span class="order-elements-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
+                                            <span class="order-elements-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                            <span class="order-elements-price-discount">-10%</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="basket-important">
-                            <span class="basket-important-icon">
-                                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.56088 5.24902C9.56088 4.93836 9.30904 4.68652 8.99838 4.68652C8.68772 4.68652 8.43588 4.93836 8.43588 5.24902V9.74902C8.43588 10.0597 8.68772 10.3115 8.99838 10.3115C9.30904 10.3115 9.56088 10.0597 9.56088 9.74902V5.24902Z" fill="#009B97"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7524 1.30936C9.6359 0.812245 8.36086 0.812245 7.24433 1.30936C6.54621 1.62018 5.98247 2.21584 5.4003 3.03984C4.81996 3.86124 4.17005 4.98693 3.33043 6.4412L3.29975 6.49434C2.46013 7.94861 1.8102 9.0743 1.38902 9.98758C0.966494 10.9038 0.732512 11.6898 0.812391 12.4498C0.940146 13.6653 1.57766 14.7695 2.56644 15.4879C3.18468 15.9371 3.98241 16.1275 4.9871 16.2196C5.98861 16.3115 7.28843 16.3115 8.96765 16.3115H9.02907C10.7083 16.3115 12.0081 16.3115 13.0097 16.2196C14.0144 16.1275 14.8121 15.9371 15.4303 15.4879C16.4191 14.7695 17.0566 13.6653 17.1844 12.4498C17.2643 11.6898 17.0303 10.9038 16.6077 9.98758C16.1866 9.07429 15.5366 7.94859 14.697 6.4943L14.6663 6.44114C13.8267 4.9869 13.1768 3.86123 12.5965 3.03984C12.0143 2.21584 11.4505 1.62018 10.7524 1.30936ZM7.70191 2.3371C8.52717 1.96967 9.46959 1.96967 10.2949 2.3371C10.7098 2.52186 11.1289 2.91237 11.6777 3.689C12.2247 4.46323 12.8493 5.54393 13.7074 7.03027C14.5655 8.51661 15.1891 9.59788 15.5862 10.4587C15.9844 11.3222 16.113 11.8804 16.0655 12.3322C15.9711 13.2306 15.4999 14.0468 14.7691 14.5778C14.4016 14.8448 13.8538 15.0125 12.9069 15.0994C11.9629 15.186 10.7147 15.1865 8.99838 15.1865C7.2821 15.1865 6.03389 15.186 5.08988 15.0994C4.14295 15.0125 3.59521 14.8448 3.2277 14.5778C2.49686 14.0468 2.02566 13.2306 1.93123 12.3322C1.88374 11.8804 2.01238 11.3222 2.41061 10.4587C2.80761 9.59788 3.43123 8.51661 4.28937 7.03027C5.14751 5.54393 5.7721 4.46323 6.31911 3.689C6.86781 2.91237 7.28692 2.52186 7.70191 2.3371Z" fill="#009B97"/>
-                                    <path d="M9.74841 11.999C9.74841 12.4132 9.41263 12.749 8.99841 12.749C8.5842 12.749 8.24841 12.4132 8.24841 11.999C8.24841 11.5848 8.5842 11.249 8.99841 11.249C9.41263 11.249 9.74841 11.5848 9.74841 11.999Z" fill="#009B97"/>
-                                </svg>
-                            </span>
-                                    <div class="basket-important-info">Бесплатная доставка от 2000 тыс рублей, самовывоз без ограничений</div>
+                            </li>
+                            <li class="order-elements-item">
+                                <div class="order-elements-link">
+                                    <a class="order-elements-img" href="#">
+                                        <img src="./images/products/products-img-2.png" alt="" />
+                                    </a>
+                                    <div class="order-elements-detail">
+                                        <div class="order-elements-discount">-3% при оплате онлайн</div>
+                                        <a class="order-elements-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                        <div class="order-elements-price">
+                                            <span class="order-elements-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
+                                            <span class="order-elements-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                            <span class="order-elements-price-discount">-10%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="order-elements-item">
+                                <div class="order-elements-link">
+                                    <a class="order-elements-img" href="#">
+                                        <img src="./images/products/products-img-1.png" alt="" />
+                                    </a>
+                                    <div class="order-elements-detail">
+                                        <div class="order-elements-discount">-3% при оплате онлайн</div>
+                                        <a class="order-elements-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                        <div class="order-elements-price">
+                                            <span class="order-elements-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
+                                            <span class="order-elements-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                            <span class="order-elements-price-discount">-10%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="order-elements-item">
+                                <div class="order-elements-link">
+                                    <a class="order-elements-img" href="#">
+                                        <img src="./images/products/products-img-4.png" alt="" />
+                                    </a>
+                                    <div class="order-elements-detail">
+                                        <div class="order-elements-discount">-3% при оплате онлайн</div>
+                                        <a class="order-elements-name" href="#">Женские ортопедические кроссовки Berenman Viviana</a>
+                                        <div class="order-elements-price">
+                                            <span class="order-elements-price-value"><span class="js-format-price">15990</span> <span class="currency">i</span></span>
+                                            <span class="order-elements-price-old"><span class="js-format-price">4200</span> <span class="currency">i</span></span>
+                                            <span class="order-elements-price-discount">-10%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                            <div class="load-more">
+                                <!-- После ajax выполнить фуенкцию initFormatPrice() -->
+                                <!-- Спиннер можно показывать в процессе загрузки load-more-icon -->
+                                <a class="load-more-link button button_modified" href="javascript:;">
+                                    Показать ещё<i class="load-more-icon"></i>
+                                </a>
+                                <div class="profile-card-elements-total">
+                                    <a class="profile-card-elements-link button" href="#">Повторить заказ</a>
+                                    <span class="profile-card-elements-sum">
+                                    <span class="profile-card-elements-sum-name">Итого:</span>
+                                    <span class="profile-card-elements-sum-value">
+                                        <span class="js-format-price">13800</span> <span class="currency">i</span>
+                                    </span>
+                                </span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
 
         </main>
