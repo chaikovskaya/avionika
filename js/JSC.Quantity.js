@@ -56,6 +56,7 @@
 
   Quantity.prototype._decrease = function _decrease() {
     var $numberValue = this.$number.val();
+    this.$number[0].dispatchEvent(new Event("change"));
 
     $numberValue --;
     if ($numberValue >= this.minNumber) {
@@ -72,6 +73,7 @@
     $numberValue ++;
     if ($numberValue <= this.maxNumber) {
       this.$number.val($numberValue).trigger('input');
+      this.$number[0].dispatchEvent(new Event("change"));
     }
     if ($numberValue > this.minNumber) {
       this.$element.removeClass(this.classDisabled);

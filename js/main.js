@@ -239,7 +239,7 @@ function openPopupBuy($element) {
 
     var url = $element.data('src');
     if ($element.attr('data-id')) url += '?id=' + $element.attr('data-id');
-    if ($element.attr('data-quantity')) url += '?quantity=' + $element.attr('data-quantity');
+    if ($element.attr('data-quantity')) url += '&quantity=' + $element.attr('data-quantity');
 
     $.fancybox.open({
         src  :  url,
