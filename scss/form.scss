@@ -413,10 +413,18 @@ label.form-error {
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.07);
 }
 .selectric-items li {
-    padding: 9px 19px;
+    margin-bottom: 8px;
+    padding: 5px 19px;
     font-size: 14px;
     line-height: 20px;
     color: var(--color1);
+    @include fix-rows();
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 .selectric-items li:hover {
     background-color: transparent;
@@ -494,8 +502,7 @@ and (max-width: $tablet) {
         color: var(--color14);
     }
     .selectric-items li {
-        padding-top: 7px;
-        padding-bottom: 7px;
+        margin-bottom: 3px;
         font-size: 13px;
         line-height: 18px;
     }
@@ -532,8 +539,8 @@ and (max-width: $mobile) {
         font-size: 16px;
     }
     .selectric-items li {
-        padding-left: 0;
-        padding-right: 0;
+        margin-bottom: 0;
+        padding: 7px 0;
         font-size: 15px;
         line-height: 26px;
     }
