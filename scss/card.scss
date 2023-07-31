@@ -1083,6 +1083,13 @@
         &-price {
             margin-bottom: 10px;
         }
+        &-marks {
+            .marks-label {
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 10px;
+            }
+        }
     }
 }
 
