@@ -431,6 +431,18 @@
     }
 
     @media screen
+    and (min-width: $mobile) and (max-width: $tablet) {
+        .points-sidebar {
+            height: 471px;
+        }
+        .points-map {
+            height: 471px;
+        }
+        .points-shops-link {
+            min-height: 145px;
+        }
+    }
+    @media screen
     and (min-width: $tablet){
         .points-sidebar {
             width: 43%;

@@ -74,7 +74,8 @@
         display: none;
     }
     &-actions-select {
-        min-width: 200px;
+        min-width: 220px;
+        width: 220px;
     }
 
     @media screen
@@ -128,6 +129,10 @@
         }
         &-actions-list-item {
             margin-left: 10px;
+        }
+        &-actions-select {
+            min-width: 200px;
+            width: 200px;
         }
     }
     @media screen
@@ -523,7 +528,7 @@
         overflow: hidden;
         height: 100%;
     }
-    &-list-item:hover .products-pic {
+    &-pic:hover .products-pic {
         transform: scale(1.1);
     }
     &-props {

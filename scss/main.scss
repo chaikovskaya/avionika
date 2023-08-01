@@ -181,6 +181,8 @@
     }
     &-img {
         min-width: 29px;
+        max-width: 43px;
+        max-height: 43px;
     }
     &-info {
         max-width: 185px;
@@ -215,6 +217,8 @@
         }
         &-img {
             min-width: auto;
+            max-width: 40px;
+            max-height: 40px;
         }
     }
     @media screen

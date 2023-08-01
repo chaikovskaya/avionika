@@ -1412,6 +1412,34 @@ function initRadioSwitch() {
     });
 }
 
+function initViewText() {
+    jQuery('.js-view-text').not('.js-view-text-ready').each(function() {
+        var $element = $(this),
+            $parent = $element.find('.js-view-text-parent'),
+            $child = $element.find('.js-view-text-child'),
+            $switcher = $element.find('.js-view-text-switcher'),
+            classStart = $element.data('view-start'),
+            classActive = $element.data('view-active');
+
+        $element.addClass('js-view-text-ready');
+
+        $switcher.on('click', function(e) {
+            if (!$element.hasClass(classActive)) {
+                $element.addClass(classActive);
+            } else {
+                $element.removeClass(classActive);
+            }
+        });
+
+        var heightParent = $parent.height(),
+            heightChild = $child.height();
+
+        if (heightChild > heightParent) {
+            $element.addClass(classStart);
+        }
+    });
+}
+
 
 function initResizeWindow() {
     var width = $(window).outerWidth();
@@ -1504,4 +1532,5 @@ $(document).ready(function () {
     initFind();
     initSticky();
     initRadioSwitch();
+    initViewText();
 });

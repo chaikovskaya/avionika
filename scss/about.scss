@@ -52,11 +52,12 @@
         border-radius: 50em;
         margin-right: 22px;
         border: 1px solid var(--color6);
-        padding: 9px;
+        padding: 10px;
     }
     &-advantages-pic {
     }
     &-advantages-name {
+        max-width: 188px;
         margin-top: 4px;
         color: var(--color2);
         font-size: 20px;
@@ -118,6 +119,7 @@
             margin-bottom: 0;
         }
         &-advantages-name {
+            max-width: 164px;
             margin-top: -4px;
             font-size: 14px;
             line-height: 21px;
@@ -163,6 +165,7 @@
         }
         &-advantages-name {
             margin-top: 0;
+            max-width: none;
             text-align: center;
         }
     }

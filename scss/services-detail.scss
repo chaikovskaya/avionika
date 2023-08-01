@@ -50,12 +50,12 @@
     }
     &-symptoms-pic {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        clip-path: ellipse(100% 100% at left center);
+        top: -55px;
+        left: -85px;
+        width: 119%;
+        height: 590px;
         overflow: hidden;
+        clip-path: ellipse(50% 50% at 50% 50%);
     }
     &-symptoms-pic-element {
         width: 100%;
@@ -120,7 +120,11 @@
             width: 32%;
         }
         &-symptoms-pic {
-            clip-path: ellipse(100% 68% at left center);
+            top: -33px;
+            left: -20%;
+            width: 122%;
+            height: 375px;
+            clip-path: ellipse(50% 50% at 50% 50%);
         }
         &-symptoms-info {
             width: 68%;
@@ -134,15 +138,22 @@
         }
         &-symptoms-img {
             width: 100%;
+            min-height: 215px;
         }
         &-symptoms-info {
             order: -1;
             width: 100%;
         }
         &-symptoms-pic {
-            position: static;
-            max-height: 220px;
-            clip-path: ellipse(65% 100% at bottom center);
+            top: auto;
+            bottom: -127px;
+            left: -4%;
+            min-width: 421px;
+            width: auto;
+            max-width: 550px;
+            height: 350px;
+            clip-path: ellipse(50% 50% at 50% 50%);
+            right: -5%;
         }
     }
 }

@@ -122,6 +122,8 @@
         letter-spacing: -0.6px;
     }
     &-info {
+        height: 96px;
+        overflow: hidden;
         margin-bottom: 27px;
         font-weight: 300;
         letter-spacing: 0.15px;
@@ -130,6 +132,7 @@
         }
     }
     &-more {
+        visibility: hidden;
         margin-top: auto;
         color: var(--color6);
         font-size: 16px;
@@ -139,6 +142,22 @@
             text-decoration: none;
             color: var(--color6);
         }
+    }
+    &-more-show {}
+    &-more-hide {
+        display: none;
+    }
+    &-block_start &-more {
+        visibility: visible;
+    }
+    &-block_active &-info {
+        height: auto;
+    }
+    &-block_active &-more-show {
+        display: none;
+    }
+    &-block_active &-more-hide {
+        display: block;
     }
 
 
@@ -210,6 +229,7 @@
             padding-right: 0;
             margin-right: 0;
             margin-bottom: 8px;
+            border-right-width: 0;
         }
         &-date {
             margin-bottom: 0;

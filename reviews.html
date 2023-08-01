@@ -1095,7 +1095,7 @@
             <div class="reviews container">
                 <ul class="reviews-list">
                     <li class="reviews-list-item">
-                        <div class="reviews-block">
+                        <div class="reviews-block js-view-text" data-view-start="reviews-block_start" data-view-active="reviews-block_active">
                             <div class="reviews-panel">
                                 <div class="reviews-left">
                                     <span class="reviews-date">01.07.2022</span>
@@ -1133,19 +1133,26 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="reviews-info content">
-                                <p>Turpis nulla integer dignissim enim venenatis montes diam montes gravida. )))Fusce pretium ac semper non vitae tellus. Nunc tortor vitae</p>
-                                <p>Fusce pretium ac semper non vitae tellus. Nunc tortor vita</p>
+                            <div class="reviews-info content js-view-text-parent">
+                                <div class="review-info-inner js-view-text-child">
+                                    <p>Turpis nulla integer dignissim enim venenatis montes diam montes gravida. )))Fusce pretium ac semper non vitae tellus. Nunc tortor vitae</p>
+                                    <p>Fusce pretium ac semper non vitae tellus. Nunc tortor vita</p>
+                                    <p>Turpis nulla integer dignissim enim venenatis montes diam montes gravida. )))Fusce pretium ac semper non vitae tellus. Nunc tortor vitae</p>
+                                    <p>Fusce pretium ac semper non vitae tellus. Nunc tortor vita</p>
+                                </div>
                             </div>
-                            <a class="reviews-more" href="#">Подробнее</a>
+                            <a class="reviews-more js-view-text-switcher" href="javascript:;">
+                                <span class="reviews-more-show">Подробнее</span>
+                                <span class="reviews-more-hide">Свернуть</span>
+                            </a>
                         </div>
                     </li>
                     <li class="reviews-list-item">
-                        <div class="reviews-block">
+                        <div class="reviews-block js-view-text" data-view-start="reviews-block_start" data-view-active="reviews-block_active">
                             <div class="reviews-panel">
                                 <div class="reviews-left">
                                     <span class="reviews-date">01.07.2022</span>
-                                    <span class="reviews-city">г. Пенза</span>
+                                    <span class="reviews-city">г. Москва</span>
                                 </div>
                                 <div class="reviews-right">
                                     <span class="reviews-name">Евгений Петров</span>
@@ -1179,14 +1186,19 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="reviews-info content">
-                                <p>In urna quam mauris magna ornare lobortis quam nunc hac. Vitae adipiscing viverra diam feugiat id. Risus eros vel leo varius sagittis scelerisque blandit non. Elementum nulla tincidunt lacus senectus imperdiet. Tristique pellentesque amet lacus faucibus.</p>
+                            <div class="reviews-info content js-view-text-parent">
+                                <div class="review-info-inner js-view-text-child">
+                                    <p>In urna quam mauris magna ornare lobortis quam nunc hac. Vitae adipiscing viverra diam feugiat id. Risus eros vel leo varius sagittis scelerisque blandit non. Elementum nulla tincidunt lacus senectus imperdiet. Tristique pellentesque amet lacus faucibus.</p>
+                                </div>
                             </div>
-                            <a class="reviews-more" href="#">Подробнее</a>
+                            <a class="reviews-more js-view-text-switcher" href="javascript:;">
+                                <span class="reviews-more-show">Подробнее</span>
+                                <span class="reviews-more-hide">Свернуть</span>
+                            </a>
                         </div>
                     </li>
                     <li class="reviews-list-item">
-                        <div class="reviews-block">
+                        <div class="reviews-block js-view-text" data-view-start="reviews-block_start" data-view-active="reviews-block_active">
                             <div class="reviews-panel">
                                 <div class="reviews-left">
                                     <span class="reviews-date">01.07.2022</span>
@@ -1224,15 +1236,22 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="reviews-info content">
-                                <p>Turpis nulla integer dignissim enim venenatis montes diam montes gravida. )))Fusce pretium ac semper non vitae tellus. Nunc tortor vitae</p>
-                                <p>Fusce pretium ac semper non vitae tellus. Nunc tortor vita</p>
+                            <div class="reviews-info content js-view-text-parent">
+                                <div class="review-info-inner js-view-text-child">
+                                    <p>Turpis nulla integer dignissim enim venenatis montes diam montes gravida. )))Fusce pretium ac semper non vitae tellus. Nunc tortor vitae</p>
+                                    <p>Fusce pretium ac semper non vitae tellus. Nunc tortor vita</p>
+                                    <p>Turpis nulla integer dignissim enim venenatis montes diam montes gravida. )))Fusce pretium ac semper non vitae tellus. Nunc tortor vitae</p>
+                                    <p>Fusce pretium ac semper non vitae tellus. Nunc tortor vita</p>
+                                </div>
                             </div>
-                            <a class="reviews-more" href="#">Подробнее</a>
+                            <a class="reviews-more js-view-text-switcher" href="javascript:;">
+                                <span class="reviews-more-show">Подробнее</span>
+                                <span class="reviews-more-hide">Свернуть</span>
+                            </a>
                         </div>
                     </li>
                     <li class="reviews-list-item">
-                        <div class="reviews-block">
+                        <div class="reviews-block js-view-text" data-view-start="reviews-block_start" data-view-active="reviews-block_active">
                             <div class="reviews-panel">
                                 <div class="reviews-left">
                                     <span class="reviews-date">01.07.2022</span>
@@ -1257,12 +1276,12 @@
                                                 <path d="M9.71877 0.75733C9.8156 0.496579 10.1844 0.496579 10.2812 0.75733L12.5125 6.76586C12.5546 6.87922 12.6606 6.95622 12.7815 6.96117L19.1912 7.22386C19.4693 7.23525 19.5833 7.58635 19.365 7.75896L14.3348 11.7351C14.2398 11.8101 14.1993 11.9349 14.2319 12.0514L15.9618 18.2216C16.0369 18.4895 15.7385 18.7064 15.5068 18.5524L10.1661 15.0014C10.0655 14.9345 9.93453 14.9345 9.8339 15.0014L4.49319 18.5524C4.26151 18.7064 3.96312 18.4895 4.03823 18.2216L5.76806 12.0514C5.80073 11.9349 5.76017 11.8101 5.66523 11.7351L0.635027 7.75896C0.416666 7.58635 0.53067 7.23525 0.808777 7.22386L7.21854 6.96117C7.33936 6.95622 7.4454 6.87922 7.48749 6.76586L9.71877 0.75733Z" stroke="#F79E1B"/>
                                             </svg>
                                         </span>
-                                        <span class="rating-item rating-item_active">
+                                        <span class="rating-item">
                                             <svg class="rating-icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M9.71877 0.75733C9.8156 0.496579 10.1844 0.496579 10.2812 0.75733L12.5125 6.76586C12.5546 6.87922 12.6606 6.95622 12.7815 6.96117L19.1912 7.22386C19.4693 7.23525 19.5833 7.58635 19.365 7.75896L14.3348 11.7351C14.2398 11.8101 14.1993 11.9349 14.2319 12.0514L15.9618 18.2216C16.0369 18.4895 15.7385 18.7064 15.5068 18.5524L10.1661 15.0014C10.0655 14.9345 9.93453 14.9345 9.8339 15.0014L4.49319 18.5524C4.26151 18.7064 3.96312 18.4895 4.03823 18.2216L5.76806 12.0514C5.80073 11.9349 5.76017 11.8101 5.66523 11.7351L0.635027 7.75896C0.416666 7.58635 0.53067 7.23525 0.808777 7.22386L7.21854 6.96117C7.33936 6.95622 7.4454 6.87922 7.48749 6.76586L9.71877 0.75733Z" stroke="#F79E1B"/>
                                             </svg>
                                         </span>
-                                        <span class="rating-item">
+                                        <span class="rating-item rating-item_active">
                                             <svg class="rating-icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M9.71877 0.75733C9.8156 0.496579 10.1844 0.496579 10.2812 0.75733L12.5125 6.76586C12.5546 6.87922 12.6606 6.95622 12.7815 6.96117L19.1912 7.22386C19.4693 7.23525 19.5833 7.58635 19.365 7.75896L14.3348 11.7351C14.2398 11.8101 14.1993 11.9349 14.2319 12.0514L15.9618 18.2216C16.0369 18.4895 15.7385 18.7064 15.5068 18.5524L10.1661 15.0014C10.0655 14.9345 9.93453 14.9345 9.8339 15.0014L4.49319 18.5524C4.26151 18.7064 3.96312 18.4895 4.03823 18.2216L5.76806 12.0514C5.80073 11.9349 5.76017 11.8101 5.66523 11.7351L0.635027 7.75896C0.416666 7.58635 0.53067 7.23525 0.808777 7.22386L7.21854 6.96117C7.33936 6.95622 7.4454 6.87922 7.48749 6.76586L9.71877 0.75733Z" stroke="#F79E1B"/>
                                             </svg>
@@ -1270,15 +1289,23 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="reviews-info content">
-                                <p>Turpis nulla integer dignissim enim venenatis montes diam montes gravida. )))Fusce pretium ac semper non vitae tellus. Nunc tortor vitae</p>
-                                <p>Fusce pretium ac semper non vitae tellus. Nunc tortor vita</p>
+                            <div class="reviews-info content js-view-text-parent">
+                                <div class="review-info-inner js-view-text-child">
+                                    <p>Turpis nulla integer dignissim enim venenatis montes diam montes gravida. )))Fusce pretium ac semper non vitae tellus. Nunc tortor vitae</p>
+                                    <p>Fusce pretium ac semper non vitae tellus. Nunc tortor vita</p>
+                                    <p>Turpis nulla integer dignissim enim venenatis montes diam montes gravida. )))Fusce pretium ac semper non vitae tellus. Nunc tortor vitae</p>
+                                    <p>Fusce pretium ac semper non vitae tellus. Nunc tortor vita</p>
+                                </div>
                             </div>
-                            <a class="reviews-more" href="#">Подробнее</a>
+                            <a class="reviews-more js-view-text-switcher" href="javascript:;">
+                                <span class="reviews-more-show">Подробнее</span>
+                                <span class="reviews-more-hide">Свернуть</span>
+                            </a>
                         </div>
                     </li>
                 </ul>
                 <div class="load-more">
+                    <!-- После подгрузки выполнить initViewText() -->
                     <!-- Спиннер можно показывать в процессе загрузки load-more-icon -->
                     <a class="load-more-link button button_modified" href="javascript:;">
                         Показать ещё<i class="load-more-icon"></i>
@@ -1323,15 +1350,15 @@
                                     <svg class="rating-form-icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9.71877 0.75733C9.8156 0.496579 10.1844 0.496579 10.2812 0.75733L12.5125 6.76586C12.5546 6.87922 12.6606 6.95622 12.7815 6.96117L19.1912 7.22386C19.4693 7.23525 19.5833 7.58635 19.365 7.75896L14.3348 11.7351C14.2398 11.8101 14.1993 11.9349 14.2319 12.0514L15.9618 18.2216C16.0369 18.4895 15.7385 18.7064 15.5068 18.5524L10.1661 15.0014C10.0655 14.9345 9.93453 14.9345 9.8339 15.0014L4.49319 18.5524C4.26151 18.7064 3.96312 18.4895 4.03823 18.2216L5.76806 12.0514C5.80073 11.9349 5.76017 11.8101 5.66523 11.7351L0.635027 7.75896C0.416666 7.58635 0.53067 7.23525 0.808777 7.22386L7.21854 6.96117C7.33936 6.95622 7.4454 6.87922 7.48749 6.76586L9.71877 0.75733Z" stroke="#F79E1B"/>
                                     </svg>
+                                    <input class="rating-form-radio" type="radio" name="rating-param1" />
+                                    <svg class="rating-form-icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.71877 0.75733C9.8156 0.496579 10.1844 0.496579 10.2812 0.75733L12.5125 6.76586C12.5546 6.87922 12.6606 6.95622 12.7815 6.96117L19.1912 7.22386C19.4693 7.23525 19.5833 7.58635 19.365 7.75896L14.3348 11.7351C14.2398 11.8101 14.1993 11.9349 14.2319 12.0514L15.9618 18.2216C16.0369 18.4895 15.7385 18.7064 15.5068 18.5524L10.1661 15.0014C10.0655 14.9345 9.93453 14.9345 9.8339 15.0014L4.49319 18.5524C4.26151 18.7064 3.96312 18.4895 4.03823 18.2216L5.76806 12.0514C5.80073 11.9349 5.76017 11.8101 5.66523 11.7351L0.635027 7.75896C0.416666 7.58635 0.53067 7.23525 0.808777 7.22386L7.21854 6.96117C7.33936 6.95622 7.4454 6.87922 7.48749 6.76586L9.71877 0.75733Z" stroke="#F79E1B"/>
+                                    </svg>
+                                    <input class="rating-form-radio" type="radio" name="rating-param1" />
+                                    <svg class="rating-form-icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.71877 0.75733C9.8156 0.496579 10.1844 0.496579 10.2812 0.75733L12.5125 6.76586C12.5546 6.87922 12.6606 6.95622 12.7815 6.96117L19.1912 7.22386C19.4693 7.23525 19.5833 7.58635 19.365 7.75896L14.3348 11.7351C14.2398 11.8101 14.1993 11.9349 14.2319 12.0514L15.9618 18.2216C16.0369 18.4895 15.7385 18.7064 15.5068 18.5524L10.1661 15.0014C10.0655 14.9345 9.93453 14.9345 9.8339 15.0014L4.49319 18.5524C4.26151 18.7064 3.96312 18.4895 4.03823 18.2216L5.76806 12.0514C5.80073 11.9349 5.76017 11.8101 5.66523 11.7351L0.635027 7.75896C0.416666 7.58635 0.53067 7.23525 0.808777 7.22386L7.21854 6.96117C7.33936 6.95622 7.4454 6.87922 7.48749 6.76586L9.71877 0.75733Z" stroke="#F79E1B"/>
+                                    </svg>
                                     <input class="rating-form-radio" type="radio" name="rating-param1" checked="checked" />
-                                    <svg class="rating-form-icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.71877 0.75733C9.8156 0.496579 10.1844 0.496579 10.2812 0.75733L12.5125 6.76586C12.5546 6.87922 12.6606 6.95622 12.7815 6.96117L19.1912 7.22386C19.4693 7.23525 19.5833 7.58635 19.365 7.75896L14.3348 11.7351C14.2398 11.8101 14.1993 11.9349 14.2319 12.0514L15.9618 18.2216C16.0369 18.4895 15.7385 18.7064 15.5068 18.5524L10.1661 15.0014C10.0655 14.9345 9.93453 14.9345 9.8339 15.0014L4.49319 18.5524C4.26151 18.7064 3.96312 18.4895 4.03823 18.2216L5.76806 12.0514C5.80073 11.9349 5.76017 11.8101 5.66523 11.7351L0.635027 7.75896C0.416666 7.58635 0.53067 7.23525 0.808777 7.22386L7.21854 6.96117C7.33936 6.95622 7.4454 6.87922 7.48749 6.76586L9.71877 0.75733Z" stroke="#F79E1B"/>
-                                    </svg>
-                                    <input class="rating-form-radio" type="radio" name="rating-param1" />
-                                    <svg class="rating-form-icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.71877 0.75733C9.8156 0.496579 10.1844 0.496579 10.2812 0.75733L12.5125 6.76586C12.5546 6.87922 12.6606 6.95622 12.7815 6.96117L19.1912 7.22386C19.4693 7.23525 19.5833 7.58635 19.365 7.75896L14.3348 11.7351C14.2398 11.8101 14.1993 11.9349 14.2319 12.0514L15.9618 18.2216C16.0369 18.4895 15.7385 18.7064 15.5068 18.5524L10.1661 15.0014C10.0655 14.9345 9.93453 14.9345 9.8339 15.0014L4.49319 18.5524C4.26151 18.7064 3.96312 18.4895 4.03823 18.2216L5.76806 12.0514C5.80073 11.9349 5.76017 11.8101 5.66523 11.7351L0.635027 7.75896C0.416666 7.58635 0.53067 7.23525 0.808777 7.22386L7.21854 6.96117C7.33936 6.95622 7.4454 6.87922 7.48749 6.76586L9.71877 0.75733Z" stroke="#F79E1B"/>
-                                    </svg>
-                                    <input class="rating-form-radio" type="radio" name="rating-param1" />
                                     <svg class="rating-form-icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9.71877 0.75733C9.8156 0.496579 10.1844 0.496579 10.2812 0.75733L12.5125 6.76586C12.5546 6.87922 12.6606 6.95622 12.7815 6.96117L19.1912 7.22386C19.4693 7.23525 19.5833 7.58635 19.365 7.75896L14.3348 11.7351C14.2398 11.8101 14.1993 11.9349 14.2319 12.0514L15.9618 18.2216C16.0369 18.4895 15.7385 18.7064 15.5068 18.5524L10.1661 15.0014C10.0655 14.9345 9.93453 14.9345 9.8339 15.0014L4.49319 18.5524C4.26151 18.7064 3.96312 18.4895 4.03823 18.2216L5.76806 12.0514C5.80073 11.9349 5.76017 11.8101 5.66523 11.7351L0.635027 7.75896C0.416666 7.58635 0.53067 7.23525 0.808777 7.22386L7.21854 6.96117C7.33936 6.95622 7.4454 6.87922 7.48749 6.76586L9.71877 0.75733Z" stroke="#F79E1B"/>
                                     </svg>
