@@ -1779,6 +1779,9 @@ label.form-error {
     padding: 9px 33px;
     font-size: 14px;
   }
+  .load-more-link:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form-row {
@@ -10393,6 +10396,7 @@ body.mob-form-show .wrapper {
   }
   .basket-side {
     width: 100%;
+    min-height: auto;
   }
   .basket-item {
     margin-bottom: 20px;

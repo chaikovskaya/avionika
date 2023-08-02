@@ -735,6 +735,9 @@ and (max-width: $mobile) {
             margin-bottom: 20px;
             padding: 9px 33px;
             font-size: 14px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
