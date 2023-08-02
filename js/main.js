@@ -237,8 +237,12 @@ function openPopupBuy($element) {
         $element = $('.js-popup-buy');
     }
 
+    var url = $element.data('src');
+    if ($element.attr('data-id')) url += '?id=' + $element.attr('data-id');
+    if ($element.attr('data-quantity')) url += '&quantity=' + $element.attr('data-quantity');
+
     $.fancybox.open({
-        src  :  $element.data('src'),
+        src  :  url,
         type : 'ajax',
         toolbar  : false,
         smallBtn : true,
@@ -325,6 +329,8 @@ function initPopupWishlist() {
                     initQuantity();
                     initFormatPrice();
                     initSelectCheckbox();
+                    initMask();
+                    initValidate();
 
                     function initSetDelay() {
                         var local = GLOBAL.parseData(jQuery('.JS-PopupForm').data('popupform'));
@@ -1040,10 +1046,11 @@ function initTextareaSize() {
 
 function initSelectCheckbox() {
     $('.js-selectCheckbox').each(function() {
-        var $input = jQuery(this).find('.js-selectCheckbox-input'),
-            $link = jQuery(this).find('.js-selectCheckbox-link input:checkbox');
-
+        var context = this;
+        var $link = jQuery(this).find('.js-selectCheckbox-link input:checkbox');
+        
         $link.on("change", function() {
+            var $input = jQuery(context).find('.js-selectCheckbox-input');
             if ($link.prop("checked")) {
                 $input.prop("checked", true);
             } else {
@@ -1158,29 +1165,34 @@ function initSliderRange() {
         var min = Number($(this).find('.min-price').attr('data-value'));
         var max = Number($(this).find('.max-price').attr('data-value'));
 
-        var price_id = $(this).attr('data-code');
+        var curMin = Number($(this).find('.min-price').attr('value'));
+        var curMax = Number($(this).find('.max-price').attr('value')) || max;
+
+        //var price_id = $(this).attr('data-code');
 
         $track.slider({
             range: true,
             min: min,
             max: max,
             drag: true,
-            values: [min, max],
+            values: [curMin, curMax],
             classes: {
                 "ui-slider-handle": "slider-range-button",
                 "ui-slider-range": "slider-range-quantity"
             },
             slide: function (event, ui) {
-                $("input#minCost_" + price_id).val(ui.values[0]);
-                $("input#maxCost_" + price_id).val(ui.values[1]);
-
-                $('#minCost_' + price_id).trigger('change');
+                if (ui.values[0] <= min) ui.values[0] = '';
+                if (ui.values[1] >= max) ui.values[1] = '';
+                $element.find('.js-slider-range-min').val(ui.values[0]);
+                $element.find('.js-slider-range-max').val(ui.values[1]);
+                $element.find('.js-slider-range-min').trigger('keyup');
             },
             stop: function (event, ui) {
-                $("input#minCost_" + price_id).val(ui.values[0]);
-                $("input#maxCost_" + price_id).val(ui.values[1]);
-
-                $('#minCost_' + price_id).trigger('change');
+                if (ui.values[0] <= min) ui.values[0] = '';
+                if (ui.values[1] >= max) ui.values[1] = '';
+                $element.find('.js-slider-range-min').val(ui.values[0]);
+                $element.find('.js-slider-range-max').val(ui.values[1]);
+                $element.find('.js-slider-range-min').trigger('keyup');
             }
         });
     });
