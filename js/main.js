@@ -84,9 +84,14 @@ function initValidate($element) {
 
 function initMask() {
     $('.js-mask-phone').inputmask({
-        mask: '+7 999 999 99 99',
+        mask: '+7 (X99) 999-99-99',
         "tabThrough": true,
         "showMaskOnHover": false,
+        definitions: {
+            'X': {
+                validator: "[^7-8]"
+            }
+        }
     });
 
     $('.js-mask-email').inputmask({
