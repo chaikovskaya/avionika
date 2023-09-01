@@ -21,6 +21,8 @@
         this.$switcher = this.$element.find('.JS-Dropdown-Switcher').eq(0);
         this.$close = this.$element.find('.JS-Dropdown-Close');
 
+        if (this.$element.hasClass(this.classReady)) return;
+
         this._init();
     };
 
