@@ -4811,7 +4811,7 @@ body.mob-form-show .wrapper {
   text-decoration: none;
 }
 .actions-all-pic {
-  width: 52%;
+  width: 51.5%;
 }
 .actions-all-img {
   display: block;
@@ -4826,7 +4826,7 @@ body.mob-form-show .wrapper {
   display: flex;
 }
 .actions-all-info {
-  width: 48%;
+  width: 48.5%;
   display: flex;
   flex-direction: column;
   padding: 22px 32px 30px;
