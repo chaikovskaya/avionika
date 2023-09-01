@@ -87,9 +87,16 @@ function initMapShops () {
                 checkZoomRange: true
             });
             */
+
+            /*
             if (masObjects.length > 1) {
                 myMap.setBounds(objectManager.getBounds());
             }
+            */
+           
+            myMap.panTo(objectManager.objects.getById(objectId).geometry.coordinates, 10, {
+                checkZoomRange: true
+            });
         }
         if (masObjects.length > 1) {
             myMap.setBounds(objectManager.getBounds());
